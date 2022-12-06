@@ -63,6 +63,11 @@
     text-decoration: none;
     cursor: pointer;
   }
+
+  #fed-button.govuk-button
+  {
+    margin-bottom: 0;
+  }
  
   .modal2 {
     display: none; /* Hidden by default */
@@ -84,6 +89,7 @@
     padding: 20px;
     border: 1px solid #888;
     width: 50%; /* Could be more or less, depending on screen size */
+    
   }
    
   /* The Close Button */
@@ -112,4 +118,9 @@
     font-size: 14px;
     font-size: .875rem;
     line-height: 1.1428571429;
+  }
+
+  #fed-button2.govuk-button
+  {
+    margin-bottom: 0;
   }

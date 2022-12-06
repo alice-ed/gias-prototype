@@ -1,0 +1,923 @@
+{% extends "layout.html" %}
+
+{% block head %}
+{% include "includes/head.html" %}
+
+{% endblock %}
+
+{% block pageTitle %}
+Get Information about Schools
+{% endblock %}
+
+{% block header %}
+{% from "govuk/components/cookie-banner/macro.njk" import govukCookieBanner %}
+
+{% set html %}
+<p class="govuk-body">We use some essential cookies to make this service work.</p>
+<p class="govuk-body">We’d also like to use analytics cookies so we can understand how you use the service and make
+    improvements.</p>
+{% endset %}
+
+{{ govukCookieBanner({
+ariaLabel: "Cookies on Get Information about Schools",
+messages: [
+{
+headingText: "Cookies on Get Information about Schools",
+html: html,
+actions: [
+{
+text: "Accept analytics cookies",
+type: "button",
+name: "cookies",
+value: "accept"
+},
+{
+text: "Reject analytics cookies",
+type: "button",
+name: "cookies",
+value: "reject"
+},
+{
+text: "View cookies",
+href: "#"
+}
+]
+}
+]
+}) }}
+{# Set serviceName in config.js. #}
+{{ govukHeader({
+homepageUrl: "/",
+serviceName: serviceName,
+serviceUrl: "/",
+navigation: [
+{
+href: "http://localhost:3000/landing",
+text: "Home",
+active: true
+},
+{
+    href: "search",
+    text: "Search"
+    },
+    {
+    href: "download",
+    text: "Downloads"
+    },
+    {
+    href: "about",
+    text: "About"
+    },
+    {
+    href: "help",
+    text: "Help"
+    },
+    {
+    href: "news",
+    text: "News"
+    }
+    ],
+containerClasses: "govuk-width-container"
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner ">
+    <p class="govuk-phase-banner__content">
+        <strong class="govuk-tag govuk-phase-banner__content__tag">
+            beta
+        </strong>
+        <span class="govuk-phase-banner__text">
+            This is a new service – your <a class="govuk-link"
+                href="https://forms.office.com/Pages/ResponsePage.aspx?id=yXfS-grGoU2187O4s0qC-ZYZAR7wa5FMmFGoqFTjsw5UREJBVlAxSTBKWFdOMEcwTTU1M0gyVVJKRCQlQCN0PWcu">feedback</a>
+            will help us to improve it.
+        </span>
+    </p>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <div class="govuk-breadcrumbs">
+            <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item"><a class="govuk-breadcrumbs__link" href="#">Home</a></li>
+                <li class="govuk-breadcrumbs__list-item"><a class="govuk-breadcrumbs__link" href="#">Search</a></li>
+            </ol>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <span class="govuk-caption-l">Establishment</span>
+      <h1 class="govuk-heading-l">Aston Academy</h1>
+  
+        <p class="urn establishment-fine-detail"><abbr title="Unique Reference Number">URN</abbr>: 136718</p>
+        <p class="establishment-type establishment-fine-detail">Academy converter</p>
+        
+        <p class="establishment-data-download">
+            <a href="/Downloads/Download/Establishment/136718?state=W3siUm91dGVOYW1lIjoiU2VhcmNoIiwiUm91dGVWYWx1ZXMiOnsiU2VsZWN0ZWRUYWIiOiJFc3RhYmxpc2htZW50cyJ9LCJMYWJlbCI6IlNlYXJjaCJ9LHsiUm91dGVOYW1lIjoiR3JvdXBEZXRhaWxzIiwiUm91dGVWYWx1ZXMiOnsiaWQiOjIxOTV9LCJMYWJlbCI6IkFTVE9OIENPTU1VTklUWSBFRFVDQVRJT04gVFJVU1QifSx7IlJvdXRlTmFtZSI6IkVzdGFiRGV0YWlscyIsIlJvdXRlVmFsdWVzIjp7ImlkIjoxMzY3MTh9LCJMYWJlbCI6IkFzdG9uIEFjYWRlbXkifV01" rel="nofollow">Download establishment data</a>
+        </p>
+  
+            <div>
+                <p class="establishment-fine-detail">Academy trust: <a class="govuk-breadcrumbs__link" href="/Groups/Group/Details/2195">ASTON COMMUNITY EDUCATION TRUST</a></p>
+            </div>
+  
+    </div>
+
+  
+ 
+        <div class="govuk-grid-column-full">
+<div class="govuk-tabs" data-module="govuk-tabs">
+    <h2 class="govuk-tabs__title">
+        Contents
+    </h2>
+    <ul class="govuk-tabs__list">
+        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+            <a class="govuk-tabs__tab" href="#past-day">
+                Details
+            </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#past-week">
+                Governance
+            </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#past-month">
+                Links
+            </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#past-year">
+                Location
+            </a>
+        </li>
+    </ul>
+
+
+
+    <div class="govuk-tabs__panel" id="past-day">
+        <div id="school-links" class="tab-content" tabindex="0" aria-hidden="false">
+
+            <details class="govuk-details govuk-!-font-size-16" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                        Show map
+                    </span>
+                </summary>
+
+                <div id="map" class="school-detail-map leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" data-latlng="[-1.32281679212994,53.3685540567259]" data-school-name="Aston Academy" data-school-address="Aughton Road, Swallownest, Sheffield, South Yorkshire, S26 4SF" style="display: block; position: relative; outline: none;" tabindex="0">
+                    <div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);">
+                        <div class="leaflet-pane leaflet-tile-pane">
+                            <div class="leaflet-layer " style="z-index: 1; opacity: 1;">
+                                <div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 18; transform: translate3d(0px, 0px, 0px) scale(1);"><img crossorigin="" alt="" role="presentation" src="https://atlas.microsoft.com/map/tile/png?api-version=1&amp;layer=basic&amp;style=main&amp;zoom=12&amp;x=2032&amp;y=1326&amp;subscription-key=rSzKqMWhVF0o-99sgAMMSQ8yzNRQVrSHcFl1P3_HLrE" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(229px, -168px, 0px); opacity: 1;"><img crossorigin="" alt="" role="presentation" src="https://atlas.microsoft.com/map/tile/png?api-version=1&amp;layer=basic&amp;style=main&amp;zoom=12&amp;x=2033&amp;y=1326&amp;subscription-key=rSzKqMWhVF0o-99sgAMMSQ8yzNRQVrSHcFl1P3_HLrE" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(485px, -168px, 0px); opacity: 1;"><img crossorigin="" alt="" role="presentation" src="https://atlas.microsoft.com/map/tile/png?api-version=1&amp;layer=basic&amp;style=main&amp;zoom=12&amp;x=2032&amp;y=1327&amp;subscription-key=rSzKqMWhVF0o-99sgAMMSQ8yzNRQVrSHcFl1P3_HLrE" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(229px, 88px, 0px); opacity: 1;"><img crossorigin="" alt="" role="presentation" src="https://atlas.microsoft.com/map/tile/png?api-version=1&amp;layer=basic&amp;style=main&amp;zoom=12&amp;x=2033&amp;y=1327&amp;subscription-key=rSzKqMWhVF0o-99sgAMMSQ8yzNRQVrSHcFl1P3_HLrE" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(485px, 88px, 0px); opacity: 1;"><img crossorigin="" alt="" role="presentation" src="https://atlas.microsoft.com/map/tile/png?api-version=1&amp;layer=basic&amp;style=main&amp;zoom=12&amp;x=2031&amp;y=1326&amp;subscription-key=rSzKqMWhVF0o-99sgAMMSQ8yzNRQVrSHcFl1P3_HLrE" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-27px, -168px, 0px); opacity: 1;"><img crossorigin="" alt="" role="presentation" src="https://atlas.microsoft.com/map/tile/png?api-version=1&amp;layer=basic&amp;style=main&amp;zoom=12&amp;x=2034&amp;y=1326&amp;subscription-key=rSzKqMWhVF0o-99sgAMMSQ8yzNRQVrSHcFl1P3_HLrE" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(741px, -168px, 0px); opacity: 1;"><img crossorigin="" alt="" role="presentation" src="https://atlas.microsoft.com/map/tile/png?api-version=1&amp;layer=basic&amp;style=main&amp;zoom=12&amp;x=2031&amp;y=1327&amp;subscription-key=rSzKqMWhVF0o-99sgAMMSQ8yzNRQVrSHcFl1P3_HLrE" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-27px, 88px, 0px); opacity: 1;"><img crossorigin="" alt="" role="presentation" src="https://atlas.microsoft.com/map/tile/png?api-version=1&amp;layer=basic&amp;style=main&amp;zoom=12&amp;x=2034&amp;y=1327&amp;subscription-key=rSzKqMWhVF0o-99sgAMMSQ8yzNRQVrSHcFl1P3_HLrE" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(741px, 88px, 0px); opacity: 1;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="leaflet-pane leaflet-shadow-pane"></div>
+                        <div class="leaflet-pane leaflet-overlay-pane"></div>
+                        <div class="leaflet-pane leaflet-marker-pane"><img src="/public/assets/images/maps/open-marker.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0" style="margin-left: -14px; margin-top: -20.5px; width: 28px; height: 41px; transform: translate3d(472px, 160px, 0px); z-index: 160;">
+                        </div>
+                        <div class="leaflet-pane leaflet-tooltip-pane"></div>
+                        <div class="leaflet-pane leaflet-popup-pane"></div>
+                        <div class="leaflet-proxy leaflet-zoom-animated"></div>
+                    </div>
+                    <div class="leaflet-control-container">
+                        <div class="leaflet-top leaflet-left"></div>
+                        <div class="leaflet-top leaflet-right"></div>
+                        <div class="leaflet-bottom leaflet-left"></div>
+                        <div class="leaflet-bottom leaflet-right">
+                            <div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="#" title="Zoom in" role="button" aria-label="Zoom in">+</a><a class="leaflet-control-zoom-out" href="#" title="Zoom out" role="button" aria-label="Zoom out">−</a></div>
+                            <div class="leaflet-control-attribution leaflet-control">© 2022 Microsoft, © 1992 - 2022
+                                TomTom</div>
+                        </div>
+                    </div>
+                </div>
+
+            </details>
+
+            <div class="detail-summary" id="details-summary">
+                <dl class="govuk-summary-list">
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Address</dt>
+                        <dd class="govuk-summary-list__value">Aughton Road, Swallownest, Sheffield, South Yorkshire, S26
+                            4SF
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Local authority</dt>
+                        <dd class="govuk-summary-list__value">
+                            <a href="/Establishments/Search?searchtype=ByLocalAuthority&amp;d=58">
+                                Rotherham
+                            </a>
+                            (372)
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Headteacher<span class="govuk-visually-hidden">
+                            </span>/<span class="govuk-visually-hidden"> </span>Principal</dt>
+                        <dd class="govuk-summary-list__value">
+                            Mr
+                            Dominic
+                            Curran
+                        </dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Age range
+                            <a href="#help-text-age-range" class="help-icon modal-link">
+                                <span class="govuk-visually-hidden">Help with age range field</span>
+                                <span class="govuk-visually-hidden">Opens a dialog</span>
+
+                            </a>
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            11 to 18
+                        </dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Phase of education</dt>
+                        <dd class="govuk-summary-list__value">
+                            Secondary
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">School type</dt>
+                        <dd class="govuk-summary-list__value">
+                            Academy converter
+                        </dd>
+                    </div>
+
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Academy trust</dt>
+                        <dd class="govuk-summary-list__value">
+                            <a href="/Groups/Group/Details/2195">ASTON COMMUNITY EDUCATION TRUST</a>
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Academy sponsor</dt>
+                        <dd class="govuk-summary-list__value">
+                            <a href="/Groups/Group/Details/2196">Aston Community Education Trust (ACET)</a>
+                        </dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Gender of entry</dt>
+                        <dd class="govuk-summary-list__value">
+                            Mixed
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+
+                        <dt class="govuk-summary-list__key">ID</dt>
+                        <dd class="govuk-summary-list__value">
+                            <abbr title="Unique Reference Number">URN</abbr>: 136718,
+                            DfE number: 372/4021<br>
+                            <abbr title="UK Provider Reference Number">UKPRN</abbr>: 10033573
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Establishment status</dt>
+                        <dd class="govuk-summary-list__value">
+                            Open </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Admissions policy</dt>
+                        <dd class="govuk-summary-list__value">
+                            Non-selective
+                        </dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Website</dt>
+                        <dd class="govuk-summary-list__value">
+                            <a href="http://www.astonacademy.org" target="_blank" rel="noreferrer noopener">
+                                http://www.astonacademy.org (opens in new tab)
+                            </a>
+                        </dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Telephone</dt>
+                        <dd class="govuk-summary-list__value">01142872171</dd>
+                    </div>
+
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Ofsted rating</dt>
+                        <dd class="govuk-summary-list__value">
+                            <span class="highlighted-ofsted-rating">Good</span>
+
+                            <span>(Last inspection: 13 June 2018)</span>
+                            <br>
+                            <a href="http://www.ofsted.gov.uk/oxedu_providers/full/(urn)/136718" target="_blank"
+                                rel="noreferrer noopener">
+                                Ofsted report (opens in new tab)
+                            </a>
+                        </dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Data from other services</dt>
+                        <dd class="govuk-summary-list__value">
+                            <ul class="govuk-list">
+                                <li>
+                                    <a href="https://www.compare-school-performance.service.gov.uk/school/136718/aston-academy"
+                                        rel="noreferrer noopener" target="_blank">
+                                        Compare school and college performance (opens in new tab)</a>
+                                </li>
+                                <li>
+                                    <a href="https://schools-financial-benchmarking.service.gov.uk/school/detail?urn=136718"
+                                        rel="noreferrer noopener" target="_blank">
+                                        Schools financial benchmarking (opens in new tab)</a>
+                                </li>
+                            </ul>
+                        </dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Religious character</dt>
+                        <dd class="govuk-summary-list__value">
+                            Does not apply
+                        </dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Diocese</dt>
+                        <dd class="govuk-summary-list__value">Not applicable</dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Religious ethos</dt>
+                        <dd class="govuk-summary-list__value">
+                            Does not apply
+                        </dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Boarders</dt>
+                        <dd class="govuk-summary-list__value">No boarders</dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Nursery provision</dt>
+                        <dd class="govuk-summary-list__value">Not applicable</dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Official sixth form</dt>
+                        <dd class="govuk-summary-list__value">Has a sixth form</dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            School capacity
+                            <a href="#help-text-school-capacity" class="help-icon modal-link">
+                                <span class="govuk-visually-hidden">Help with school capacity field</span>
+                                <span class="govuk-visually-hidden">Opens a dialog</span>
+
+                            </a>
+                        </dt>
+                        <dd class="govuk-summary-list__value">1650</dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Number of pupils</dt>
+                        <dd class="govuk-summary-list__value">1644</dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Section 41 approved</dt>
+                        <dd class="govuk-summary-list__value">Not applicable</dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Open date</dt>
+                        <dd class="govuk-summary-list__value">
+                            1 May 2011
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Reason establishment opened</dt>
+                        <dd class="govuk-summary-list__value">Academy Converter</dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Closed date</dt>
+                        <dd class="govuk-summary-list__value">Not recorded</dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Reason establishment closed</dt>
+                        <dd class="govuk-summary-list__value">Not recorded</dd>
+                    </div>
+
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Special classes</dt>
+                        <dd class="govuk-summary-list__value">No Special Classes</dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Number of pupils eligible for free school meals
+                            <a href="#help-text-fsm" class="help-icon modal-link">
+                                <span class="govuk-visually-hidden">Help with number of pupils eligible for free school
+                                    meals field</span>
+                                <span class="govuk-visually-hidden">Opens a dialog</span>
+
+                            </a>
+                        </dt>
+                        <dd class="govuk-summary-list__value">203</dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Percentage of children eligible for free school meals
+                            <a href="#help-text-fsm-percentage" class="help-icon modal-link">
+                                <span class="govuk-visually-hidden">Help with percentage of children eligible for free
+                                    school meals field</span>
+                                <span class="govuk-visually-hidden">Opens a dialog</span>
+
+                            </a>
+                        </dt>
+                        <dd class="govuk-summary-list__value">14%</dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Date last changed<span class="govuk-visually-hidden">
+                            </span>/<span class="govuk-visually-hidden"> </span>confirmed</dt>
+                        <dd class="govuk-summary-list__value">5 June 2022</dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Type of SEN provision</dt>
+                        <dd class="govuk-summary-list__value">
+
+                        </dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Type of resourced provision</dt>
+                        <dd class="govuk-summary-list__value">Not recorded</dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Resourced provision number on roll</dt>
+                        <dd class="govuk-summary-list__value"></dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Resourced provision capacity</dt>
+                        <dd class="govuk-summary-list__value"></dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Special Educational Needs (SEN) unit number on roll</dt>
+                        <dd class="govuk-summary-list__value"></dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Special Educational Needs (SEN) unit capacity</dt>
+                        <dd class="govuk-summary-list__value"></dd>
+                    </div>
+
+                </dl>
+
+            </div>
+            <a class="back-to-top-link" href="#top">
+                <svg role="presentation" focusable="false" class="back-to-top-icon" xmlns="http://www.w3.org/2000/svg"
+                    width="13" height="17" viewBox="0 0 13 17">
+                    <path fill="currentColor" d="M6.5 0L0 6.5 1.4 8l4-4v12.7h2V4l4.3 4L13 6.4z"></path>
+                </svg>
+                Back to top
+            </a>
+        </div>
+    </div>
+
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+        <div id="school-governance" class="tab-content" tabindex="0" aria-hidden="false">
+
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">
+                    <p class="govuk-body-s">
+                    </p>
+                </div>
+            </div>
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">
+                    <div class="governors-section">
+                        <h2 class="govuk-heading-s">Legal duty to provide governance information</h2>
+                        <details class="govuk-details govuk-!-font-size-16" data-module="govuk-details">
+                            <summary class="govuk-details__summary">
+                                <span class="govuk-details__summary-text">
+                                    More details
+                                </span>
+                            </summary>
+                            <div class="govuk-details__text">
+                                <p class="govuk-!-font-size-16">
+                                    All maintained school governing bodies and academy trusts have a legal duty to
+                                    provide all of the governance information requested on this page in so far as it is
+                                    available to them.
+                                </p>
+                                <p class="govuk-!-font-size-16">
+                                    This will increase the transparency of governance arrangements. It will enable
+                                    schools and the department to identify more quickly and accurately individuals who
+                                    are involved in governance, and who govern in more than one context.
+                                </p>
+                                <p class="govuk-!-font-size-16">
+                                    The information requested says nothing in itself about a person's suitability to
+                                    govern. However, it is essential information for the department to be able to
+                                    uniquely identify an individual and in a small number of cases conduct checks to
+                                    confirm their suitability for this important and influential role.
+                                </p>
+                                <p class="govuk-!-font-size-16">
+                                    You should provide all of the information requested insofar as it is available to
+                                    you. A minimum set of information needs to be provided before a record can be saved.
+                                </p>
+                                <p class="govuk-!-font-size-16">
+                                    A suggested privacy notice for schools is available for download:
+                                    <a target="_blank" rel="noreferrer noopener"
+                                        href="https://www.gov.uk/government/publications/data-protection-and-privacy-privacy-notices">
+                                        https://www.gov.uk/government/publications/data-protection-and-privacy-privacy-notices
+                                        (opens in new tab)</a>
+                                </p>
+                            </div>
+                        </details>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <div class="governor-grid">
+                        <h2 class="govuk-heading-m">Chair of local governing body</h2>
+                        <table class="govuk-table gias-table list-table governors unsortable">
+                            <caption class="govuk-visually-hidden">Chair of local governing body</caption>
+                            <thead class="govuk-table__head">
+                                <tr class="govuk-table__row">
+                                    <th scope="col" class="govuk-table__header col-name ">
+                                        <a class="js-sort-header" data-sort-key="name" data-sort-type="sortText">
+                                            Name
+                                        </a>
+                                    </th>
+                                    <th scope="col" class="govuk-table__header col-shared ">
+                                        <a class="js-sort-header" data-sort-key="shared" data-sort-type="sortText">
+                                            Shared with
+                                        </a>
+                                    </th>
+                                    <th scope="col" class="govuk-table__header col-appointed ">
+                                        <a class="js-sort-header" data-sort-key="appointed" data-sort-type="sortText">
+                                            Appointed by
+                                        </a>
+                                    </th>
+                                    <th scope="col" class="govuk-table__header col-fromDate ">
+                                        <a class="js-sort-header" data-sort-key="fromDate" data-sort-type="sortDate">
+                                            From
+                                        </a>
+                                    </th>
+                                    <th scope="col" class="govuk-table__header col-toDate ">
+                                        <a class="js-sort-header" data-sort-key="toDate" data-sort-type="sortDate">
+                                            To
+                                        </a>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="govuk-table__body">
+                                <tr class="govuk-table__row">
+                                    <td data-label="Name" class="govuk-table__cell">Jenny Hudson</td>
+                                    <td data-label="Shared with" class="govuk-table__cell">Not recorded</td>
+                                    <td data-label="Appointed by" class="govuk-table__cell">Appointed by
+                                        foundation/Trust</td>
+                                    <td data-label="From" class="govuk-table__cell">2 September 2019</td>
+                                    <td data-label="To" class="govuk-table__cell">30 September 2024</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="governor-grid">
+                        <h2 class="govuk-heading-m">Local governors</h2>
+                        <table class="govuk-table gias-table list-table sortable-table governors">
+                            <caption class="govuk-visually-hidden">Local governors</caption>
+                            <thead class="govuk-table__head">
+                                <tr class="govuk-table__row">
+                                    <th scope="col" class="govuk-table__header col-name ">
+                                        <a href="#" class="js-sort-header selected-sort sorted-asc" data-sort-key="name"
+                                            data-sort-type="sortText"
+                                            aria-label="Name is sorted in an ascending order. Click to change order. All other columns are sortable.">
+                                            Name
+                                        </a>
+                                    </th>
+                                    <th scope="col" class="govuk-table__header col-shared ">
+                                        <a href="#" class="js-sort-header" data-sort-key="shared"
+                                            data-sort-type="sortText"
+                                            aria-label="Shared with. Click to sort data by this column.">
+                                            Shared with
+                                        </a>
+                                    </th>
+                                    <th scope="col" class="govuk-table__header col-appointed ">
+                                        <a href="#" class="js-sort-header" data-sort-key="appointed"
+                                            data-sort-type="sortText"
+                                            aria-label="Appointed by. Click to sort data by this column.">
+                                            Appointed by
+                                        </a>
+                                    </th>
+                                    <th scope="col" class="govuk-table__header col-fromDate ">
+                                        <a href="#" class="js-sort-header" data-sort-key="fromDate"
+                                            data-sort-type="sortDate"
+                                            aria-label="From. Click to sort data by this column.">
+                                            From
+                                        </a>
+                                    </th>
+                                    <th scope="col" class="govuk-table__header col-toDate ">
+                                        <a href="#" class="js-sort-header" data-sort-key="toDate"
+                                            data-sort-type="sortDate"
+                                            aria-label="To. Click to sort data by this column.">
+                                            To
+                                        </a>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="govuk-table__body">
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell" data-label="Name">Christine Arthur</td>
+                                    <td class="govuk-table__cell" data-label="Shared with">Not recorded</td>
+                                    <td class="govuk-table__cell" data-label="Appointed by">Appointed by academy members
+                                    </td>
+                                    <td class="govuk-table__cell" data-label="From">10 January 2020</td>
+                                    <td class="govuk-table__cell" data-label="To">10 January 2024</td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell" data-label="Name">Dawn Davies</td>
+                                    <td class="govuk-table__cell" data-label="Shared with">Not recorded</td>
+                                    <td class="govuk-table__cell" data-label="Appointed by">Appointed by
+                                        foundation/Trust</td>
+                                    <td class="govuk-table__cell" data-label="From">2 October 2019</td>
+                                    <td class="govuk-table__cell" data-label="To">2 October 2023</td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell" data-label="Name">Dominic Curran</td>
+                                    <td class="govuk-table__cell" data-label="Shared with">Not recorded</td>
+                                    <td class="govuk-table__cell" data-label="Appointed by">Ex-officio by virtue of
+                                        office as headteacher/principal</td>
+                                    <td class="govuk-table__cell" data-label="From">1 September 2016</td>
+                                    <td class="govuk-table__cell" data-label="To">Not recorded</td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell" data-label="Name">Jane Ford</td>
+                                    <td class="govuk-table__cell" data-label="Shared with">Not recorded</td>
+                                    <td class="govuk-table__cell" data-label="Appointed by">Appointed by
+                                        foundation/Trust</td>
+                                    <td class="govuk-table__cell" data-label="From">30 November 2021</td>
+                                    <td class="govuk-table__cell" data-label="To">30 November 2025</td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell" data-label="Name">Luke Norfolk</td>
+                                    <td class="govuk-table__cell" data-label="Shared with">Not recorded</td>
+                                    <td class="govuk-table__cell" data-label="Appointed by">Appointed by
+                                        foundation/Trust</td>
+                                    <td class="govuk-table__cell" data-label="From">23 October 2019</td>
+                                    <td class="govuk-table__cell" data-label="To">23 October 2023</td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell" data-label="Name">Maria Jackson-Brown</td>
+                                    <td class="govuk-table__cell" data-label="Shared with">Not recorded</td>
+                                    <td class="govuk-table__cell" data-label="Appointed by">Appointed by
+                                        foundation/Trust</td>
+                                    <td class="govuk-table__cell" data-label="From">1 September 2019</td>
+                                    <td class="govuk-table__cell" data-label="To">1 September 2023</td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell" data-label="Name">Paula Helliwell</td>
+                                    <td class="govuk-table__cell" data-label="Shared with">Not recorded</td>
+                                    <td class="govuk-table__cell" data-label="Appointed by">Elected by school staff</td>
+                                    <td class="govuk-table__cell" data-label="From">27 February 2019</td>
+                                    <td class="govuk-table__cell" data-label="To">27 February 2023</td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell" data-label="Name">Rebecca Scutt</td>
+                                    <td class="govuk-table__cell" data-label="Shared with">Not recorded</td>
+                                    <td class="govuk-table__cell" data-label="Appointed by">Appointed by academy members
+                                    </td>
+                                    <td class="govuk-table__cell" data-label="From">1 September 2016</td>
+                                    <td class="govuk-table__cell" data-label="To">30 September 2024</td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell" data-label="Name">Ruth Stone</td>
+                                    <td class="govuk-table__cell" data-label="Shared with">Not recorded</td>
+                                    <td class="govuk-table__cell" data-label="Appointed by">Appointed by
+                                        foundation/Trust</td>
+                                    <td class="govuk-table__cell" data-label="From">6 December 2021</td>
+                                    <td class="govuk-table__cell" data-label="To">5 December 2025</td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell" data-label="Name">Steve Trotter</td>
+                                    <td class="govuk-table__cell" data-label="Shared with">Not recorded</td>
+                                    <td class="govuk-table__cell" data-label="Appointed by">Elected by parents</td>
+                                    <td class="govuk-table__cell" data-label="From">19 October 2020</td>
+                                    <td class="govuk-table__cell" data-label="To">19 October 2024</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h2 class="govuk-heading-m">Historic (left within last 12 months)</h2>
+                    <details class="govuk-details govuk-!-font-size-16 gias-details--noborder"
+                        data-module="govuk-details">
+                        <summary class="govuk-details__summary">
+                            <span class="govuk-details__summary-text">
+                                <span class="gias-details-closed-text">More details</span>
+                                <span class="gias-details-open-text">Less details</span>
+                            </span>
+                        </summary>
+                        <div class="govuk-details__text">
+                            <table
+                                class="govuk-table govuk-!-font-size-16 gias-table list-table sortable-table historical governors">
+                                <caption class="govuk-visually-hidden">Historical governance</caption>
+                                <thead class="govuk-table__head">
+                                    <tr class="govuk-table__row">
+                                        <th scope="col" class="govuk-table__header">
+                                            <a href="#" class="js-sort-header selected-sort sorted-asc"
+                                                data-sort-key="name" data-sort-type="sortText"
+                                                aria-label="Name is sorted in an ascending order. Click to change order. All other columns are sortable.">Name</a>
+                                        </th>
+                                        <th scope="col" class="govuk-table__header">
+                                            <a href="#" class="js-sort-header" data-sort-key="role"
+                                                data-sort-type="sortText"
+                                                aria-label="Role. Click to sort data by this column.">Role</a>
+                                        </th>
+                                        <th scope="col" class="govuk-table__header">
+                                            <a href="#" class="js-sort-header" data-sort-key="appointed"
+                                                data-sort-type="sortText"
+                                                aria-label="Appointed by. Click to sort data by this column.">Appointed
+                                                by</a>
+                                        </th>
+                                        <th scope="col" class="govuk-table__header">
+                                            <a href="#" class="js-sort-header" data-sort-key="from"
+                                                data-sort-type="sortDate"
+                                                aria-label="From. Click to sort data by this column.">From</a>
+                                        </th>
+                                        <th scope="col" class="govuk-table__header">
+                                            <a href="#" class="js-sort-header" data-sort-key="to"
+                                                data-sort-type="sortDate"
+                                                aria-label="To. Click to sort data by this column.">To</a>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody class="govuk-table__body">
+                                    <tr class="govuk-table__row">
+                                        <td class="govuk-table__cell" data-label="Name">Heather Greenwood</td>
+                                        <td class="govuk-table__cell" data-label="Role">Local governor</td>
+                                        <td class="govuk-table__cell" data-label="Appointed by">Elected by parents</td>
+                                        <td class="govuk-table__cell" data-label="From">19 October 2020</td>
+                                        <td class="govuk-table__cell" data-label="To">23 May 2022</td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                        <td class="govuk-table__cell" data-label="Name">Rachel Cadman</td>
+                                        <td class="govuk-table__cell" data-label="Role">Local governor</td>
+                                        <td class="govuk-table__cell" data-label="Appointed by">Elected by school staff
+                                        </td>
+                                        <td class="govuk-table__cell" data-label="From">2 May 2018</td>
+                                        <td class="govuk-table__cell" data-label="To">31 May 2022</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <a class="back-to-top-link" href="#top">
+                <svg role="presentation" focusable="false" class="back-to-top-icon" xmlns="http://www.w3.org/2000/svg"
+                    width="13" height="17" viewBox="0 0 13 17">
+                    <path fill="currentColor" d="M6.5 0L0 6.5 1.4 8l4-4v12.7h2V4l4.3 4L13 6.4z"></path>
+                </svg>
+                Back to top
+            </a>
+        </div>
+
+    </div>
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-month">
+        <div id="school-links" class="tab-content" tabindex="0" aria-hidden="false">
+
+            <p class="govuk-!-font-size-16">
+                These establishments are linked with Aston Academy,
+                <abbr title="Unique Reference Number">URN</abbr>: 136718. For example, they may be predecessor or
+                successor establishments.
+            </p>
+            <div class="table-count">
+                <p class="govuk-body-s">Showing 1 - 1 of 1</p>
+            </div>
+            <table class="govuk-table gias-table">
+                <caption class="govuk-visually-hidden">Links</caption>
+                <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header links-urn"><abbr
+                                title="Unique Reference Number">URN</abbr></th>
+                        <th scope="col" class="govuk-table__header links-name">Establishment name</th>
+                        <th scope="col" class="govuk-table__header links-type">Type of link</th>
+                        <th scope="col" class="govuk-table__header links-date">Date linked</th>
+                    </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                        <td data-label="URN" class="govuk-table__cell"><a
+                                href="/Establishments/Establishment/Details/106957">106957</a></td>
+                        <td data-label="Establishment name" class="govuk-table__cell"><a
+                                href="/Establishments/Establishment/Details/106957">Aston Comprehensive School</a></td>
+                        <td data-label="Type of link" class="govuk-table__cell">Predecessor</td>
+                        <td data-label="Date linked" class="govuk-table__cell">1 May 2011</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <a class="back-to-top-link" href="#top">
+                <svg role="presentation" focusable="false" class="back-to-top-icon" xmlns="http://www.w3.org/2000/svg"
+                    width="13" height="17" viewBox="0 0 13 17">
+                    <path fill="currentColor" d="M6.5 0L0 6.5 1.4 8l4-4v12.7h2V4l4.3 4L13 6.4z"></path>
+                </svg>
+                Back to top
+            </a>
+
+
+        </div>
+
+    </div>
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-year">
+        <div id="school-location" class="tab-content" tabindex="0" aria-hidden="false">
+
+
+            <div class="detail-summary">
+                <dl class="govuk-summary-list">
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Regional schools commissioner (RSC) region</dt>
+                        <dd class="govuk-summary-list__value">East Midlands and the Humber</dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Government office region (GOR)</dt>
+                        <dd class="govuk-summary-list__value">Yorkshire and the Humber</dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">District</dt>
+                        <dd class="govuk-summary-list__value">Rotherham</dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Ward</dt>
+                        <dd class="govuk-summary-list__value">Aughton &amp; Swallownest</dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Parliamentary constituency</dt>
+                        <dd class="govuk-summary-list__value">Rother Valley</dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Urban/rural description</dt>
+                        <dd class="govuk-summary-list__value">(England/Wales) Urban minor conurbation</dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Government Statistical Service (GSS) local authority code
+                        </dt>
+                        <dd class="govuk-summary-list__value">E08000018</dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Easting</dt>
+                        <dd class="govuk-summary-list__value">445156</dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Northing</dt>
+                        <dd class="govuk-summary-list__value">385958</dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Middle super output area (MSOA)</dt>
+                        <dd class="govuk-summary-list__value">Rotherham 026</dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Lower super output area (LSOA)</dt>
+                        <dd class="govuk-summary-list__value">Rotherham 026A</dd>
+                    </div>
+                </dl>
+            </div>
+
+
+
+            <a class="back-to-top-link" href="#top">
+                <svg role="presentation" focusable="false" class="back-to-top-icon" xmlns="http://www.w3.org/2000/svg"
+                    width="13" height="17" viewBox="0 0 13 17">
+                    <path fill="currentColor" d="M6.5 0L0 6.5 1.4 8l4-4v12.7h2V4l4.3 4L13 6.4z"></path>
+                </svg>
+                Back to top
+            </a>
+
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+{% endblock %}

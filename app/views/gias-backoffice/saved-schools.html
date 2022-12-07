@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+{% extends "layouts/main.html" %}
+{% block pageTitle %}
+Get Information about Schools
+{% endblock %}
+
+{% block header %}
+{% from "govuk/components/cookie-banner/macro.njk" import govukCookieBanner %}
+
+{% set html %}
+<p class="govuk-body">We use some essential cookies to make this service work.</p>
+<p class="govuk-body">We’d also like to use analytics cookies so we can understand how you use the service and make
+    improvements.</p>
+{% endset %}
+
+{{ govukCookieBanner({
+ariaLabel: "Cookies on Get Information about Schools",
+messages: [
+{
+headingText: "Cookies on Get Information about Schools",
+html: html,
+actions: [
+{
+text: "Accept analytics cookies",
+type: "button",
+name: "cookies",
+value: "accept"
+},
+{
+text: "Reject analytics cookies",
+type: "button",
+name: "cookies",
+value: "reject"
+},
+{
+text: "View cookies",
+href: "#"
+}
+]
+}
+]
+}) }}
+{# Set serviceName in config.js. #}
+{{ govukHeader({
+homepageUrl: "/",
+serviceName: serviceName,
+serviceUrl: "/",
+navigation: [
+{
+href: "http://localhost:3000/landing",
+text: "Home",
+active: true
+},
+{
+href: "search",
+text: "Search"
+},
+{
+href: "download",
+text: "Downloads"
+},
+{
+href: "tools",
+text: "Tools"
+},
+{
+href: "about",
+text: "About"
+},
+{
+href: "help",
+text: "Help"
+},
+{
+href: "news",
+text: "News"
+}
+],
+containerClasses: "govuk-width-container"
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner ">
+    <p class="govuk-phase-banner__content">
+        <strong class="govuk-tag govuk-phase-banner__content__tag">
+            beta
+        </strong>
+        <span class="govuk-phase-banner__text">
+            This is a new service – your <a class="govuk-link"
+                href="https://forms.office.com/Pages/ResponsePage.aspx?id=yXfS-grGoU2187O4s0qC-ZYZAR7wa5FMmFGoqFTjsw5UREJBVlAxSTBKWFdOMEcwTTU1M0gyVVJKRCQlQCN0PWcu">feedback</a>
+            will help us to improve it.
+        </span>
+    </p>
+</div>
+<div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="#">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="#">Search</a>
+        </li>
+    </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<body>
+
+
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <span class="govuk-caption-l">Edit establishment group</span>
+            <h1 class="govuk-heading-l" id="federation-page">Test school federation</h1>
+            <p class="urn establishment-fine-detail"><abbr title="Unique Reference Number">URN</abbr>: 136718</p>
+            <p class="establishment-type establishment-fine-detail">Federation</p>
+            <p class="govuk-body-s establishment-data-download">
+                <a href="" rel="nofollow">Download group data</a>
+            </p>
+        </div>
+    </div>
+
+
+    <div class="govuk-tabs" data-module="govuk-tabs">
+        <h2 class="govuk-tabs__title">
+            Contents
+        </h2>
+
+        <ul class="govuk-tabs__list">
+            <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                <a class="govuk-tabs__tab" href="#details">
+                    Details
+                </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#schools">
+                    Schools (2)
+                </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#changes">
+                    Changes
+                </a>
+            </li>
+        </ul>
+
+        <div class="federation-tabs" id="federation-tabs">
+
+            <div class="govuk-tabs__panel fed-panel" id="details">
+
+                <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                    Edit details
+                </button>
+
+                <dl class="govuk-summary-list">
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Unique group identifier (UID)
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            28327
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Group type
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            Federation
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Status
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            Open
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Open date
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            6 December 2022
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Close date
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            Not recorded
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Data from other services
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            Not applicable
+                        </dd>
+                    </div>
+                </dl>
+
+                <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                    Edit details
+                </button>
+
+            </div>
+
+            <div class="govuk-tabs__panel fed-panel" id="schools">
+
+                <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                    Edit schools
+                </button>
+
+                <h3 class="govuk-heading-xs">
+                    <a href="#" class="govuk-link govuk-link--no-visited-state">Hannah More Primary School</a>
+                </h3>
+
+                <dl class="govuk-summary-list">
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Address
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            obfuscated, St Philips, obfuscated, BS2 0LT
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Phase / type
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            Primary, Community school
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            URN
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            109110
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            LAESTAB
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            10075783
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            UKPRN
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            801/2299
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Status
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            Open
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Local authority name
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            Bristol City of
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Joined date
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            6 December 2022
+                        </dd>
+                    </div>
+                </dl>
+
+                <h3 class="govuk-heading-xs">
+                    <a href="#" class="govuk-link govuk-link--no-visited-state">St George Church of England Primary
+                        School</a>
+                </h3>
+
+                <dl class="govuk-summary-list">
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Address
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            obfuscated, Brandon Hill, obfuscated, BS1 5XJ
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Phase / type
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            Primary, Voluntary controlled school
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            URN
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            109145
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            UKPRN
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            10075783
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            LAESTAB
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            801/3013
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Status
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            Open
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Local authority name
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            Bristol City of
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Joined date
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            6 December 2022
+                        </dd>
+                    </div>
+                </dl>
+
+                <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                    Edit schools
+                </button>
+            </div>
+
+            <div class="govuk-tabs__panel fed-panel" id="changes">
+
+                <h2 class="govuk-heading-s">Change History</h2>
+
+                <p class="govuk-body">
+                    <a href="">Download data in CSV format</a>
+                </p>
+
+                <p class="govuk-body">
+                    <a href="">Download data in XLSX format</a>
+                </p>
+
+                <table class="govuk-table">
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row" id="saved-schools">
+                            <th scope="col" class="govuk-table__header saved-schools">Date changed</th>
+                            <th scope="col" class="govuk-table__header saved-schools">
+                                Request type</th>
+                            <th scope="col" class="govuk-table__header saved-schools"> Changes</th>
+                            <th scope="col" class="govuk-table__header saved-schools">
+                                Suggested by</th>
+                        </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell saved-schools-cell">6 December 2022 </td>
+                            <td class="govuk-table__cell saved-schools-cell">New link </td>
+                            <td class="govuk-table__cell saved-schools-cell">
+                                <p class="govuk-body govuk-!-font-weight-bold saved-schools-p"> Establishment</p>
+                               <p class="saved-schools-p" >109110 Hannah More Primary School</p>
+                                <p class="govuk-body govuk-!-font-weight-bold saved-schools-p"> Link date</p>
+                             <p class="saved-schools-p">   6 December 2022</p>
+                                <p class="govuk-body govuk-!-font-weight-bold saved-schools-p">  Type</p>
+                             <p class="saved-schools-p">   Hard</p>
+                             </td>
+                            <td class="govuk-table__cell saved-schools-cell">user_20190430114035_3601308 </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell saved-schools-cell">6 December 2022 </td>
+                            <td class="govuk-table__cell saved-schools-cell">New link </td>
+                            <td class="govuk-table__cell saved-schools-cell" >
+                                <p class="govuk-body govuk-!-font-weight-bold saved-schools-p">  Establishment</p>
+                                  <p class="saved-schools-p"> 109145 St George Church of England Primary School</p>
+                                  <p class="govuk-body govuk-!-font-weight-bold saved-schools-p"> Link date</p>
+                                  <p class="saved-schools-p">  6 December 2022</p>
+                                  <p class="govuk-body govuk-!-font-weight-bold saved-schools-p">Type</p>
+                                   <p class="saved-schools-p"> Hard</p>
+                                </td>
+                            <td class="govuk-table__cell saved-schools-cell">user_20190430114035_3601308 </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell saved-schools-cell">6 December 2022 </td>
+                            <td class="govuk-table__cell saved-schools-cell">New group</td>
+                            <td class="govuk-table__cell saved-schools-cell"> </td>
+                            <td class="govuk-table__cell saved-schools-cell">user_20190430114035_3601308  </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+</body>
+{% endblock %}
+
+</html>

@@ -1,22 +1,381 @@
+<!DOCTYPE html>
+<html>
 {% extends "layouts/main.html" %}
-
 {% block pageTitle %}
-Home – {{serviceName}} – GOV.UK Prototype Kit
+Get Information about Schools
+{% endblock %}
+
+{% block header %}
+{% from "govuk/components/cookie-banner/macro.njk" import govukCookieBanner %}
+
+{% set html %}
+<p class="govuk-body">We use some essential cookies to make this service work.</p>
+<p class="govuk-body">We’d also like to use analytics cookies so we can understand how you use the service and make
+  improvements.</p>
+{% endset %}
+
+{{ govukCookieBanner({
+ariaLabel: "Cookies on Get Information about Schools",
+messages: [
+{
+headingText: "Cookies on Get Information about Schools",
+html: html,
+actions: [
+{
+text: "Accept analytics cookies",
+type: "button",
+name: "cookies",
+value: "accept"
+},
+{
+text: "Reject analytics cookies",
+type: "button",
+name: "cookies",
+value: "reject"
+},
+{
+text: "View cookies",
+href: "#"
+}
+]
+}
+]
+}) }}
+{# Set serviceName in config.js. #}
+{{ govukHeader({
+homepageUrl: "/",
+serviceName: serviceName,
+serviceUrl: "/",
+navigation: [
+{
+href: "http://localhost:3000/landing",
+text: "Home",
+active: true
+},
+{
+href: "search",
+text: "Search"
+},
+{
+href: "download",
+text: "Downloads"
+},
+{
+href: "about",
+text: "About"
+},
+{
+href: "help",
+text: "Help"
+},
+{
+href: "news",
+text: "News"
+},
+{
+  href: "sign-in",
+  text: "Sign in"
+  }
+],
+containerClasses: "govuk-width-container"
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+
 {% endblock %}
 
 {% block content %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+<body>
 
-    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl" id="index-page">Get Information about Schools</h1>
+    </div>
+</div>
 
-    <h1 class="govuk-heading-xl">
-      {{ serviceName }}
-    </h1>
 
-    {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
+
+<div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Important
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <p class="govuk-notification-banner__heading">
+      The new API is live.
+      <a class="govuk-notification-banner__link" href="#">View more details here</a>.
+    </p>
   </div>
 </div>
 
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <p class="govuk-!-padding-bottom-3">
+          For more information about this service go to the
+          <a href="about">about</a> page.
+        </p>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half home-grid-component">
+        <ul class="govuk-list">
+          <li>
+            <h3 class="govuk-heading-m">Establishments</h3>
+            <p>
+              Find and search for establishments
+            </p>
+            <p>
+              <a href="search">
+                Search for establishments
+              </a>
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="govuk-grid-column-one-half home-grid-component">
+        <ul class="govuk-list">
+          <li>
+            <h3 class="govuk-heading-m">Establishment groups</h3>
+            <p>
+              Find and search for establishment groups
+            </p>
+            <p>
+              <a href="search">
+                Search for establishment groups
+              </a>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half home-grid-component">
+        <ul class="govuk-list">
+          <li>
+            <h3 class="govuk-heading-m">Governance roles</h3>
+            <p>
+              Find and search for governance roles in state maintained establishments and academy trust groups
+            </p>
+            <p>
+              <a href="search">
+                Search for governance roles
+              </a>
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="govuk-grid-column-one-half home-grid-component">
+        <ul class="govuk-list">
+          <li>
+            <h3 class="govuk-heading-m">Downloads</h3>
+            <p>
+              Download files of specific data item fields from the database that are publicly available and updated
+              daily
+            </p>
+            <p>
+              <a href="download">
+                Find a download
+              </a>
+            </p>
+          </li>
+        </ul>  
+      </div>
+    </div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full home-grid-component">
+    <h2 class="govuk-heading-m" id="index-update">Update your establishment, group and governance information</h2>
+    <p>
+      This is for establishment users only and local authority and group users where applicable. Please sign into
+      your DfE Sign-in (DSI) account to make any updates
+    </p>
+    <p>
+      <a href="sign-in" class="signin-index" rel="nofollow">DfE Sign-in</a>
+    </p>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <hr
+      class="govuk-section-break govuk-section-break--l govuk-section-break--visible govuk-!-margin-top-15 home-hr">
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full home-grid-component">
+    <h2 class="govuk-heading-m" id="index-following">The following websites may be of interest in your searches</h2>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half home-grid-component">
+    <ul class="govuk-list">
+      <li>
+        <h3 class="govuk-heading-m">Find and Compare Schools in England</h3>
+        <p>
+          Search and compare performance information about schools and further education colleges in England
+        </p>
+        <p>
+          <a href="#" target="_blank" rel="noreferrer noopener">
+            Search
+            (opens in new tab)
+          </a>
+        </p>
+      </li>
+    </ul>
+  </div>
+  <div class="govuk-grid-column-one-half home-grid-component">
+    <ul class="govuk-list">
+      <li>
+        <h3 class="govuk-heading-m">Schools Financial Benchmarking</h3>
+        <p>
+          Search and compare financial data about schools and academy trusts in England
+        </p>
+        <p>
+          <a href="#" target="_blank" rel="noreferrer noopener">
+            Search
+            (opens in new tab)
+          </a>
+        </p>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half home-grid-component">
+    <ul class="govuk-list">
+      <li>
+        <h3 class="govuk-heading-m">Ofsted</h3>
+        <p>
+          Search and view Ofsted inspection reports for establishments in England
+        </p>
+        <p>
+          <a href="#" target="_blank" rel="noreferrer noopener">
+            Search
+            (opens in new tab)
+          </a>
+        </p>
+      </li>
+    </ul>
+  </div>
+  <div class="govuk-grid-column-one-half home-grid-component">
+    <ul class="govuk-list">
+      <li>
+        <h3 class="govuk-heading-m">Education and learning</h3>
+        <p>
+          See a comprehensive listings of all DfE services and guidance
+        </p>
+        <p>
+          <a href="#" target="_blank" rel="noreferrer noopener">
+            Explore
+            (opens in new tab)
+          </a>
+        </p>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <hr
+      class="govuk-section-break govuk-section-break--l govuk-section-break--visible govuk-!-margin-top-15 home-hr">
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full home-grid-component">
+    <h2 class="govuk-heading-m">Information about educational establishments in the rest of the United Kingdom
+    </h2>
+    <p>
+      Please visit the:
+    </p>
+    <p>
+      Northern Ireland government
+      <a href="#" target="_blank" rel="noreferrer noopener">
+        website
+        (opens in new tab)
+      </a>
+    </p>
+    <p>
+      Scottish government
+      <a href="#" target="_blank" rel="noreferrer noopener">
+        website
+        (opens in new tab)
+      </a>
+    </p>
+    <p>
+      Welsh government
+      <a href="#" target="_blank" rel="noreferrer noopener">
+        website
+        (opens in new tab)
+      </a>
+    </p>
+  </div>
+</div>
+</div>
+
+<div class="govuk-grid-column-one-third">
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible govuk-!-margin-top-5 home-hr">
+
+<h3 class="govuk-heading-m">News</h3>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <p class="govuk-!-margin-bottom-0">
+      <a href="article">
+        System update
+      </a>
+    </p>
+    <p class="govuk-!-font-size-16">
+      28 June 2022
+    </p>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <p class="govuk-!-margin-bottom-0">
+      <a href="article">
+        System update
+      </a>
+    </p>
+    <p class="govuk-!-font-size-16">
+      17 May 2022
+    </p>
+  </div>
+</div>
+
+<p>
+  <a href="news">
+    More news
+  </a>
+</p>
+</div>
+</div>
+
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-full">
+<a class="back-to-top-link" href="#top">
+  <svg role="presentation" focusable="false" class="back-to-top-icon" xmlns="http://www.w3.org/2000/svg" width="13"
+    height="17" viewBox="0 0 13 17">
+    <path fill="currentColor" d="M6.5 0L0 6.5 1.4 8l4-4v12.7h2V4l4.3 4L13 6.4z"></path>
+  </svg>
+  Back to top
+</a>
+
+</div>
+</div>
+  
+</body>
 {% endblock %}
+</html>

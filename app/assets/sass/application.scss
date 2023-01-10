@@ -141,4 +141,42 @@
 .saved-schools-p{
     font-size: 13px;
   }
- 
+
+  //Index page css
+
+  .home-hr {
+    margin-top: 15px;
+    border: none;
+    height: 5px;
+    color: #1d70b8;
+    background-color: #1d70b8;
+  }
+
+  #index-page {
+    padding-bottom: 5px;
+  }
+
+  #index-update{
+    padding-top: 15px;
+  }
+
+  #index-following{
+    padding-bottom: 15px;
+  }
+
+  //bulk upload css
+  //#bulk_upload_paginaton {
+  //  float: right;
+   // height: 50%;
+    //width:50%;
+   // margin-bottom: 0;
+  //}
+  
+  #bulk_upload_paginaton {
+    padding-left: 25%;
+  }
+
+  #errors-pagination{
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+  }

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+{% extends "layouts/main.html" %}
+{% block pageTitle %}
+Get Information about Schools
+{% endblock %}
+
+{% block header %}
+{% from "govuk/components/cookie-banner/macro.njk" import govukCookieBanner %}
+
+{% set html %}
+<p class="govuk-body">We use some essential cookies to make this service work.</p>
+<p class="govuk-body">We’d also like to use analytics cookies so we can understand how you use the service and make
+    improvements.</p>
+{% endset %}
+
+{{ govukCookieBanner({
+ariaLabel: "Cookies on Get Information about Schools",
+messages: [
+{
+headingText: "Cookies on Get Information about Schools",
+html: html,
+actions: [
+{
+text: "Accept analytics cookies",
+type: "button",
+name: "cookies",
+value: "accept"
+},
+{
+text: "Reject analytics cookies",
+type: "button",
+name: "cookies",
+value: "reject"
+},
+{
+text: "View cookies",
+href: "#"
+}
+]
+}
+]
+}) }}
+{# Set serviceName in config.js. #}
+{{ govukHeader({
+homepageUrl: "/",
+serviceName: serviceName,
+serviceUrl: "/",
+navigation: [
+{
+href: "http://localhost:3000/landing",
+text: "Home",
+active: true
+},
+{
+href: "search",
+text: "Search"
+},
+{
+href: "download",
+text: "Downloads"
+},
+{
+href: "about",
+text: "About"
+},
+{
+href: "help",
+text: "Help"
+},
+{
+href: "news",
+text: "News"
+},
+{
+href: "sign-in",
+text: "Sign in"
+}
+],
+containerClasses: "govuk-width-container"
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+<body>
+
+    <a href="#" class="govuk-back-link">Back</a>
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl" id="index-page">Submission status</h1>
+
+            <p class="govuk-body">Your file has been uplaoded and we're now processing the data. This may take some time.
+            </p>
+
+            <h2 class="govuk-heading-m">What happens next?</h2>
+            <p class="govuk-body">Below you will the status of the file being uploaded. Once the file has finished
+                processing the status will be
+                updated with of the following:</p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>processed succesfully - this means your data has been submitted successfully without any errors and you do not need to take any further action  </li>
+                <li>processed with errors - this means there is a problem with the data in your file and you'll need to correct these and reupload the data </li>
+            </ul>
+
+            
+            </div>
+            </div>
+
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+
+                    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+            <table class="govuk-table">
+                <caption class="govuk-table__caption govuk-table__caption--m">File submitted</caption>
+                <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header">Date and time submitted</th>
+                        <th scope="col" class="govuk-table__header">File name</th>
+                        <th scope="col" class="govuk-table__header">Status</th>
+                        <th scope="col" class="govuk-table__header">Action</th>
+                    </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">21st February 2023 </br> 09:40am</td>
+                        <td class="govuk-table__cell">template.xlsx</td>
+                        <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">PROCESSED
+                                SUCCESSFULLY</strong></td>
+                        <td class="govuk-table__cell"></td>
+                    </tr <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">21st February 2023 </br> 09:40am</td>
+                        <td class="govuk-table__cell">template.xlsx</td>
+                    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">PROCESSED WITH
+                            ERRORS</strong></td>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="errors">View errors</a></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">21st February 2023 </br> 09:40am</td>
+                        <td class="govuk-table__cell">template.xlsx</td>
+                        <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">PROCESSING</strong>
+                        </td>
+                        <td class="govuk-table__cell"></td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+            </div>
+
+            <div class="govuk-button-group">
+                <a class="govuk-button" href="bulk-upload">Upload a new file</a>
+              </div>
+
+        </div>
+    </div>
+
+</body>
+{% endblock %}
+
+</html>

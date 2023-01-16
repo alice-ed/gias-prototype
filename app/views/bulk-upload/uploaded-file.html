@@ -95,16 +95,17 @@ containerClasses: "govuk-width-container"
         <div class="govuk-grid-column-two-thirds">
             <h1 class="govuk-heading-xl" id="index-page">Submission status</h1>
 
-            <p class="govuk-body">Your file has been uplaoded and we're now processing the data. This may take some time.
+            <p class="govuk-body">Your file has been uploaded and the data is now being processed. This may take a while.
             </p>
 
             <h2 class="govuk-heading-m">What happens next?</h2>
-            <p class="govuk-body">Below you will the status of the file being uploaded. Once the file has finished
-                processing the status will be
-                updated with of the following:</p>
+            <p class="govuk-body">Below shows the status of the file being uploaded.
+               There are three status that will be shown:
+                </p>
             <ul class="govuk-list govuk-list--bullet">
-                <li>processed succesfully - this means your data has been submitted successfully without any errors and you do not need to take any further action  </li>
-                <li>processed with errors - this means there is a problem with the data in your file and you'll need to correct these and reupload the data </li>
+                <li>	processing – the file is in the process of being uploaded.</li>
+                <li>	processed successfully – the file has uploaded successfully and the data has been added without any errors. There is no further action required. </li>
+                <li>	processed with errors – the file has not successfully uploaded and some or all of the data has not been added. Select view errors to review the errors and identify which data has not successfully uploaded. Corrections will need to be made and a file with the corrected data uploaded.</li>
             </ul>
 
             
@@ -122,7 +123,7 @@ containerClasses: "govuk-width-container"
                     <tr class="govuk-table__row">
                         <th scope="col" class="govuk-table__header">Date and time submitted</th>
                         <th scope="col" class="govuk-table__header">File name</th>
-                        <th scope="col" class="govuk-table__header">Status</th>
+                        <th scope="col" class="govuk-table__header">Processing status</th>
                         <th scope="col" class="govuk-table__header">Action</th>
                     </tr>
                 </thead>
@@ -132,8 +133,8 @@ containerClasses: "govuk-width-container"
                         <td class="govuk-table__cell">template.xlsx</td>
                         <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">PROCESSED
                                 SUCCESSFULLY</strong></td>
-                        <td class="govuk-table__cell"></td>
-                    </tr <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">No action needed</td>
+                     <tr class="govuk-table__row">
                         <td class="govuk-table__cell">21st February 2023 </br> 09:40am</td>
                         <td class="govuk-table__cell">template.xlsx</td>
                     <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">PROCESSED WITH
@@ -145,7 +146,7 @@ containerClasses: "govuk-width-container"
                         <td class="govuk-table__cell">template.xlsx</td>
                         <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">PROCESSING</strong>
                         </td>
-                        <td class="govuk-table__cell"></td>
+                        <td class="govuk-table__cell">Processing</td>
                     </tr>
                 </tbody>
             </table>

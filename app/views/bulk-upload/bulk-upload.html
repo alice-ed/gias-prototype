@@ -49,8 +49,7 @@ serviceUrl: "/",
 navigation: [
 {
 href: "http://localhost:3000/landing",
-text: "Home",
-active: true
+text: "Home"
 },
 {
 href: "search",
@@ -59,6 +58,11 @@ text: "Search"
 {
 href: "download",
 text: "Downloads"
+},
+{
+  href: "tools",
+  text: "Tools",
+  active: true
 },
 {
 href: "about",
@@ -73,8 +77,8 @@ href: "news",
 text: "News"
 },
 {
-href: "sign-in",
-text: "Sign in"
+href: "sign-out",
+text: "Sign out"
 }
 ],
 containerClasses: "govuk-width-container"
@@ -112,23 +116,25 @@ containerClasses: "govuk-width-container"
       For a step by step guide to prepare documents for bulk update please reference the <a class="govuk-link" href="#">Establishment bulk update guidance.</a>
     </div>
   </details>-->
-  <h2 class="govuk-heading-m">Help with preparing files</h2>
+  <h2 class="govuk-heading-m">How to prepare the spreadsheet</h2>
   <p class="govuk-body">
-    For a step by step guide to prepare documents for bulk update please reference the <a class="govuk-link" href="#">Establishment bulk update guidance.</a>
+    For a step by step guide on how to prepare the spreadsheet template for bulk update please refer to <a class="govuk-link" href="#">the Office for National Statistics (ONS) bulk update guidance.</a>
   </p>
 
   <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
   <h2 class="govuk-heading-m">Download template</h2>
 
-  <p class="govuk-body">Please download the template using the link below. Then, provide or update the
-    information in the template. Finally, upload the completed template using the 'Browse' button below. </p>
+  <p class="govuk-body">Download the spreadsheet <a class="govuk-link" href="#">ONS bulk update template.</a>
+     </p>
 
-<div class="govuk-form-group">
-  <p class="govuk-body"> <a class="govuk-link" href="#">template.xlsx</a></p>
-  </div>
+     <p class="govuk-body"> Update the spreadsheet template with the relevant information and save the file, following the naming conventions in the guidance document.</p>
+     
+     <p class="govuk-body"> Upload the saved file to Get Information about Schools (GIAS) by selecting the choose file button below so that you can find where you saved it.”</p>
+
+
 
   <div class="govuk-form-group">
-    <label class="govuk-label" for="file-upload-1">
+    <label class="govuk-label govuk-!-font-weight-bold" for="file-upload-1">
       Upload a file
     </label>
     <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">

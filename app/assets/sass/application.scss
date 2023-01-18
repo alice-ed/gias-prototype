@@ -7,176 +7,234 @@
 
 // Federation page
 .establishment-fine-detail {
-    display: inline-block;
-    color: #505a5f;
-    font-weight: bold;
-    font-size: 14px;
-    margin-right: 10px;
-  }
-
- #federation-page {
-    margin-bottom: 15px;
-  }
-
-  #details.fed-panel{
-    border:  1px hidden; 
-  }
-
-  #schools.fed-panel{
-    border:  1px hidden; 
-  }
-
-  #changes.fed-panel{
-    border:  1px hidden; 
-  }
-
-  /* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0); /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-  }
-   
-  /* Modal Content/Box */
-  .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width:50%; /* Could be more or less, depending on screen size */
-  }
-   
-  /* The Close Button */
-  .close {
-    float: right;
-    font-size: 14px;
-    padding: 0px;
-  
-  }
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  #fed-button.govuk-button
-  {
-    margin-bottom: 0;
-  }
- 
-  .modal2 {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0); /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-  }
-   
-  /* Modal Content/Box */
-  .modal-content2 {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 50%; /* Could be more or less, depending on screen size */
-    
-  }
-   
-  /* The Close Button */
-  .close2 {
-    float: right;
-    font-size: 14px;
-    padding: 0px;
-  
-  }
-   
-  .close2:hover,
-  .close2:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  .establishment-data-download {
-    float: right;
-    margin-bottom: 25px;
-    overflow: hidden;
-    font-family: "GDS Transport",arial,sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-weight: 400;
-    font-size: 14px;
-    font-size: .875rem;
-    line-height: 1.1428571429;
-  }
-
-  #fed-button2.govuk-button
-  {
-    margin-bottom: 0;
-  }
-
-  //saved-schools
-
-  .saved-schools {
-    font-size: 13px;
-  }
-
-  .saved-schools-cell{
-    font-size: 13px;
+  display: inline-block;
+  color: #505a5f;
+  font-weight: bold;
+  font-size: 14px;
+  margin-right: 10px;
 }
 
-.saved-schools-p{
-    font-size: 13px;
-  }
+#federation-page {
+  margin-bottom: 15px;
+}
 
-  //Index page css
+#details.fed-panel {
+  border: 1px hidden;
+}
 
-  .home-hr {
-    margin-top: 15px;
-    border: none;
-    height: 5px;
-    color: #1d70b8;
-    background-color: #1d70b8;
-  }
+#schools.fed-panel {
+  border: 1px hidden;
+}
 
-  #index-page {
-    padding-bottom: 5px;
-  }
+#changes.fed-panel {
+  border: 1px hidden;
+}
 
-  #index-update{
-    padding-top: 15px;
-  }
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
 
-  #index-following{
-    padding-bottom: 15px;
-  }
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  /* Could be more or less, depending on screen size */
+}
 
-  //bulk upload css
-  //#bulk_upload_paginaton {
-  //  float: right;
-   // height: 50%;
-    //width:50%;
-   // margin-bottom: 0;
-  //}
-  
-  #bulk_upload_paginaton {
-    padding-left: 20%;
-  }
+/* The Close Button */
+.close {
+  float: right;
+  font-size: 14px;
+  padding: 0px;
 
-  #errors-pagination{
-    margin-bottom: 5px;
-    padding-bottom: 5px;
-  }
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#fed-button.govuk-button {
+  margin-bottom: 0;
+}
+
+.modal2 {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content2 {
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  /* Could be more or less, depending on screen size */
+
+}
+
+/* The Close Button */
+.close2 {
+  float: right;
+  font-size: 14px;
+  padding: 0px;
+
+}
+
+.close2:hover,
+.close2:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.establishment-data-download {
+  float: right;
+  margin-bottom: 25px;
+  overflow: hidden;
+  font-family: "GDS Transport", arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 14px;
+  font-size: .875rem;
+  line-height: 1.1428571429;
+}
+
+#fed-button2.govuk-button {
+  margin-bottom: 0;
+}
+
+//saved-schools
+
+.saved-schools {
+  font-size: 13px;
+}
+
+.saved-schools-cell {
+  font-size: 13px;
+}
+
+.saved-schools-p {
+  font-size: 13px;
+}
+
+//Index page css
+
+.home-hr {
+  margin-top: 15px;
+  border: none;
+  height: 5px;
+  color: #1d70b8;
+  background-color: #1d70b8;
+}
+
+#index-page {
+  padding-bottom: 5px;
+}
+
+#index-update {
+  padding-top: 15px;
+}
+
+#index-following {
+  padding-bottom: 15px;
+}
+
+//bulk upload css
+//#bulk_upload_paginaton {
+//  float: right;
+// height: 50%;
+//width:50%;
+// margin-bottom: 0;
+//}
+
+#bulk_upload_paginaton {
+  padding-left: 20%;
+}
+
+#errors-pagination {
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+
+.pagination_upload {
+  overflow: hidden;
+  position: relative;
+  font-size: 16px;
+  clear: both;
+  min-height: 48px;
+}
+
+.pagination-p {
+  float: left;
+  margin-top: 0;
+}
+
+.pagination-links {
+  display: flex;
+  list-style-type: none;
+  position: absolute;
+  right: 0;
+  margin-bottom: 0;
+  margin: 0;
+  margin-bottom: 0px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.pagination-a{
+  display:block;
+  min-width: 28px;
+margin-bottom: 12px;
+padding: 0 3px 0 3px;
+}
+
+.go-nowhere {
+  display:block;
+  min-width: 28px;
+margin-bottom: 12px;
+padding: 2px 3px 0 3px;
+}

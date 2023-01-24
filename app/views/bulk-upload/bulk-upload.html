@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 {% extends "layouts/main.html" %}
+
 {% block pageTitle %}
 Get Information about Schools
 {% endblock %}
+
 
 {% block header %}
 {% from "govuk/components/cookie-banner/macro.njk" import govukCookieBanner %}
@@ -41,6 +43,7 @@ href: "#"
 }
 ]
 }) }}
+
 {# Set serviceName in config.js. #}
 {{ govukHeader({
 homepageUrl: "/",
@@ -84,6 +87,47 @@ text: "Sign out"
 containerClasses: "govuk-width-container"
 }) }}
 {% endblock %}
+
+{% block footer %}
+ {{ govukFooter({
+   meta: {
+     items: [
+       {
+         href: "#",
+         text: "Contact"
+       },
+       {
+        href: "#",
+        text: "Glossary"
+       },
+       {
+        href: "#",
+        text: "Guidance"
+      },
+      {
+        href: "#",
+        text: "Terms of use"
+      },
+      {
+        href: "#",
+        text: "Privacy"
+      },
+      {
+        href: "#",
+        text: "Cookies"
+      },
+      {
+        href: "#",
+        text: "Accessibility"
+      }
+     ],
+     visuallyHiddenTitle: "Footer links"
+   }
+ }) }}
+
+{% endblock %}
+
+
 
 {% block beforeContent %}
 

@@ -81,6 +81,45 @@ containerClasses: "govuk-width-container"
 }) }}
 {% endblock %}
 
+{% block footer %}
+ {{ govukFooter({
+   meta: {
+     items: [
+       {
+         href: "#",
+         text: "Contact"
+       },
+       {
+        href: "#",
+        text: "Glossary"
+       },
+       {
+        href: "#",
+        text: "Guidance"
+      },
+      {
+        href: "#",
+        text: "Terms of use"
+      },
+      {
+        href: "#",
+        text: "Privacy"
+      },
+      {
+        href: "#",
+        text: "Cookies"
+      },
+      {
+        href: "#",
+        text: "Accessibility"
+      }
+     ],
+     visuallyHiddenTitle: "Footer links"
+   }
+ }) }}
+
+{% endblock %}
+
 {% block beforeContent %}
 
 {% endblock %}

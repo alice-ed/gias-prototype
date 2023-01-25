@@ -239,6 +239,24 @@ margin-bottom: 12px;
 padding: 2px 3px 0 3px;
 }
 
-#download-info{
+.download-info{
+  display: inline; 
+  justify-content: space-between;
+}
+
+#download-title{
   font-size: 14px;
 }
+
+#clear_all{
+  margin-left: 20px;
+}
+
+#title_checkbox{
+  margin-bottom: 0;
+}
+
+#title_checkbox2{
+  margin-bottom: 0;
+}
+

@@ -150,24 +150,24 @@ visuallyHiddenTitle: "Footer links"
         </div>
     </details>
 
-    <div class="govuk-tabs" data-module="govuk-tabs">
+    <div class="govuk-tabs" data-module="govuk-tabs" id="download-tabs">
         <h2 class="govuk-tabs__title">
             Contents
         </h2>
         <ul class="govuk-tabs__list">
             <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                <a class="govuk-tabs__tab" href="#past-day">
+                <a class="govuk-tabs__tab" href="#establishment">
                     Establishment, group and governance data
                 </a>
             </li>
             <li class="govuk-tabs__list-item">
-                <a class="govuk-tabs__tab" href="#past-week">
+                <a class="govuk-tabs__tab" href="#schedule_extracts">
                     Scheduled extracts
                 </a>
             </li>
 
         </ul>
-        <div class="govuk-tabs__panel" id="past-day">
+        <div class="govuk-tabs__panel download_tabs" id="establishment">
 
             <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -255,10 +255,293 @@ visuallyHiddenTitle: "Footer links"
                         </div>
                     </div>
                 </fieldset>
+
+                <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+                <p class="goveuk-body">Chose the file(s) you require by selecting the appropriate box(es) or using the select all
+                    functionality and then select download selected files.</p>
+            
+                <details class="govuk-details" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text"> Why are some of the files not available to download?
+                        </span>
+                    </summary>
+                    <div class="govuk-details__text">
+                        If a file is unavailable for a selected date please try selecting the day before or the day after to get
+                        information as close to the required date as possible.
+                    </div>
+                </details>
+            
+                <a class="govuk-link govuk-body" href="#">Select all files</a>
+                <a class="govuk-link govuk-body" id="clear_all" href="#">Clear all selections</a>
+            
+            
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <h2 class="govuk-heading-m govuk-!-margin-top-4" id="title_checkbox">
+                                Establishments
+                            </h2>
+                        </legend>
+                        <p class="govuk-body govuk-!-font-weight-bold">
+                            All establishment data
+                        </p>
+                        <p class="govuk-body">
+                            These data files contain information about establishments that are proposed to open, open, open but
+                            proposed to close and closed, excluding children’s centres and children’s centres linked sites.
+                        </p>
+                        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="establishment" name="establishment" type="checkbox"
+                                    value="british" aria-describedby="establishment-item-hint">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste">
+                                    Establishment fields
+                                    <p class="govuk-body-xs" id="download-info">Description: Contains all publicly available data
+                                        fields for all establishment
+                                        types, excluding children’s centres and children’s centres linked sites, with the status of
+                                        proposed to open, open, open proposed to close and closed in GIAS. </br> File type and size:
+                                        CSV
+                                        63.85 MB&nbsp;&nbsp; Extract ID: ID3286&nbsp;&nbsp; Frequency: Daily&nbsp;&nbsp; Extract
+                                        date: 14 April 2021 11:30pm
+                                        </br> URL: <a class="govuk-link"
+                                            href="#">https://ea-edubase-api-prod.azurewebsites.net/edubase/downloads/public/edubasealldata20210414.csv</a>
+                                    </p>
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="establishment-2" name="establishment" type="checkbox"
+                                    value="irish">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                    Establishment links
+                                    <p class="govuk-body-xs" id="download-info">Description: Contains details of the
+                                        predecessor/successor link (as applicable) for all establishments, excluding children’s
+                                        centres and children’s centres linked sites, in GIAS. </br> File type and size: CSV 1.95
+                                        MB&nbsp;&nbsp;
+                                        Extract ID: ID3287&nbsp;&nbsp; Frequency: Daily&nbsp;&nbsp; Extract date: 14 April 2021
+                                        11:30pm
+                                        </br> URL: <a class="govuk-link"
+                                            href="#">https://ea-edubase-api-prod.azurewebsites.net/edubase/downloads/public/links_edubasealldata20210414.csv</a>
+                                    </p>
+                                </label>
+                            </div>
+                            <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-top-4">
+                                All open children’s centres data
+                            </p>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="establishment-3" name="establishment" type="checkbox"
+                                    value="other">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                    Children’s centre fields
+                                    <p class="govuk-body-xs" id="download-info">Description: Contains all publicly available fields
+                                        for
+                                        all open children’s centres and children’s centres linked sites establishments in GIAS.
+                                        </br> File type and size: CSV 4.19 MB&nbsp;&nbsp; Extract ID: ID3288&nbsp;&nbsp; Frequency:
+                                        Daily&nbsp;&nbsp; Extract date: 14
+                                        April 2021 11:30pm
+                                        </br> URL: <a class="govuk-link"
+                                            href="#">https://ea-edubase-api-prod.azurewebsites.net/edubase/downloads/public/edubaseallacademiesandfree20210414.csv</a>
+                                    </p>
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="establishment-4" name="establishment" type="checkbox"
+                                    value="other">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                    All open children's centres links
+                                    <p class="govuk-body-xs" id="download-info">Description: Contains details of the predecessor
+                                        link
+                                        for all open children’s centres and children’s centres linked sites establishments in GIAS.
+                                        </br> File type and size: CSV 0.64 MB&nbsp;&nbsp; Extract ID: ID3289&nbsp;&nbsp; Frequency:
+                                        Daily Extract date: 14
+                                        April 2021 11:30pm
+                                        </br> URL: <a class="govuk-link"
+                                            href="#">https://ea-edubase-api-prod.azurewebsites.net/edubase/downloads/public/links_edubaseallacademiesandfree20210414.csv</a>
+                                    </p>
+                                </label>
+                            </div>
+                            <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-top-4">
+                                All open state funded establishment data
+                            </p>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="establishment-5" name="establishment" type="checkbox"
+                                value="other">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                State-funded school fields
+                                <p class="govuk-body-xs" id="download-info">Description: Contains all publicly available data fields
+                                    for all open and open, but proposed to close state-funded establishments in GIAS.
+                                    </br> File type and size: CSV 63.85 MB&nbsp;&nbsp; Extract ID: ID3286&nbsp;&nbsp; Frequency:
+                                    Daily Extract date: 14
+                                    April 2021 11:30pm
+                                    </br> URL: <a class="govuk-link"
+                                        href="#">https://ea-edubase-api-prod.azurewebsites.net/edubase/downloads/public/edubasealldata20210414.csv</a>
+                                </p>
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="establishment-6" name="establishment" type="checkbox"
+                                value="other">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                State-funded school links
+                                <p class="govuk-body-xs" id="download-info">Description: Contains details of the predecessor link
+                                    for
+                                    all open and open, but proposed to close state-funded establishments in GIAS.
+                                    </br> File type and size: CSV 1.95 MB&nbsp;&nbsp; Extract ID: ID3287&nbsp;&nbsp; Frequency:
+                                    Daily Extract date: 14 April
+                                    2021 11:30pm 
+                                    </br> URL: <a class="govuk-link"
+                                        href="#">https://ea-edubase-api-prod.azurewebsites.net/edubase/downloads/public/links_edubasealldata20210414.csv</a>
+                                </p>
+                            </label>
+                        </div>
+                        <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-top-4">
+                            All open academies and free schools data
+                        </p>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="establishment-7" name="establishment" type="checkbox"
+                                value="other">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                Academies and free school ﬁelds
+                                <p class="govuk-body-xs" id="download-info">Description: Contains all publicly available fields for
+                                    open and open, but proposed to close academies and free schools establishments in GIAS.
+                                    </br> File type and size: CSV 4.19 MB&nbsp;&nbsp; Extract ID: ID3288&nbsp;&nbsp; Frequency:
+                                    Daily Extract date: 14 April
+                                    2021 11:30pm 
+                                    </br> URL: <a class="govuk-link"
+                                        href="#">https://ea-edubase-api-prod.azurewebsites.net/edubase/downloads/public/edubaseallacademiesandfree20210414.csv</a>
+                                </p>
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="establishment-8" name="establishment" type="checkbox"
+                                value="other">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                Academies and free school links
+                                <p class="govuk-body-xs" id="download-info">Description: Contains details of the predecessor link
+                                    for
+                                    all open and open, but proposed to close academies and free schools establishments in GIAS.
+                                    </br> File type and size: CSV 0.64 MB&nbsp;&nbsp; Extract ID: ID3289&nbsp;&nbsp; Frequency:
+                                    Daily Extract date: 14 April
+                                    2021 11:30pm
+                                    </br> URL: <a class="govuk-link"
+                                        href="#">https://ea-edubase-api-prod.azurewebsites.net/edubase/downloads/public/links_edubaseallacademiesandfree20210414.csv</a>
+                                </p>
+                            </label>
+                        </div>
+                    </fieldset>
+                </div>
+            
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <h2 class="govuk-heading-m " id="title_checkbox2">
+                                Groups
+                            </h2>
+                        </legend>
+                        <p class="govuk-body">
+                            Download the public record for group types.
+                        </p>
+                        <p class="govuk-body govuk-!-font-weight-bold">
+                            All open and closed group data
+                        </p>
+                        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="establishment" name="establishment" type="checkbox"
+                                    value="british" aria-describedby="establishment-item-hint">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste">
+                                    All group record
+                                    <p class="govuk-body-xs" id="download-info">Description: Contains all publicly available fields
+                                        for
+                                        all open and closed groups in GIAS.
+                                        </br>
+                                        File type and size: CSV 63.85 MB&nbsp;&nbsp; Extract ID: ID3286&nbsp;&nbsp; Frequency: Daily
+                                        Extract date: 14 April
+                                        2021 11:30pm
+                                        </br> URL: <a class="govuk-link"
+                                            href="#">https://ea-edubase-api-prod.azurewebsites.net/edubase/downloads/public/edubasealldata20210414.csv</a>
+                                    </p>
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="establishment-2" name="establishment" type="checkbox"
+                                    value="irish">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                    All group links records
+                                    <p class="govuk-body-xs" id="download-info">Description: Contains the links between all
+                                        establishments that are part of a group in GIAS.
+                                        </br>
+                                        File type and size: CSV 1.95 MB&nbsp;&nbsp; Extract ID: ID3287&nbsp;&nbsp; Frequency: Daily
+                                        Extract date: 14 April
+                                        2021 11:30pm
+                                        </br> URL: <a class="govuk-link"
+                                            href="#">https://ea-edubase-api-prod.azurewebsites.net/edubase/downloads/public/links_edubasealldata20210414.csv</a>
+                                    </p>
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="establishment-3" name="establishment" type="checkbox"
+                                    value="other">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                    All group records with links
+                                    <p class="govuk-body-xs" id="download-info">Description: Contains the two files: “All group
+                                        records” and “All group links records” in a zip file.
+                                        </br>
+                                        File type and size: CSV 1.95 MB&nbsp;&nbsp; Extract ID: ID3287&nbsp;&nbsp; Frequency: Daily
+                                        Extract date: 14 April
+                                        2021 11:30pm
+                                        </br> URL: <a class="govuk-link"
+                                            href="#">https://ea-edubase-api-prod.azurewebsites.net/edubase/downloads/public/links_edubasealldata20210414.csv</a>
+                                    </p>
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="establishment-4" name="establishment" type="checkbox"
+                                    value="other">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                    SAT and MAT membership history
+                                    <p class="govuk-body-xs" id="download-info">Description: This file shows the movement of an
+                                        academy
+                                        or free school between single-academy trusts and multi-academy trusts and between
+                                        multi-academy trusts.
+                                        </br>
+                                        File type and size: CSV 1.95 MB&nbsp;&nbsp; Extract ID: ID3287&nbsp;&nbsp; Frequency: Daily
+                                        Extract date: 14 April
+                                        2021 11:30pm
+                                        </br> URL: <a class="govuk-link"
+                                            href="#">https://ea-edubase-api-prod.azurewebsites.net/edubase/downloads/public/links_edubasealldata20210414.csv</a>
+                                    </p>
+                                </label>
+                            </div>
+                            <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-top-4">
+                                Open group data
+                            </p>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="establishment-5" name="establishment" type="checkbox"
+                                value="other">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                Academy sponsor and trust links
+                                <p class="govuk-body-xs" id="download-info">Description: This file shows which school sponsor and
+                                    single-academy trust or multi-academy trust an establishment is part of in GIAS.
+                                    </br>
+                                    File type and size: CSV 63.85 MB&nbsp;&nbsp; Extract ID: ID3286&nbsp;&nbsp; Frequency: Daily
+                                    Extract date: 14 April 2021
+                                    11:30pm
+                                    </br> URL: <a class="govuk-link"
+                                        href="#">https://ea-edubase-api-prod.azurewebsites.net/edubase/downloads/public/edubasealldata20210414.csv</a>
+                                </p>
+                            </label>
+                        </div>
+                    </fieldset>
+                </div>
+            
+                <button class="govuk-button" data-module="govuk-button">
+                    Download selected files
+                </button>
             </div>
 
         </div>
-        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden download_tabs" id="schedule_extracts">
             <p class="govuk-body">This is full data that can be found on Get information about schools. Not all files
                 are date stamped, so it's a good idea to make a note of when you download the file.</p>
 
@@ -438,286 +721,7 @@ visuallyHiddenTitle: "Footer links"
         </div>
     </div>
 
-    <p class="goveuk-body">Chose the file(s) you require by selecting the appropriate box(es) or using the select all
-        functionality and then select download selected files.</p>
 
-    <details class="govuk-details" data-module="govuk-details">
-        <summary class="govuk-details__summary">
-            <span class="govuk-details__summary-text"> Why are some of the files not available to download?
-            </span>
-        </summary>
-        <div class="govuk-details__text">
-            If a file is unavailable for a selected date please try selecting the day before or the day after to get
-            information as close to the required date as possible.
-        </div>
-    </details>
-
-    <a class="govuk-link govuk-body" href="#">Select all files</a>
-    <a class="govuk-link govuk-body" id="clear_all" href="#">Clear all selections</a>
-
-
-    <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                <h2 class="govuk-heading-m govuk-!-margin-top-4" id="title_checkbox">
-                    Establishments
-                </h2>
-            </legend>
-            <p class="govuk-body govuk-!-font-weight-bold">
-                All establishment data
-            </p>
-            <p class="govuk-body">
-                These data files contain information about establishments that are proposed to open, open, open but
-                proposed to close and closed, excluding children’s centres and children’s centres linked sites.
-            </p>
-            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="establishment" name="establishment" type="checkbox"
-                        value="british" aria-describedby="establishment-item-hint">
-                    <label class="govuk-label govuk-checkboxes__label" for="waste">
-                        Establishment fields
-                        <p class="govuk-body-xs" id="download-info">Description: Contains all publicly available data
-                            fields for all establishment
-                            types, excluding children’s centres and children’s centres linked sites, with the status of
-                            proposed to open, open, open proposed to close and closed in GIAS. </br> File type and size:
-                            CSV
-                            63.85 MB&nbsp;&nbsp; Extract ID: ID3286&nbsp;&nbsp; Frequency: Daily&nbsp;&nbsp; Extract
-                            date: 14 April 2021 11:30pm
-                            </br> URL: <a class="govuk-link"
-                                href="#">https://ea-edubase-api-prod.azurewebsites.net/edubase/downloads/public/edubasealldata20210414.csv</a>
-                        </p>
-                    </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="establishment-2" name="establishment" type="checkbox"
-                        value="irish">
-                    <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-                        Establishment links
-                        <p class="govuk-body-xs" id="download-info">Description: Contains details of the
-                            predecessor/successor link (as applicable) for all establishments, excluding children’s
-                            centres and children’s centres linked sites, in GIAS. </br> File type and size: CSV 1.95
-                            MB&nbsp;&nbsp;
-                            Extract ID: ID3287&nbsp;&nbsp; Frequency: Daily&nbsp;&nbsp; Extract date: 14 April 2021
-                            11:30pm
-                            </br> URL: <a class="govuk-link"
-                                href="#">https://ea-edubase-api-prod.azurewebsites.net/edubase/downloads/public/links_edubasealldata20210414.csv</a>
-                        </p>
-                    </label>
-                </div>
-                <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-top-4">
-                    All open children’s centres data
-                </p>
-                <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="establishment-3" name="establishment" type="checkbox"
-                        value="other">
-                    <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                        Children’s centre fields
-                        <p class="govuk-body-xs" id="download-info">Description: Contains all publicly available fields
-                            for
-                            all open children’s centres and children’s centres linked sites establishments in GIAS.
-                            </br> File type and size: CSV 4.19 MB&nbsp;&nbsp; Extract ID: ID3288&nbsp;&nbsp; Frequency:
-                            Daily&nbsp;&nbsp; Extract date: 14
-                            April 2021 11:30pm
-                            </br> URL: <a class="govuk-link"
-                                href="#">https://ea-edubase-api-prod.azurewebsites.net/edubase/downloads/public/edubaseallacademiesandfree20210414.csv</a>
-                        </p>
-                    </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="establishment-4" name="establishment" type="checkbox"
-                        value="other">
-                    <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                        All open children's centres links
-                        <p class="govuk-body-xs" id="download-info">Description: Contains details of the predecessor
-                            link
-                            for all open children’s centres and children’s centres linked sites establishments in GIAS.
-                            </br> File type and size: CSV 0.64 MB&nbsp;&nbsp; Extract ID: ID3289&nbsp;&nbsp; Frequency:
-                            Daily Extract date: 14
-                            April 2021 11:30pm
-                            </br> URL: <a class="govuk-link"
-                                href="#">https://ea-edubase-api-prod.azurewebsites.net/edubase/downloads/public/links_edubaseallacademiesandfree20210414.csv</a>
-                        </p>
-                    </label>
-                </div>
-                <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-top-4">
-                    All open state funded establishment data
-                </p>
-            </div>
-            <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="establishment-5" name="establishment" type="checkbox"
-                    value="other">
-                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                    State-funded school fields
-                    <p class="govuk-body-xs" id="download-info">Description: Contains all publicly available data fields
-                        for all open and open, but proposed to close state-funded establishments in GIAS.
-                        </br> File type and size: CSV 63.85 MB&nbsp;&nbsp; Extract ID: ID3286&nbsp;&nbsp; Frequency:
-                        Daily Extract date: 14
-                        April 2021 11:30pm
-                        </br> URL: <a class="govuk-link"
-                            href="#">https://ea-edubase-api-prod.azurewebsites.net/edubase/downloads/public/edubasealldata20210414.csv</a>
-                    </p>
-                </label>
-            </div>
-            <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="establishment-6" name="establishment" type="checkbox"
-                    value="other">
-                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                    State-funded school links
-                    <p class="govuk-body-xs" id="download-info">Description: Contains details of the predecessor link
-                        for
-                        all open and open, but proposed to close state-funded establishments in GIAS.
-                        </br> File type and size: CSV 1.95 MB&nbsp;&nbsp; Extract ID: ID3287&nbsp;&nbsp; Frequency:
-                        Daily Extract date: 14 April
-                        2021 11:30pm 
-                        </br> URL: <a class="govuk-link"
-                            href="#">https://ea-edubase-api-prod.azurewebsites.net/edubase/downloads/public/links_edubasealldata20210414.csv</a>
-                    </p>
-                </label>
-            </div>
-            <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-top-4">
-                All open academies and free schools data
-            </p>
-            <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="establishment-7" name="establishment" type="checkbox"
-                    value="other">
-                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                    Academies and free school ﬁelds
-                    <p class="govuk-body-xs" id="download-info">Description: Contains all publicly available fields for
-                        open and open, but proposed to close academies and free schools establishments in GIAS.
-                        </br> File type and size: CSV 4.19 MB&nbsp;&nbsp; Extract ID: ID3288&nbsp;&nbsp; Frequency:
-                        Daily Extract date: 14 April
-                        2021 11:30pm 
-                        </br> URL: <a class="govuk-link"
-                            href="#">https://ea-edubase-api-prod.azurewebsites.net/edubase/downloads/public/edubaseallacademiesandfree20210414.csv</a>
-                    </p>
-                </label>
-            </div>
-            <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="establishment-8" name="establishment" type="checkbox"
-                    value="other">
-                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                    Academies and free school links
-                    <p class="govuk-body-xs" id="download-info">Description: Contains details of the predecessor link
-                        for
-                        all open and open, but proposed to close academies and free schools establishments in GIAS.
-                        </br> File type and size: CSV 0.64 MB&nbsp;&nbsp; Extract ID: ID3289&nbsp;&nbsp; Frequency:
-                        Daily Extract date: 14 April
-                        2021 11:30pm
-                        </br> URL: <a class="govuk-link"
-                            href="#">https://ea-edubase-api-prod.azurewebsites.net/edubase/downloads/public/links_edubaseallacademiesandfree20210414.csv</a>
-                    </p>
-                </label>
-            </div>
-        </fieldset>
-    </div>
-
-    <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                <h2 class="govuk-heading-m " id="title_checkbox2">
-                    Groups
-                </h2>
-            </legend>
-            <p class="govuk-body">
-                Download the public record for group types.
-            </p>
-            <p class="govuk-body govuk-!-font-weight-bold">
-                All open and closed group data
-            </p>
-            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="establishment" name="establishment" type="checkbox"
-                        value="british" aria-describedby="establishment-item-hint">
-                    <label class="govuk-label govuk-checkboxes__label" for="waste">
-                        All group record
-                        <p class="govuk-body-xs" id="download-info">Description: Contains all publicly available fields
-                            for
-                            all open and closed groups in GIAS.
-                            </br>
-                            File type and size: CSV 63.85 MB&nbsp;&nbsp; Extract ID: ID3286&nbsp;&nbsp; Frequency: Daily
-                            Extract date: 14 April
-                            2021 11:30pm
-                            </br> URL: <a class="govuk-link"
-                                href="#">https://ea-edubase-api-prod.azurewebsites.net/edubase/downloads/public/edubasealldata20210414.csv</a>
-                        </p>
-                    </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="establishment-2" name="establishment" type="checkbox"
-                        value="irish">
-                    <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-                        All group links records
-                        <p class="govuk-body-xs" id="download-info">Description: Contains the links between all
-                            establishments that are part of a group in GIAS.
-                            </br>
-                            File type and size: CSV 1.95 MB&nbsp;&nbsp; Extract ID: ID3287&nbsp;&nbsp; Frequency: Daily
-                            Extract date: 14 April
-                            2021 11:30pm
-                            </br> URL: <a class="govuk-link"
-                                href="#">https://ea-edubase-api-prod.azurewebsites.net/edubase/downloads/public/links_edubasealldata20210414.csv</a>
-                        </p>
-                    </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="establishment-3" name="establishment" type="checkbox"
-                        value="other">
-                    <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                        All group records with links
-                        <p class="govuk-body-xs" id="download-info">Description: Contains the two files: “All group
-                            records” and “All group links records” in a zip file.
-                            </br>
-                            File type and size: CSV 1.95 MB&nbsp;&nbsp; Extract ID: ID3287&nbsp;&nbsp; Frequency: Daily
-                            Extract date: 14 April
-                            2021 11:30pm
-                            </br> URL: <a class="govuk-link"
-                                href="#">https://ea-edubase-api-prod.azurewebsites.net/edubase/downloads/public/links_edubasealldata20210414.csv</a>
-                        </p>
-                    </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="establishment-4" name="establishment" type="checkbox"
-                        value="other">
-                    <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                        SAT and MAT membership history
-                        <p class="govuk-body-xs" id="download-info">Description: This file shows the movement of an
-                            academy
-                            or free school between single-academy trusts and multi-academy trusts and between
-                            multi-academy trusts.
-                            </br>
-                            File type and size: CSV 1.95 MB&nbsp;&nbsp; Extract ID: ID3287&nbsp;&nbsp; Frequency: Daily
-                            Extract date: 14 April
-                            2021 11:30pm
-                            </br> URL: <a class="govuk-link"
-                                href="#">https://ea-edubase-api-prod.azurewebsites.net/edubase/downloads/public/links_edubasealldata20210414.csv</a>
-                        </p>
-                    </label>
-                </div>
-                <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-top-4">
-                    Open group data
-                </p>
-            </div>
-            <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="establishment-5" name="establishment" type="checkbox"
-                    value="other">
-                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                    Academy sponsor and trust links
-                    <p class="govuk-body-xs" id="download-info">Description: This file shows which school sponsor and
-                        single-academy trust or multi-academy trust an establishment is part of in GIAS.
-                        </br>
-                        File type and size: CSV 63.85 MB&nbsp;&nbsp; Extract ID: ID3286&nbsp;&nbsp; Frequency: Daily
-                        Extract date: 14 April 2021
-                        11:30pm
-                        </br> URL: <a class="govuk-link"
-                            href="#">https://ea-edubase-api-prod.azurewebsites.net/edubase/downloads/public/edubasealldata20210414.csv</a>
-                    </p>
-                </label>
-            </div>
-        </fieldset>
-    </div>
-
-    <button class="govuk-button" data-module="govuk-button">
-        Download selected files
-    </button>
 
     <div class="govuk-grid-column-full">
         <a class="back-to-top-link" href="#top">
@@ -734,4 +738,5 @@ visuallyHiddenTitle: "Footer links"
 {% endblock %}
 
 ]
+
 </html>

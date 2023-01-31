@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html>
+{% extends "layouts/main.html" %}
+{% block pageTitle %}
+Get Information about Schools
+{% endblock %}
+
+{% block header %}
+{% from "govuk/components/cookie-banner/macro.njk" import govukCookieBanner %}
+
+{% set html %}
+<p class="govuk-body">We use some essential cookies to make this service work.</p>
+<p class="govuk-body">We’d also like to use analytics cookies so we can understand how you use the service and make
+    improvements.</p>
+{% endset %}
+
+{{ govukCookieBanner({
+ariaLabel: "Cookies on Get Information about Schools",
+messages: [
+{
+headingText: "Cookies on Get Information about Schools",
+html: html,
+actions: [
+{
+text: "Accept analytics cookies",
+type: "button",
+name: "cookies",
+value: "accept"
+},
+{
+text: "Reject analytics cookies",
+type: "button",
+name: "cookies",
+value: "reject"
+},
+{
+text: "View cookies",
+href: "#"
+}
+]
+}
+]
+}) }}
+{# Set serviceName in config.js. #}
+{{ govukHeader({
+homepageUrl: "/",
+serviceName: serviceName,
+serviceUrl: "/",
+navigation: [
+{
+href: "http://localhost:3000/api/index_api",
+text: "Home"
+},
+{
+href: "search",
+text: "Search"
+},
+{
+href: "download_api",
+text: "Downloads",
+active: true
+},
+{
+href: "about",
+text: "About"
+},
+{
+href: "help",
+text: "Help"
+},
+{
+href: "news",
+text: "News"
+},
+{
+href: "sign-in",
+text: "Sign in"
+}
+],
+containerClasses: "govuk-width-container"
+}) }}
+{% endblock %}
+
+{% block footer %}
+{{ govukFooter({
+meta: {
+items: [
+{
+href: "#",
+text: "Contact"
+},
+{
+href: "#",
+text: "Glossary"
+},
+{
+href: "#",
+text: "Guidance"
+},
+{
+href: "#",
+text: "Terms of use"
+},
+{
+href: "#",
+text: "Privacy"
+},
+{
+href: "#",
+text: "Cookies"
+},
+{
+href: "#",
+text: "Accessibility"
+}
+],
+visuallyHiddenTitle: "Footer links"
+}
+}) }}
+
+{% endblock %}
+
+{% block beforeContent %}
+
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+tag: {
+text: "beta"
+},
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<body>
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <h1 class="govuk-heading-xl" id="index-page">Files available to download from 31 January 2023</h1>
+        </div>
+    </div>
+
+    <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title"
+        data-module="govuk-notification-banner">
+        <div class="govuk-notification-banner__header">
+            <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                Important
+            </h2>
+        </div>
+        <div class="govuk-notification-banner__content">
+            <p class="govuk-notification-banner__heading">
+                The new API is live.
+                <a class="govuk-notification-banner__link" href="#">View more details here</a>.
+            </p>
+        </div>
+    </div>
+
+    <div class="govuk-grid-row">
+
+        <p class="govuk-body">This data is updated daily. The data fields and the order of the data fields can change in
+            these downloads. If you need data in a prescribed format you should consider signing up for WebServices by
+            submitting a <a class="govuk-link" href="#">Service Request (opens in new tab).</a> </p>
+
+
+        <div class="govuk-tabs" data-module="govuk-tabs">
+            <h2 class="govuk-tabs__title">
+                Contents
+            </h2>
+            <ul class="govuk-tabs__list">
+                <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                    <a class="govuk-tabs__tab" href="#establishment">
+                        Establishment & group data
+                    </a>
+                </li>
+                <li class="govuk-tabs__list-item">
+                    <a class="govuk-tabs__tab" href="#schedule_extracts">
+                        Scheduled extracts
+                    </a>
+                </li>
+            </ul>
+            <div class="govuk-tabs__panel download_tabs" id="establishment">
+                <h2 class="govuk-heading-l">Establishment & group data</h2>
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-one-third">
+
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+                                <p class="govuk-body-m govuk-!-font-weight-bold">
+                                    Select an option
+                                </p>
+                                <div class="govuk-radios" data-module="govuk-radios">
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="where-do-you-live" name="download"
+                                            type="radio" value="england">
+                                        <label class="govuk-label-m govuk-radios__label" for="where-do-you-live">
+                                            Latest
+                                        </label>
+                                    </div>
+
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="contact-2" name="download" type="radio"
+                                            value="phone" data-aria-controls="conditional-contact-2">
+                                        <label class="govuk-label-m govuk-radios__label" for="contact-2">
+                                            Select a date
+                                        </label>
+                                    </div>
+
+                                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden"
+                                        id="conditional-contact-2">
+                                        <div class="govuk-form-group">
+                                            <div class="govuk-form-group">
+                                                <fieldset class="govuk-fieldset" role="group"
+                                                    aria-describedby="passport-issued-hint">
+                                                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                                                    </legend>
+                                                    <p class="govuk-body-m">Files can be downloaded from
+                                                        11 September 2020 to present</p>
+                                                    <div id="passport-issued-hint" class="govuk-hint">
+                                                        For example, 27 3 2019
+                                                    </div>
+                                                    <div class="govuk-date-input" id="passport-issued">
+                                                        <div class="govuk-date-input__item">
+                                                            <div class="govuk-form-group">
+                                                                <label class="govuk-label govuk-date-input__label"
+                                                                    for="passport-issued-day">
+                                                                    Day
+                                                                </label>
+                                                                <input
+                                                                    class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                                                    id="passport-issued-day" name="passport-issued-day"
+                                                                    type="text" inputmode="numeric">
+                                                            </div>
+                                                        </div>
+                                                        <div class="govuk-date-input__item">
+                                                            <div class="govuk-form-group">
+                                                                <label class="govuk-label govuk-date-input__label"
+                                                                    for="passport-issued-month">
+                                                                    Month
+                                                                </label>
+                                                                <input
+                                                                    class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                                                    id="passport-issued-month"
+                                                                    name="passport-issued-month" type="text"
+                                                                    inputmode="numeric">
+                                                            </div>
+                                                        </div>
+                                                        <div class="govuk-date-input__item">
+                                                            <div class="govuk-form-group">
+                                                                <label class="govuk-label govuk-date-input__label"
+                                                                    for="passport-issued-year">
+                                                                    Year
+                                                                </label>
+                                                                <input
+                                                                    class="govuk-input govuk-date-input__input govuk-input--width-4"
+                                                                    id="passport-issued-year"
+                                                                    name="passport-issued-year" type="text"
+                                                                    inputmode="numeric">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+
+                    </div>
+
+                    <div class="govuk-grid-column-two-thirds">
+                        <p class="goveuk-body">Select the files you want to download then click 'Download selected
+                            files'.</p>
+
+                        <details class="govuk-details" data-module="govuk-details">
+                            <summary class="govuk-details__summary">
+                                <span class="govuk-details__summary-text"> Why can't I see the files I'm looking for?
+                                </span>
+                            </summary>
+                            <p class="govuk-body">Some of the historical downloadable files may not be available for
+                                this date.</p>
+                            <p class="govuk-body">This is normally for one of the following reasons:</p>
+                            <ul class="govuk-list govuk-list--bullet">
+                                <li> The files were not introduced until a later date</li>
+                                <li> A technical issue resulted in the files not being generated on this date </li>
+                                <li> The files were only available as public download and not specific scheduled
+                                    extracts </li>
+                            </ul>
+                            <p class="govuk-body">Please try again tomorrow or if the error continues, raise a <a
+                                    href="#" class="govuk-link">Service Request (opens in new tab).</a></p>
+                        </details>
+
+                        <a class="govuk-link govuk-body" href="#">Select all </a>
+                        <a class="govuk-link govuk-body" id="clear_all" href="#">Clear all </a>
+
+                        <h2 class="govuk-heading-m">Establishment downloads</h2>
+                        <p class="" govuk-body>You can download the complete record for the specified establishment
+                            types. There's a separate file with links to any predecessor or successor establishments.
+                        </p>
+
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                                <h3 class="govuk-heading-s">All establishment data</h3>
+
+                                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox"
+                                            value="carcasses">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste">
+                                            Establishment fields CSV, 68.78 MB
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox"
+                                            value="mines">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                            Establishment links CSV, 2.3 MB
+                                        </label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                                <h3 class="govuk-heading-s">Open academies and free schools data</h3>
+                                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox"
+                                            value="carcasses">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste">
+                                            Academies and free school ﬁelds CSV, 4.64 MB
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox"
+                                            value="mines">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                            Academies and free school links CSV, 0.79 MB
+                                        </label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                                <h3 class="govuk-heading-s">Open state-funded schools data</h3>
+                                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox"
+                                            value="carcasses">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste">
+                                            State-funded school ﬁelds CSV, 13.76 MB
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox"
+                                            value="mines">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                            State-funded school links CSV, 0.98 MB
+                                        </label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                                <h3 class="govuk-heading-s">Open children's centres data </h3>
+                                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox"
+                                            value="carcasses">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste">
+                                            Children's centre ﬁelds CSV, 2.41 MB
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox"
+                                            value="mines">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                            All open children's centres links.csv, 0.12 MB
+                                        </label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+
+                        <h2 class="govuk-heading-m">Establishment groups</h2>
+                        <p class="" govuk-body>You can download the complete record for the specified establishment
+                            group. There's a separate file with links to any establishments associated with the groups.
+                        </p>
+
+
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                                <h3 class="govuk-heading-s">All group data</h3>
+
+                                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox"
+                                            value="carcasses">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste">
+                                            SAT and MAT membership history CSV, 6.1 MB
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox"
+                                            value="mines">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                            All group records.csv, 2.71 MB
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox"
+                                            value="mines">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                            All group links records.csv, 2.86 MB
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox"
+                                            value="mines">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                            All group records with links.zip, 0.87 MB
+                                        </label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                                <h3 class="govuk-heading-s">Open group data</h3>
+
+                                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox"
+                                            value="carcasses">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste">
+                                            Academy sponsor and trust links.csv, 1.98 MB
+                                        </label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+
+                        <h2 class="govuk-heading-m">Governors</h2>
+                        <p class="" govuk-body>You can download the complete record for all governors listed within GIAS.</p>
+                        </p>
+
+
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                                <h3 class="govuk-heading-s">All governor data</h3>
+
+                                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox"
+                                            value="carcasses">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste">
+                                            Governor ﬁelds CSV, 2.72 MB
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox"
+                                            value="mines">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                            All multi academy trust (MAT) governance records.csv, 1.32 MB
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox"
+                                            value="mines">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                            All academy governance records.csv, 0.96 MB
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox"
+                                            value="mines">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                            All local authority (LA) maintained governance records.csv, 0.45 MB
+                                        </label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+
+                        <button class="govuk-button" data-module="govuk-button" >
+                            Download selected files
+                        </button>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="govuk-tabs__panel govuk-tabs__panel--hidden download_tabs" id="schedule_extracts">
+                <h2 class="govuk-heading-l">Scheduled extracts</h2>
+                <table class="govuk-table">
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                            <th scope="col" class="govuk-table__header govuk-body-s">File</th>
+                            <th scope="col" class="govuk-table__header govuk-body-s">ID</th>
+                        </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s"> <a class="govuk-link" href="#">0, 30, 60 Day
+                                    checks
+                                    file</a></td>
+                            <td class="govuk-table__cell govuk-body-s">13519</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s"><a class="govuk-link" href="#">Academy links</a>
+                            </td>
+                            <td class="govuk-table__cell govuk-body-s">2646</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s"><a class="govuk-link" href="#">All monthly
+                                    BBv5</a>
+                            </td>
+                            <td class="govuk-table__cell govuk-body-s">3346</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s"><a class="govuk-link" href="#">All open academies
+                                    and
+                                    free schools</a></td>
+                            <td class="govuk-table__cell govuk-body-s">3286</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s"><a class="govuk-link" href="#">All open academies
+                                    and
+                                    free schools in MAT or SAT</a></td>
+                            <td class="govuk-table__cell govuk-body-s">13559</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s"><a class="govuk-link" href="#">All open
+                                    children's
+                                    centres</a></td>
+                            <td class="govuk-table__cell govuk-body-s">13507</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s"><a class="govuk-link" href="#">All open
+                                    schools</a>
+                            </td>
+                            <td class="govuk-table__cell govuk-body-s">13635</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s"><a class="govuk-link" href="#">All open state
+                                    funded
+                                    schools</a></td>
+                            <td class="govuk-table__cell govuk-body-s">3280</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s"><a class="govuk-link" href="#">All schools - for
+                                    staffs insight team</a></td>
+                            <td class="govuk-table__cell govuk-body-s">3195</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s"><a class="govuk-link" href="#">All available to
+                                    TDA</a></td>
+                            <td class="govuk-table__cell govuk-body-s">2405</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s"><a class="govuk-link" href="#">All data</a></td>
+                            <td class="govuk-table__cell govuk-body-s">3180</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s"><a class="govuk-link" href="#">All establishments
+                                    full</a></td>
+                            <td class="govuk-table__cell govuk-body-s">13453</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s"><a class="govuk-link" href="#">CCP file upload
+                                    service</a></td>
+                            <td class="govuk-table__cell govuk-body-s">13592</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s"><a class="govuk-link" href="#">EB all 2016</a>
+                            </td>
+                            <td class="govuk-table__cell govuk-body-s">13464</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s"><a class="govuk-link" href="#">Edubase schools
+                                    Leicestershire Leicester</a></td>
+                            <td class="govuk-table__cell govuk-body-s">13590</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s"><a class="govuk-link"
+                                    href="#">EduBaseBCCSchools</a>
+                            </td>
+                            <td class="govuk-table__cell govuk-body-s">13503</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s"><a class="govuk-link"
+                                    href="#">EdubaseMainDataNew</a>
+                            </td>
+                            <td class="govuk-table__cell govuk-body-s">3265</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s"><a class="govuk-link" href="#">Free schools,
+                                    studio
+                                    schools and UTCs</a></td>
+                            <td class="govuk-table__cell govuk-body-s">3343</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s"><a class="govuk-link" href="#">Headteacher list
+                                    extract</a></td>
+                            <td class="govuk-table__cell govuk-body-s">13483</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s"><a class="govuk-link" href="#">Headteachers</a>
+                            </td>
+                            <td class="govuk-table__cell govuk-body-s">13611</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s"><a class="govuk-link" href="#">Import</a></td>
+                            <td class="govuk-table__cell govuk-body-s">2392</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s"><a class="govuk-link" href="#">Import</a></td>
+                            <td class="govuk-table__cell govuk-body-s">13738</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s"><a class="govuk-link" href="#">Leeds all
+                                    establishments</a></td>
+                            <td class="govuk-table__cell govuk-body-s">13526</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s"><a class="govuk-link"
+                                    href="#">LeicestershireExtract</a></td>
+                            <td class="govuk-table__cell govuk-body-s">13492</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s"><a class="govuk-link" href="#">NAV school
+                                    extract</a>
+                            </td>
+                            <td class="govuk-table__cell govuk-body-s">3342</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s"><a class="govuk-link" href="#">NCTL weekly
+                                    run</a>
+                            </td>
+                            <td class="govuk-table__cell govuk-body-s">13382</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s"><a class="govuk-link" href="#">New schools</a>
+                            </td>
+                            <td class="govuk-table__cell govuk-body-s">13368</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s"><a class="govuk-link" href="#">New schools
+                                    NEW</a>
+                            </td>
+                            <td class="govuk-table__cell govuk-body-s">13431</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s"><a class="govuk-link"
+                                    href="#">OfstedFullExtract</a>
+                            </td>
+                            <td class="govuk-table__cell govuk-body-s">2472</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s"><a class="govuk-link" href="#">OneData Edubase
+                                    Extract </a></td>
+                            <td class="govuk-table__cell govuk-body-s">2905</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s"><a class="govuk-link" href="#">portalupdate</a>
+                            </td>
+                            <td class="govuk-table__cell govuk-body-s">13390</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s"><a class="govuk-link" href="#">SDA download</a>
+                            </td>
+                            <td class="govuk-table__cell govuk-body-s">2292</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s"><a class="govuk-link" href="#">Sponsors list</a>
+                            </td>
+                            <td class="govuk-table__cell govuk-body-s">13533</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s"><a class="govuk-link" href="#">test</a></td>
+                            <td class="govuk-table__cell govuk-body-s">13733</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s"><a class="govuk-link" href="#">VA schools</a>
+                            </td>
+                            <td class="govuk-table__cell govuk-body-s">3341</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <div class="govuk-grid-column-full">
+            <a class="back-to-top-link" href="#top">
+                <svg role="presentation" focusable="false" class="back-to-top-icon" xmlns="http://www.w3.org/2000/svg"
+                    width="13" height="17" viewBox="0 0 13 17">
+                    <path fill="currentColor" d="M6.5 0L0 6.5 1.4 8l4-4v12.7h2V4l4.3 4L13 6.4z"></path>
+                </svg>
+                Back to top
+            </a>
+        </div>
+
+
+    </div>
+
+</body>
+{% endblock %}
+
+</html>

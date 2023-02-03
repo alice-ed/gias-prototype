@@ -185,88 +185,93 @@ html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a
                 <div class="govuk-grid-row">
                     <div class="govuk-grid-column-one-third">
 
-                        <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-                                <p class="govuk-body-m govuk-!-font-weight-bold">
-                                    Select an option
-                                </p>
-                                <div class="govuk-radios" data-module="govuk-radios">
-                                    <div class="govuk-radios__item">
-                                        <input class="govuk-radios__input" id="where-do-you-live" name="download"
-                                            type="radio" value="england">
-                                        <label class="govuk-label-m govuk-radios__label" for="where-do-you-live">
-                                            Latest
-                                        </label>
+                        <fieldset class="govuk-fieldset" id="download-radios">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Select an option</legend>
+                            <div class="govuk-form-group govuk-!-margin-bottom-2">
+                                <div class="govuk-radios govuk-radios--small govuk-radios--conditional"
+                                    data-module="govuk-radios">
+                                    <div class="govuk-radios__item gias-radio__item--bordered-filter">
+
+                                        <input checked="checked" class="govuk-radios__input" data-aria-controls="Latest"
+                                            id="search-type-Latest" name="SearchType" type="radio" value="Latest">
+                                        <label class="govuk-label govuk-radios__label"
+                                            for="search-type-Latest">Latest</label>
+                                    </div>
+                                    <div class="govuk-radios__item gias-radio__item--bordered-filter">
+
+                                        <input class="govuk-radios__input" id="search-type-DateFilter" name="SearchType"
+                                            type="radio" value="DateFilter" aria-controls="DateFilter"
+                                            aria-expanded="false">
+                                        <label class="govuk-label govuk-radios__label"
+                                            for="search-type-DateFilter">Select a date</label>
                                     </div>
 
-                                    <div class="govuk-radios__item">
-                                        <input class="govuk-radios__input" id="contact-2" name="download" type="radio"
-                                            value="phone" data-aria-controls="conditional-contact-2">
-                                        <label class="govuk-label-m govuk-radios__label" for="contact-2">
-                                            Select a date
-                                        </label>
-                                    </div>
+                                    <div id="DateFilter"
+                                        class="govuk-radios__conditional gias-conditional--bordered govuk-radios__conditional--hidden">
+                                        <div class="date-filters    " id="filterDate">
+                                            <p class="govuk-!-padding-right-2">
+                                                Files can be downloaded from<br>
+                                                11 September 2020 to present
+                                            </p>
 
-                                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden"
-                                        id="conditional-contact-2">
-                                        <div class="govuk-form-group">
-                                            <div class="govuk-form-group">
-                                                <fieldset class="govuk-fieldset" role="group"
-                                                    aria-describedby="passport-issued-hint">
-                                                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                                                    </legend>
-                                                    <p class="govuk-body-m">Files can be downloaded from
-                                                        11 September 2020 to present</p>
-                                                    <div id="passport-issued-hint" class="govuk-hint">
-                                                        For example, 27 3 2019
-                                                    </div>
-                                                    <div class="govuk-date-input" id="passport-issued">
+                                            <div class="govuk-form-group create-edit-form-group date-group     ">
+                                                <fieldset class="govuk-fieldset range-group search-to-date">
+                                                
+                                                    <p class="govuk-hint">For example, 11 9 2020</p>
+
+                                                    <div class="govuk-date-input">
                                                         <div class="govuk-date-input__item">
                                                             <div class="govuk-form-group">
-                                                                <label class="govuk-label govuk-date-input__label"
-                                                                    for="passport-issued-day">
-                                                                    Day
-                                                                </label>
-                                                                <input
-                                                                    class="govuk-input govuk-date-input__input govuk-input--width-2"
-                                                                    id="passport-issued-day" name="passport-issued-day"
-                                                                    type="text" inputmode="numeric">
+
+
+                                                                <label
+                                                                    class="govuk-label govuk-label govuk-date-input__label"
+                                                                    for="FilterDate_Day">Day</label>
+                                                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="FilterDate_Day"
+                                                                    maxlength="2" name="FilterDate.Day" type="text"
+                                                                    value="1">
                                                             </div>
                                                         </div>
                                                         <div class="govuk-date-input__item">
                                                             <div class="govuk-form-group">
-                                                                <label class="govuk-label govuk-date-input__label"
-                                                                    for="passport-issued-month">
-                                                                    Month
-                                                                </label>
-                                                                <input
-                                                                    class="govuk-input govuk-date-input__input govuk-input--width-2"
-                                                                    id="passport-issued-month"
-                                                                    name="passport-issued-month" type="text"
-                                                                    inputmode="numeric">
+                                                                <label
+                                                                    class="govuk-label govuk-label govuk-date-input__label"
+                                                                    for="FilterDate_Month">Month</label>
+                                                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="FilterDate_Month"
+                                                                    maxlength="2" name="FilterDate.Month" type="text"
+                                                                    value="2">
                                                             </div>
                                                         </div>
-                                                        <div class="govuk-date-input__item">
+                                                        <div class="govuk-date-input__item gias-year-input__item">
                                                             <div class="govuk-form-group">
-                                                                <label class="govuk-label govuk-date-input__label"
-                                                                    for="passport-issued-year">
-                                                                    Year
-                                                                </label>
-                                                                <input
-                                                                    class="govuk-input govuk-date-input__input govuk-input--width-4"
-                                                                    id="passport-issued-year"
-                                                                    name="passport-issued-year" type="text"
-                                                                    inputmode="numeric">
+                                                                <label
+                                                                    class="govuk-label govuk-label govuk-date-input__label"
+                                                                    for="FilterDate_Year">Year</label>
+                                                                <input class=" govuk-input govuk-date-input__input govuk-input--width-4" id="FilterDate_Year"
+                                                                    maxlength="4" name="FilterDate.Year" type="text"
+                                                                    value="2023">
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </fieldset>
                                             </div>
+
+
+                                            <div class="js-show-block">
+                                                <button type="submit" name="apply"
+                                                    class="govuk-button downloads-filter-button"
+                                                    id="filter-apply">Apply</button>
+                                            </div>
+
                                         </div>
+
                                     </div>
                                 </div>
-                            </fieldset>
-                        </div>
+                            </div>
+                           
+                        </fieldset>
+
+
 
                     </div>
 
@@ -449,7 +454,8 @@ html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a
                         </div>
 
                         <h2 class="govuk-heading-m">Governors</h2>
-                        <p class="" govuk-body>You can download the complete record for all governors listed within GIAS.</p>
+                        <p class="" govuk-body>You can download the complete record for all governors listed within
+                            GIAS.</p>
                         </p>
 
 
@@ -490,7 +496,7 @@ html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a
                             </fieldset>
                         </div>
 
-                        <button class="govuk-button" data-module="govuk-button" >
+                        <button class="govuk-button" data-module="govuk-button">
                             Download selected files
                         </button>
 

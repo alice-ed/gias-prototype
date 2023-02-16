@@ -328,3 +328,50 @@ padding: 2px 3px 0 3px;
   padding-left: 10px;
 }
 
+//children care details
+
+#children_care_details {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+#urn_colour{
+  color: #505a5f;
+  display: inline-block;
+}
+
+#download_location{
+  margin-left: auto;
+  float: right;
+}
+
+#ch_details.ch_tabs {
+  border: 1px hidden;
+}
+#ch_governance.ch_tabs {
+  border: 1px hidden;
+}
+#ch_links.ch_tabs {
+  border: 1px hidden;
+}
+#ch_locations.ch_tabs {
+  border: 1px hidden;
+}
+#ch_iebt.ch_tabs {
+  border: 1px hidden;
+}
+#ch_changes.ch_tabs {
+  border: 1px hidden;
+}
+#ch_helpdesk.ch_tabs {
+  border: 1px hidden;
+}
+
+.greyed_out{
+  background-color: #d8dadb;
+}
+
+#important-icon{
+  width:100%;
+  height:75%;
+}

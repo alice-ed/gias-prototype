@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html>
+{% extends "layouts/main.html" %}
+{% block pageTitle %}
+Get Information about Schools
+{% endblock %}
+
+{% block header %}
+{% from "govuk/components/cookie-banner/macro.njk" import govukCookieBanner %}
+
+{% set html %}
+<p class="govuk-body">We use some essential cookies to make this service work.</p>
+<p class="govuk-body">We’d also like to use analytics cookies so we can understand how you use the service and make
+    improvements.</p>
+{% endset %}
+
+{{ govukCookieBanner({
+ariaLabel: "Cookies on Get Information about Schools",
+messages: [
+{
+headingText: "Cookies on Get Information about Schools",
+html: html,
+actions: [
+{
+text: "Accept analytics cookies",
+type: "button",
+name: "cookies",
+value: "accept"
+},
+{
+text: "Reject analytics cookies",
+type: "button",
+name: "cookies",
+value: "reject"
+},
+{
+text: "View cookies",
+href: "#"
+}
+]
+}
+]
+}) }}
+{# Set serviceName in config.js. #}
+{{ govukHeader({
+homepageUrl: "/",
+serviceName: serviceName,
+serviceUrl: "/",
+navigation: [
+{
+href: "http://localhost:3000/landing",
+text: "Home"
+},
+{
+href: "search",
+text: "Search"
+},
+{
+href: "download",
+text: "Downloads"
+},
+{
+href: "about",
+text: "About"
+},
+{
+href: "help",
+text: "Help"
+},
+{
+href: "news",
+text: "News"
+},
+{
+href: "sign-in",
+text: "Sign in"
+}
+],
+containerClasses: "govuk-width-container"
+}) }}
+{% endblock %}
+
+{% block footer %}
+{{ govukFooter({
+meta: {
+items: [
+{
+href: "#",
+text: "Contact"
+},
+{
+href: "#",
+text: "Glossary"
+},
+{
+href: "#",
+text: "Guidance"
+},
+{
+href: "#",
+text: "Terms of use"
+},
+{
+href: "#",
+text: "Privacy"
+},
+{
+href: "#",
+text: "Cookies"
+},
+{
+href: "#",
+text: "Accessibility"
+}
+],
+visuallyHiddenTitle: "Footer links"
+}
+}) }}
+
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+tag: {
+text: "beta"
+},
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{{ govukBreadcrumbs({
+items: [
+{
+text: "Home",
+href: "#"
+},
+{
+text: "Search",
+href: "#"
+},
+{
+text: "Establishments",
+href: "#"
+}
+]
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<body>
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+
+            <h1 class="govuk-heading-l" id="children_care_details">
+                <span class="govuk-caption-l">Establishment</span>
+                Bramfield House School
+            </h1>
+
+
+            <p class="govuk-body-s govuk-!-font-weight-bold" id="urn_colour">URN: 124879&nbsp;&nbsp;&nbsp;&nbsp; Other
+                independent special school</p>
+
+            <a href="#" class="govuk-link govuk-link--no-visited-state" id="download_location">Download establishment
+                data</a>
+
+
+            <div class="govuk-tabs" data-module="govuk-tabs">
+                <h2 class="govuk-tabs__title">
+                    Contents
+                </h2>
+                <ul class="govuk-tabs__list">
+                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                        <a class="govuk-tabs__tab" href="#ch_details">
+                            Details
+                        </a>
+                    </li>
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#ch_iebt">
+                            IEBT
+                        </a>
+                    </li>
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#ch_links">
+                            Links
+                        </a>
+                    </li>
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#ch_locations">
+                            Locations
+                        </a>
+                    </li>
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#ch_changes">
+                            Changes
+                        </a>
+                    </li>
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#ch_helpdesk">
+                            Helpdesk
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="govuk-tabs__panel ch_tabs" id="ch_details">
+
+                    <div class="govuk-grid-row">
+                        <div class="govuk-grid-column-two-thirds">
+
+                            <fieldset class="govuk-fieldset">
+                                <div class="govuk-form-group ">
+                                    <label class="govuk-label" for="school-town">
+                                        School / College name
+                                    </label>
+                                    <input class="govuk-input " id="school-name" name="address-town" type="text"
+                                        value="Bramfield House School">
+                                </div>
+
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label" for="urn">
+                                        Unique Reference Number (URN)
+                                    </label>
+                                    <input class="govuk-input greyed_out" id="urn" name="address-town" type="text"
+                                        value="124879">
+                                </div>
+
+                                <div class="govuk-form-group ">
+                                    <label class="govuk-label" for="street">
+                                        Street
+                                    </label>
+                                    <input class="govuk-input " id="street" name="address-town" type="text"
+                                        value="obfuscated">
+                                </div>
+                                <div class="govuk-form-group ">
+                                    <label class="govuk-label" for="locality">
+                                        Locality
+                                    </label>
+                                    <input class="govuk-input " id="locality" name="address-town" type="text"
+                                        value="Bramfield">
+                                </div>
+                                <div class="govuk-form-group ">
+                                    <label class="govuk-label" for="address-town">
+                                        Address 3
+                                    </label>
+                                    <input class="govuk-input " id="address-town" name="address-town" type="text">
+                                </div>
+                                <div class="govuk-form-group ">
+                                    <label class="govuk-label" for="address-town">
+                                        Town
+                                    </label>
+                                    <input class="govuk-input " id="address-town" name="address-town" type="text"
+                                        value=" obfuscated">
+                                </div>
+                                <div class="govuk-form-group ">
+                                    <label class="govuk-label" for="county">
+                                        County
+                                    </label>
+                                    <input class="govuk-input greyed_out" id="county" name="address-town" type="text"
+                                        value="Suffolk">
+                                </div>
+
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label" for="address-postcode">
+                                        Postcode
+                                    </label>
+                                    <input class="govuk-input govuk-input--width-10 greyed_out" id="address-postcode"
+                                        name="address-postcode" type="text" autocomplete="postal-code"
+                                        value=" 1P19 9AB">
+                                    <a class="govuk-link" href="#">Replace this address</a>
+                                </div>
+
+                                <a class="govuk-link " href="#">Add new address</a>
+
+                                <div class="govuk-form-group govuk-!-padding-top-4">
+                                    <label class="govuk-label" for="headteacher_title">
+                                        Headteacher / Principal title
+                                    </label>
+                                    <input class="govuk-input greyed_out" id="headteacher_title" name="address-town" type="text"
+                                        value="Mrs">
+                                </div>
+
+                                <div class="govuk-form-group ">
+                                    <label class="govuk-label" for="headteacher_name">
+                                        Headteacher / Principal first name
+                                    </label>
+                                    <input class="govuk-input " id="headteacher_name" name="address-town" type="text"
+                                        value="obfuscated">
+                                </div>
+
+                                <div class="govuk-form-group ">
+                                    <label class="govuk-label" for="headteacher_lastname">
+                                        Headteacher / Principal last name
+                                    </label>
+                                    <input class="govuk-input " id="headteacher_lastname" name="address-town" type="text"
+                                        value="obfuscated">
+                                </div>
+
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset" role="group"
+                                        aria-describedby="passport-issued-hint">
+                                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                                            <h1 class="govuk-heading-s">
+                                                Headteacher date of appointment
+                                            </h1>
+                                        </legend>
+                                        <div id="passport-issued-hint" class="govuk-hint">
+                                            For example, 27 3 2007
+                                        </div>
+                                        <div class="govuk-date-input" id="passport-issued">
+                                            <div class="govuk-date-input__item">
+                                                <div class="govuk-form-group">
+                                                    <label class="govuk-label govuk-date-input__label"
+                                                        for="passport-issued-day">
+                                                        Day
+                                                    </label>
+                                                    <input
+                                                        class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                                        id="passport-issued-day" name="passport-issued-day" type="text"
+                                                        inputmode="numeric">
+                                                </div>
+                                            </div>
+                                            <div class="govuk-date-input__item">
+                                                <div class="govuk-form-group">
+                                                    <label class="govuk-label govuk-date-input__label"
+                                                        for="passport-issued-month">
+                                                        Month
+                                                    </label>
+                                                    <input
+                                                        class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                                        id="passport-issued-month" name="passport-issued-month"
+                                                        type="text" inputmode="numeric">
+                                                </div>
+                                            </div>
+                                            <div class="govuk-date-input__item">
+                                                <div class="govuk-form-group">
+                                                    <label class="govuk-label govuk-date-input__label"
+                                                        for="passport-issued-year">
+                                                        Year
+                                                    </label>
+                                                    <input
+                                                        class="govuk-input govuk-date-input__input govuk-input--width-4"
+                                                        id="passport-issued-year" name="passport-issued-year"
+                                                        type="text" inputmode="numeric">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+
+                                <details class="govuk-details" data-module="govuk-details">
+                                    <summary class="govuk-details__summary">
+                                        <span class="govuk-details__summary-text">
+                                            How this email address information is used
+                                        </span>
+                                    </summary>
+                                    <div class="govuk-details__text">
+                                        The main establishment email address and the alternative establishment email
+                                        address (if one exists for your establishment) should be added here
+                                        respectively. These must be up-to-date, valid and actively monitored email
+                                        addresses. No personal email addresses or personal establishment email addresses
+                                        should be added to these fields. Although these fields are not publicly
+                                        displayed on the website's interface they are not classed as personal data,
+                                        therefore under certain circumstances GIAS must share this information, for
+                                        example, if the department is requested to do so under a Freedom of Information
+                                        (FOI) request. This data can be used by the DfE and other government
+                                        departments, non-departmental public bodies, arm's length bodies and partners
+                                        for official functions and tasks within the public interest.
+                                        </br>
+                                        </br>
+                                        This information is very important as it allows the Department for Education to
+                                        share important information and messages with establishments, especially during
+                                        the Coronavirus pandemic.
+                                    </div>
+                                </details>
+
+                                <div class="govuk-form-group ">
+                                    <label class="govuk-label" for="headteacher_email">
+                                        Headteacher / Principal email address
+                                    </label>
+                                    <input class="govuk-input " id="headteacher_email" name="address-town" type="text"
+                                        >
+                                </div>
+
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset" role="group"
+                                        aria-describedby="passport-issued-hint">
+                                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                                            <h1 class="govuk-heading-s">
+                                                Age range
+                                            </h1>
+                                        </legend>
+                                        <div class="govuk-date-input" id="passport-issued">
+                                            <div class="govuk-date-input__item">
+                                                <div class="govuk-form-group">
+                                                    <label class="govuk-label govuk-date-input__label"
+                                                        for="passport-issued-day">
+                                                        Low
+                                                    </label>
+                                                    <input
+                                                        class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                                        id="passport-issued-day" name="passport-issued-day" type="text"
+                                                        inputmode="numeric">
+                                                </div>
+                                            </div>
+                                            <div class="govuk-date-input__item">
+                                                <div class="govuk-form-group">
+                                                    <label class="govuk-label govuk-date-input__label"
+                                                        for="passport-issued-month">
+                                                        High
+                                                    </label>
+                                                    <input
+                                                        class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                                        id="passport-issued-month" name="passport-issued-month"
+                                                        type="text" inputmode="numeric">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label" for="establishment_type">
+                                        Establishment type
+                                    </label>
+                                    <select class="govuk-select" id="establishment_type" name="sort">
+                                        <option value="published">other</option>
+                                        <option value="updated" selected>Other independent special school</option>
+                                        <option value="views">other</option>
+                                        <option value="comments">other</option>
+                                    </select>
+                                </div>
+
+
+
+
+                                <details class="govuk-details" data-module="govuk-details">
+                                    <summary class="govuk-details__summary">
+                                        <span class="govuk-details__summary-text">
+                                            Is your establishment a children's home, residential special school or both?
+                                        </span>
+                                    </summary>
+                                    <div class="govuk-details__text">
+
+                                        <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-0">
+                                            Children’s home definition</p>
+                                        <p class="govuk-body"> An other independent school or an other independent
+                                            special school is a children’s
+                                            home, and must be registered as a children’s home with Ofsted, if it
+                                            provides
+                                            accommodation for 296 days or more of the year for one or more of its
+                                            pupils. This
+                                            means the education part is registered with the DfE (GIAS) and the
+                                            accommodation
+                                            part is registered with Ofsted. In this scenario the, “Is this establishment
+                                            a
+                                            children’s home” field should have the yes option selected and the
+                                            “Boarders” field
+                                            should have the no boarders option selected.</p>
+
+                                        </br>
+                                        <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-0">
+                                            Residential special school definition</p>
+                                        <p class="govuk-body"> An, other independent special school only must be
+                                            registered as a residential
+                                            special school if it provides accommodation for 295 days or less of the year
+                                            for one
+                                            or more of its pupils. This means the education and accommodation parts are
+                                            registered with the DfE (GIAS). In this scenario the, “Is ths establishment
+                                            a
+                                            residential special school” field should have the yes option selected and
+                                            “Boarders”
+                                            field should have the boarding school option selected.</p>
+
+                                        </br>
+                                        <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-0">
+                                            Children’s home and residential special school definition</p>
+                                        <p class="govuk-body"> An, other independent special school only must be
+                                            registered as a children’s home
+                                            and a residential special school if it provides accommodation for 296 days
+                                            or more
+                                            for one or more of its pupils and it also provides accommodation for 295
+                                            days or
+                                            less for one or more of its pupils (not those classed as the children’s
+                                            homes
+                                            pupils). The children’s home element must be registered with Ofsted and the
+                                            residential special school element must be registered with the DfE. In this
+                                            scenario
+                                            the, “Is this establishment a children’s home” field should have the yes
+                                            option
+                                            selected and the “Is this establishment a residential special school” field
+                                            should
+                                            have the yes option selected. The “Boarders field should have the boarding
+                                            school
+                                            option selected to reflect the residential special school status.”</p>
+
+                                    </div>
+                                </details>
+
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label" for="childrens_home">
+                                        Is this establishment a children’s home?
+                                    </label>
+                                    <select class="govuk-select" id="childrens_home" name="sort">
+                                        <option value="published">Yes</option>
+                                        <option value="updated" selected>No</option>
+                                    </select>
+                                </div>
+
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label" for="special_school">
+                                        Is this establishment a residential special school?
+                                    </label>
+                                    <select class="govuk-select" id="special_school" name="sort">
+                                        <option value="published">Yes</option>
+                                        <option value="updated" selected>No</option>
+                                    </select>
+                                </div>
+
+                                <div class="govuk-form-group ">
+                                    <label class="govuk-label" for="phase_education">
+                                        Phase of education
+                                    </label>
+                                    <input class="govuk-input greyed_out" id="phase_education" name="address-town" type="text"
+                                        value="Not applicable">
+                                </div>
+
+                                <div class="govuk-form-group ">
+                                    <label class="govuk-label " for="gender_entry">
+                                        Gender of entry
+                                    </label>
+                                    <input class="govuk-input greyed_out " id="address-town" name="gender_entry" type="text"
+                                        value="Boys">
+                                </div>
+
+                                <div class="govuk-form-group govuk-!-margin-bottom-9 ">
+                                    <label class="govuk-label " for="local_authority">
+                                        Local authority
+                                    </label>
+                                    <input class="govuk-input greyed_out " id="address-town" name="local_authority" type="text"
+                                        value="Suffolk">
+                                </div>
+
+
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset" role="group"
+                                        aria-describedby="passport-issued-hint">
+                                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                                            <h1 class="govuk-heading-s govuk-!-margin-bottom-2">
+                                                DFE number
+                                            </h1>
+                                        </legend>
+                                        <div id="passport-issued-hint" class="govuk-hint">
+                                            LA code and Establishment number
+                                        </div>
+                                        <div class="govuk-date-input" id="passport-issued">
+                                            <div class="govuk-date-input__item">
+                                                <div class="govuk-form-group">
+                                                    <label class="govuk-label govuk-date-input__label"
+                                                        for="passport-issued-day">
+                                                    </label>
+                                                    <input
+                                                        class="govuk-input govuk-date-input__input govuk-input--width-4 greyed_out"
+                                                        id="passport-issued-day" name="passport-issued-day" type="text"
+                                                        inputmode="numeric" value="149" >
+                                                </div>
+                                            </div>
+                                            <div class="govuk-date-input__item">
+                                                <div class="govuk-form-group">
+                                                    <label class="govuk-label govuk-date-input__label"
+                                                        for="passport-issued-month">
+                                                    </label>
+                                                    <input
+                                                        class="govuk-input govuk-date-input__input govuk-input--width-6 "
+                                                        id="passport-issued-month" name="passport-issued-month"
+                                                        type="text" inputmode="numeric" value=" 6036">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+
+                                <div class="govuk-form-group ">
+                                    <label class="govuk-label" for="ukprn">
+                                        UK provider reference number (UKPRN)
+                                    </label>
+                                    <input class="govuk-input " id="address-town" name="ukprn" type="text"
+                                        value="10015213">
+                                </div>
+
+                                <div class="govuk-form-group ">
+                                    <label class="govuk-label" for="establishment_status">
+                                        Establishment status
+                                    </label>
+                                    <input class="govuk-input greyed_out" id="establishment_status" name="address-town" type="text"
+                                        value="Open">
+                                </div>
+
+                                <div class="govuk-form-group ">
+                                    <label class="govuk-label" for="admissions_policy">
+                                        Admissions policy
+                                    </label>
+                                    <input class="govuk-input greyed_out" id="admissions_policy" name="address-town" type="text"
+                                        value="Not applicable">
+                                </div>
+
+                                <div class="govuk-form-group ">
+                                    <label class="govuk-label" for="website">
+                                        Website
+                                    </label>
+                                    <input class="govuk-input " id="website" name="address-town" type="text">
+                                </div>
+
+                                <div class="govuk-form-group ">
+                                    <label class="govuk-label" for="telephone">
+                                        Telephone
+                                    </label>
+                                    <input class="govuk-input " id="telephone" name="address-town" type="text"
+                                        value="0000000000">
+                                </div>
+
+                                <div class="govuk-form-group ">
+                                    <label class="govuk-label" for="inspectorate">
+                                        Inspectorate
+                                    </label>
+                                    <input class="govuk-input greyed_out" id="inspectorate" name="address-town" type="text"
+                                        value="Ofsted">
+                                </div>
+
+                                <div class="govuk-form-group ">
+                                    <label class="govuk-label" for="proprietors_name">
+                                        Proprietor's name
+                                    </label>
+                                    <input class="govuk-input " id="proprietors_name" name="address-town" type="text"
+                                        value="Ofsted">
+                                </div>
+
+                                <div class="govuk-form-group ">
+                                    <label class="govuk-label" for="religious_character">
+                                        Religious character
+                                    </label>
+                                    <input class="govuk-input greyed_out " id="religious_character" name="address-town" type="text"
+                                        value="None">
+                                </div>
+
+                                <div class="govuk-form-group ">
+                                    <label class="govuk-label" for="religious_ethos">
+                                        Religious ethos
+                                    </label>
+                                    <input class="govuk-input greyed_out " id="religious_ethos" name="address-town" type="text"
+                                        value="None">
+                                </div>
+
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label" for="boarders">
+                                        Boarders
+                                    </label>
+                                    <select class="govuk-select" id="boarders" name="sort">
+                                        <option value="published">Boarding school</option>
+                                        <option value="published">College / FE residential accommodation</option>
+                                        <option value="updated" selected>No boarders</option>
+                                        <option value="published">Not applicable</option>
+                                        <option value="published">Not recorded</option>
+                                    </select>
+                                </div>
+
+                                <div class="govuk-form-group ">
+                                    <label class="govuk-label" for="nursery_provision">
+                                        Nursery provision
+                                    </label>
+                                    <input class="govuk-input greyed_out " id="nursery_provision" name="address-town" type="text"
+                                        value="No nursery classes">
+                                </div>
+
+                                <div class="govuk-form-group ">
+                                    <label class="govuk-label" for="offical_sixthform">
+                                        Official sixth form
+                                    </label>
+                                    <input class="govuk-input greyed_out " id="offical_sixthform" name="address-town" type="text"
+                                        value="Has a sixth form">
+                                </div>
+
+                                <div class="govuk-form-group ">
+                                    <label class="govuk-label" for="school_capacity">
+                                        School capacity
+                                    </label>
+                                    <input class="govuk-input " id="school_capacity" name="address-town" type="text"
+                                        value="74">
+                                </div>
+
+                                <div class="govuk-form-group ">
+                                    <label class="govuk-label" for="number_pupils">
+                                        Number of pupils
+                                    </label>
+                                    <input class="govuk-input " id="number_pupils" name="address-town" type="text"
+                                        value="71">
+                                </div>
+
+                                <div class="govuk-form-group ">
+                                    <label class="govuk-label" for="section_41">
+                                        Section 41 approved
+                                    </label>
+                                    <input class="govuk-input greyed_out" id="section_41" name="address-town" type="text"
+                                        value="Not approved">
+                                </div>
+
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset" role="group"
+                                        aria-describedby="passport-issued-hint">
+                                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                                            <h1 class="govuk-heading-s">
+                                                Open date
+                                            </h1>
+                                        </legend>
+                                        <div id="passport-issued-hint" class="govuk-hint">
+                                            For example, 27 3 2007
+                                        </div>
+                                        <div class="govuk-date-input" id="passport-issued">
+                                            <div class="govuk-date-input__item">
+                                                <div class="govuk-form-group">
+                                                    <label class="govuk-label govuk-date-input__label"
+                                                        for="passport-issued-day">
+                                                        Day
+                                                    </label>
+                                                    <input
+                                                        class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                                        id="passport-issued-day" name="passport-issued-day" type="text"
+                                                        inputmode="numeric" value="20">
+                                                </div>
+                                            </div>
+                                            <div class="govuk-date-input__item">
+                                                <div class="govuk-form-group">
+                                                    <label class="govuk-label govuk-date-input__label"
+                                                        for="passport-issued-month">
+                                                        Month
+                                                    </label>
+                                                    <input
+                                                        class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                                        id="passport-issued-month" name="passport-issued-month"
+                                                        type="text" inputmode="numeric" value="11">
+                                                </div>
+                                            </div>
+                                            <div class="govuk-date-input__item">
+                                                <div class="govuk-form-group">
+                                                    <label class="govuk-label govuk-date-input__label"
+                                                        for="passport-issued-year">
+                                                        Year
+                                                    </label>
+                                                    <input
+                                                        class="govuk-input govuk-date-input__input govuk-input--width-4"
+                                                        id="passport-issued-year" name="passport-issued-year"
+                                                        type="text" inputmode="numeric" value="1970">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+
+                                <div class="govuk-form-group ">
+                                    <label class="govuk-label" for="reason_opened">
+                                        Reason establishment opened
+                                    </label>
+                                    <input class="govuk-input greyed_out" id="reason_opened" name="address-town" type="text"
+                                        value="Not applicable">
+                                </div>
+
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset" role="group"
+                                        aria-describedby="passport-issued-hint">
+                                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                                            <h1 class="govuk-heading-s">
+                                                Close date
+                                            </h1>
+                                        </legend>
+                                        <div id="passport-issued-hint" class="govuk-hint">
+                                            For example, 27 3 2007
+                                        </div>
+                                        <div class="govuk-date-input" id="passport-issued">
+                                            <div class="govuk-date-input__item">
+                                                <div class="govuk-form-group">
+                                                    <label class="govuk-label govuk-date-input__label"
+                                                        for="passport-issued-day">
+                                                        Day
+                                                    </label>
+                                                    <input
+                                                        class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                                        id="passport-issued-day" name="passport-issued-day" type="text"
+                                                        inputmode="numeric">
+                                                </div>
+                                            </div>
+                                            <div class="govuk-date-input__item">
+                                                <div class="govuk-form-group">
+                                                    <label class="govuk-label govuk-date-input__label"
+                                                        for="passport-issued-month">
+                                                        Month
+                                                    </label>
+                                                    <input
+                                                        class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                                        id="passport-issued-month" name="passport-issued-month"
+                                                        type="text" inputmode="numeric">
+                                                </div>
+                                            </div>
+                                            <div class="govuk-date-input__item">
+                                                <div class="govuk-form-group">
+                                                    <label class="govuk-label govuk-date-input__label"
+                                                        for="passport-issued-year">
+                                                        Year
+                                                    </label>
+                                                    <input
+                                                        class="govuk-input govuk-date-input__input govuk-input--width-4"
+                                                        id="passport-issued-year" name="passport-issued-year"
+                                                        type="text" inputmode="numeric">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+
+                                <div class="govuk-form-group ">
+                                    <label class="govuk-label" for="reason_closed">
+                                        Reason establishment closed
+                                    </label>
+                                    <input class="govuk-input greyed_out" id="reason_closed" name="address-town" type="text"
+                                        value="Not applicable">
+                                </div>
+
+                                <div class="govuk-form-group ">
+                                    <label class="govuk-label" for="special_classes">
+                                        Special classes
+                                    </label>
+                                    <input class="govuk-input greyed_out" id="special_classes" name="address-town" type="text"
+                                        value="Has special classes ">
+                                </div>
+
+                                <div class="govuk-form-group ">
+                                    <label class="govuk-label" for="pupils_eligible">
+                                        Number of pupils eligible for free school meals
+                                    </label>
+                                    <input class="govuk-input " id="pupils_eligible" name="address-town" type="text">
+                                </div>
+
+                                <div class="govuk-form-group ">
+                                    <label class="govuk-label" for="free_school_means">
+                                        Percentage of children eligible for free school meals
+                                    </label>
+                                    <input class="govuk-input " id="free_school_means" name="address-town" type="text">
+                                </div>
+
+                                <div class="govuk-form-group ">
+                                    <label class="govuk-label" for="sen">
+                                        Number of special pupils under a special educational needs (SEN)
+                                        statement/education, health and care (EHC) plan
+                                    </label>
+                                    <input class="govuk-input " id="sen" name="address-town" type="text"
+                                        value="54">
+                                </div>
+
+                                <div class="govuk-form-group ">
+                                    <label class="govuk-label" for="sen_numbers">
+                                        Number of special pupils not under a special educational needs (SEN)
+                                        statement/education, health and care (EHC) plan
+                                    </label>
+                                    <input class="govuk-input " id="sen_numbers" name="address-town" type="text"
+                                        value="0">
+                                </div>
+
+                                <details class="govuk-details" data-module="govuk-details">
+                                    <summary class="govuk-details__summary">
+                                        <span class="govuk-details__summary-text">
+                                            How is this email address information is used
+                                        </span>
+                                    </summary>
+
+                                            <div class="govuk-details__text">
+                                                The main establishment email address and the alternative establishment
+                                                email address (if one exists for your establishment) should be added
+                                                here respectively. These must be up-to-date, valid and actively
+                                                monitored email addresses. No personal email addresses or personal
+                                                establishment email addresses should be added to these fields. Although
+                                                these fields are not publicly displayed on the website's interface they
+                                                are not classed as personal data, therefore under certain circumstances
+                                                GIAS must share this information, for example, if the department is
+                                                requested to do so under a Freedom of Information (FOI) request. This
+                                                data can be used by the DfE and other government departments,
+                                                non-departmental public bodies, arm's length bodies and partners for
+                                                official functions and tasks within the public interest.
+                                                </br>
+                                                </br>
+                                                This information is very important as it allows the Department for
+                                                Education to share important information and messages with
+                                                establishments, especially during the Coronavirus pandemic.
+
+                                    </div>
+                                </details>
+
+                                <div class="govuk-form-group ">
+                                    <label class="govuk-label" for="email_address">
+                                        Email address 
+                                    </label>
+                                    <input class="govuk-input " id="email_address" name="address-town" type="text"
+                                        value="testemail@testing.com">
+                                </div>
+
+                                <div class="govuk-form-group ">
+                                    <label class="govuk-label" for="alternative_email_address">
+                                        Alternative email address 
+                                    </label>
+                                    <input class="govuk-input " id="alternative_email_address" name="address-town" type="text"
+                                       >
+                                </div>
+
+                            </fieldset>
+
+                            <div class="govuk-button-group">
+                                <button class="govuk-button" data-module="govuk-button">
+                                    Continue
+                                </button>
+                                <a class="govuk-link" href="#">Cancel</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+
+                <div class="govuk-tabs__panel govuk-tabs__panel--hidden ch_tabs" id="ch_iebt">
+
+                </div>
+
+                <div class="govuk-tabs__panel govuk-tabs__panel--hidden ch_tabs" id="ch_links">
+
+                </div>
+                <div class="govuk-tabs__panel govuk-tabs__panel--hidden ch_tabs" id="ch_locations">
+
+                </div>
+                <div class="govuk-tabs__panel govuk-tabs__panel--hidden ch_tabs" id="ch_changes">
+
+                </div>
+                <div class="govuk-tabs__panel govuk-tabs__panel--hidden ch_tabs" id="ch_helpdesk">
+
+                </div>
+
+            </div>
+
+        </div>
+</body>
+{% endblock %}
+
+</html>

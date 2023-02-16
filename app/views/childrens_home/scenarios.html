@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+{% extends "layouts/main.html" %}
+{% block pageTitle %}
+Get Information about Schools
+{% endblock %}
+
+{% block header %}
+{% from "govuk/components/cookie-banner/macro.njk" import govukCookieBanner %}
+
+{% set html %}
+<p class="govuk-body">We use some essential cookies to make this service work.</p>
+<p class="govuk-body">We’d also like to use analytics cookies so we can understand how you use the service and make
+  improvements.</p>
+{% endset %}
+
+{{ govukCookieBanner({
+ariaLabel: "Cookies on Get Information about Schools",
+messages: [
+{
+headingText: "Cookies on Get Information about Schools",
+html: html,
+actions: [
+{
+text: "Accept analytics cookies",
+type: "button",
+name: "cookies",
+value: "accept"
+},
+{
+text: "Reject analytics cookies",
+type: "button",
+name: "cookies",
+value: "reject"
+},
+{
+text: "View cookies",
+href: "#"
+}
+]
+}
+]
+}) }}
+{# Set serviceName in config.js. #}
+{{ govukHeader({
+homepageUrl: "/",
+serviceName: serviceName,
+serviceUrl: "/",
+navigation: [
+{
+href: "http://localhost:3000/landing",
+text: "Home"
+},
+{
+href: "search",
+text: "Search"
+},
+{
+href: "download",
+text: "Downloads"
+},
+{
+href: "about",
+text: "About"
+},
+{
+href: "help",
+text: "Help"
+},
+{
+href: "news",
+text: "News"
+},
+{
+  href: "sign-in",
+  text: "Sign in"
+  }
+],
+containerClasses: "govuk-width-container"
+}) }}
+{% endblock %}
+
+{% block footer %}
+{{ govukFooter({
+meta: {
+items: [
+{
+href: "#",
+text: "Contact"
+},
+{
+href: "#",
+text: "Glossary"
+},
+{
+href: "#",
+text: "Guidance"
+},
+{
+href: "#",
+text: "Terms of use"
+},
+{
+href: "#",
+text: "Privacy"
+},
+{
+href: "#",
+text: "Cookies"
+},
+{
+href: "#",
+text: "Accessibility"
+}
+],
+visuallyHiddenTitle: "Footer links"
+}
+}) }}
+
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+{% block content %}
+
+<body>
+
+  <h1 class="govuk-heading-l govuk-!-margin-bottom-9" id="children_care_details">
+ Children's home scenarios
+  </h1>
+
+  <h2 class="govuk-heading-m">Scenario one - No CH, No Special, No Boarders 53454</h2>
+  <ul class="govuk-list">
+    <li>
+      <a class="govuk-link" href="notsignedin_details">Details - Not signed in view</a>
+    </li>
+    <li>
+      <a class="govuk-link" href="signedin_details">Details - Signed in view</a>
+    </li>
+    <li>
+      <a class="govuk-link" href="edit">Details - edit</a>
+    </li>
+  </ul>
+
+  <h2 class="govuk-heading-m">Scenario two - No CH, No Special, Yes Boarding 53454</h2>
+  <ul class="govuk-list">
+    <li>
+        <a class="govuk-link" href="notsignedin_details2">Details - Not signed in view</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="signedin_details2">Details - Signed in view</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="edit2">Details - edit</a>
+      </li>
+  </ul>
+
+  <h2 class="govuk-heading-m">Scenario three - Yes CH, No Special, No Boarders 53454</h2>
+  <ul class="govuk-list">
+    <li>
+        <a class="govuk-link" href="notsignedin_details3">Details - Not signed in view</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="signedin_details3">Details - Signed in view</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="edit3">Details - edit</a>
+      </li>
+  </ul>
+
+  <h2 class="govuk-heading-m">Scenario four - No CH, Yes Special, Yes Boarding 53454</h2>
+  <ul class="govuk-list">
+    <li>
+        <a class="govuk-link" href="notsignedin_details4">Details - Not signed in view</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="signedin_details4">Details - Signed in view</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="edit4">Details - edit</a>
+      </li>
+  </ul>
+
+  <h2 class="govuk-heading-m">Scenario five - Yes CH, Yes Special, Yes Boarding 53454</h2>
+  <ul class="govuk-list">
+    <li>
+        <a class="govuk-link" href="notsignedin_details5">Details - Not signed in view</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="signedin_details5">Details - Signed in view</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="edit5">Details - edit</a>
+      </li>
+  </ul>
+
+</body>
+{% endblock %}
+</html>
+
+
+
+

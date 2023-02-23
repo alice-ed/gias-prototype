@@ -225,38 +225,38 @@
   overflow: hidden;
 }
 
-.pagination-a{
-  display:block;
+.pagination-a {
+  display: block;
   min-width: 28px;
-margin-bottom: 12px;
-padding: 0 3px 0 3px;
+  margin-bottom: 12px;
+  padding: 0 3px 0 3px;
 }
 
 .go-nowhere {
-  display:block;
+  display: block;
   min-width: 28px;
-margin-bottom: 12px;
-padding: 2px 3px 0 3px;
+  margin-bottom: 12px;
+  padding: 2px 3px 0 3px;
 }
 
-.download-info{
-  display: inline; 
+.download-info {
+  display: inline;
   justify-content: space-between;
 }
 
-#download-title{
+#download-title {
   font-size: 14px;
 }
 
-#clear_all{
+#clear_all {
   margin-left: 20px;
 }
 
-#title_checkbox{
+#title_checkbox {
   margin-bottom: 0;
 }
 
-#title_checkbox2{
+#title_checkbox2 {
   margin-bottom: 0;
 }
 
@@ -270,14 +270,14 @@ padding: 2px 3px 0 3px;
   border: 1px hidden;
 }
 
-#download_paragraph{
+#download_paragraph {
   margin-bottom: 0;
   padding-bottom: 0;
 }
 
-#download_button{
+#download_button {
   margin-top: 30px;
-  margin-bottom:15px;
+  margin-bottom: 15px;
 }
 
 .govuk-radios__input {
@@ -288,12 +288,12 @@ padding: 2px 3px 0 3px;
   width: 34px;
   height: 34px;
   margin: 0;
-  opacity: 0; 
+  opacity: 0;
 }
 
 .govuk-radios--small .govuk-radios__label {
   padding: 11px 15px 10px 1px;
-    padding-left: 1px;
+  padding-left: 1px;
 }
 
 .govuk-radios--small .govuk-radios__item {
@@ -305,23 +305,24 @@ padding: 2px 3px 0 3px;
 
 .gias-radio__item--bordered-filter {
   border: 2px solid #b1b4b6;
-    border-bottom-color: rgb(177, 180, 182);
-    border-bottom-style: solid;
-    border-bottom-width: 2px;
+  border-bottom-color: rgb(177, 180, 182);
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
   width: calc(100% - 38px);
 }
 
 
 .govuk-radios--small .gias-conditional--bordered {
   border: 2px solid #b1b4b6;
-    border-top-color: rgb(177, 180, 182);
-    border-top-style: solid;
-    border-top-width: 2px;
+  border-top-color: rgb(177, 180, 182);
+  border-top-style: solid;
+  border-top-width: 2px;
   border-top: 0;
   padding-left: 10px;
   padding-bottom: 10px;
   margin-left: 0;
 }
+
 .govuk-radios--small .gias-conditional--bordered .date-filters {
   border-left: 4px solid #b1b4b6;
   margin-left: 10px;
@@ -335,12 +336,18 @@ padding: 2px 3px 0 3px;
   padding-bottom: 0;
 }
 
-#urn_colour{
+#urn_colour {
+  color: #505a5f;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+#urn_colour2 {
   color: #505a5f;
   display: inline-block;
 }
 
-#download_location{
+#download_location {
   margin-left: auto;
   float: right;
 }
@@ -348,34 +355,59 @@ padding: 2px 3px 0 3px;
 #ch_details.ch_tabs {
   border: 1px hidden;
 }
+
 #ch_governance.ch_tabs {
   border: 1px hidden;
 }
+
 #ch_links.ch_tabs {
   border: 1px hidden;
 }
+
 #ch_locations.ch_tabs {
   border: 1px hidden;
 }
+
 #ch_iebt.ch_tabs {
   border: 1px hidden;
 }
+
 #ch_changes.ch_tabs {
   border: 1px hidden;
 }
+
 #ch_helpdesk.ch_tabs {
   border: 1px hidden;
 }
 
-.greyed_out{
+.greyed_out {
   background-color: #d8dadb;
 }
 
-#important-icon{
-  width:100%;
-  height:75%;
+#important-icon {
+  width: 100%;
+  height: 75%;
 }
 
-.drop_downs_ch{
-  width:150%;
+#important-icon2 {
+  width: 99.5%;
+  height: 75%;
 }
+
+.drop_downs_ch {
+  width: 150%;
+}
+
+.question_mark {
+  color: white;
+  background-color: #1d70b8;
+  border-color: #1d70b8;
+  position: relative;
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 16px;
+min-width: 20px;
+min-height:15px;
+line-height:15px;
+}
+

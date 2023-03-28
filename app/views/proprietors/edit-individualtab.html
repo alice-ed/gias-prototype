@@ -173,6 +173,11 @@ href: "#"
           Details
         </a>
       </li>
+      <li class="govuk-tabs__list-item govuk-tabs__list-item--selected" selected>
+        <a class="govuk-tabs__tab" href="#ch_proprietors">
+          Proprietors
+        </a>
+      </li>
       <li class="govuk-tabs__list-item">
         <a class="govuk-tabs__tab" href="#ch_iebt">
           IEBT
@@ -230,101 +235,11 @@ href: "#"
           </tr>
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">Date of appointment</th>
-            <td class="govuk-table__cell">proprietor@email.com</td>
+            <td class="govuk-table__cell">13 June 2001</td>
           </tr>
         </tbody>
       </table>
-
-      <div class="govuk-!-padding-bottom-9"></div>
-      <h2 class="govuk-heading-m">Proprietor individual information </h2>
-      <p class="govuk-body">This section gives information about the individual proprietors. An individual proprietors
-        is a person or group of persons who own an independent school and are not members of a proprietor body.</p>
-      <table class="govuk-table ">
-        <caption id="waste-hint" class=" govuk-table__caption  govuk-!-font-weight-regular govuk-hint">
-            Total number of individual proprietors 3
-          </caption>
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header govuk-!-width-one-half">Proprietor individual name</th>
-            <td class="govuk-table__cell govuk-!-width-one-half">Proprietor name 1</td>
-          </tr>
-        </thead>
-        <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">Address</th>
-            <td class="govuk-table__cell">Lindle Lane </br>
-              Hutton, Preston</br>
-              Lancashire</br>
-              PR4 4AQ</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">Proprietor telephone number</th>
-            <td class="govuk-table__cell">0191213123445</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">Proprietor email addresss</th>
-            <td class="govuk-table__cell">proprietor@email.com</td>
-          </tr>
-        </tbody>
-      </table>
-
-
-      <div class="govuk-!-padding-bottom-4"></div>
-
-      <table class="govuk-table ">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header govuk-!-width-one-half">Proprietor individual name</th>
-            <td class="govuk-table__cell govuk-!-width-one-half">Proprietor name 2</td>
-          </tr>
-        </thead>
-        <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">Address</th>
-            <td class="govuk-table__cell">Lindle Lane </br>
-              Hutton, Preston</br>
-              Lancashire</br>
-              PR4 4AQ</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">Proprietor telephone number</th>
-            <td class="govuk-table__cell">0191213123445</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">Proprietor email addresss</th>
-            <td class="govuk-table__cell">proprietor@email.com</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <div class="govuk-!-padding-bottom-4"></div>
-
-      <table class="govuk-table ">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header govuk-!-width-one-half">Proprietor individual name</th>
-            <td class="govuk-table__cell govuk-!-width-one-half">Proprietor name 3</td>
-          </tr>
-        </thead>
-        <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">Address</th>
-            <td class="govuk-table__cell">Lindle Lane </br>
-              Hutton, Preston</br>
-              Lancashire</br>
-              PR4 4AQ</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">Proprietor telephone number</th>
-            <td class="govuk-table__cell">0191213123445</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">Proprietor email addresss</th>
-            <td class="govuk-table__cell">proprietor@email.com</td>
-          </tr>
-        </tbody>
-      </table>
-
+      
       <div class="govuk-!-padding-bottom-9"></div>
       
       <table class="govuk-table">
@@ -369,12 +284,6 @@ href: "#"
             <th scope="row" class="govuk-table__header">Local authority name <span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span></th>
             <td class="govuk-table__cell">Birmingham</td>
           </tr>
-          <tr class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">
-              Change<span class="govuk-visually-hidden"> contact details</span>
-            </a>
-          </tr>
-      
         </tbody>
       </table>
 
@@ -647,9 +556,100 @@ href: "#"
         Edit details
       </button>
 
-
-
     </div>
+
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden ch_tabs" id="ch_proprietors">
+
+          <div class="govuk-!-padding-bottom-4"></div>
+
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-fieldset__heading">
+                Proprietor individual 
+              </h2>
+            </legend>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="address-line-1">
+                Proprietor individual name
+              </label>
+              <input class="govuk-input govuk-!-width-two-thirds" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1" value="Individual Name 1">
+            </div>
+            <div class="govuk-form-group">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="address-line-2" valaue="test">
+                  Street
+                </label>
+                <input class="govuk-input govuk-!-width-two-thirds " id="address-line-2" name="address-line-2" type="text" autocomplete="address-line2" value="test" >
+              </div>
+              <div class="govuk-form-group">
+                  <label class="govuk-label" for="address-line-2">
+                      Locality
+                  </label>
+                  <input class="govuk-input govuk-!-width-two-thirds " id="address-line-2" name="address-line-2" type="text" autocomplete="address-line" >
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="address-line-2">
+                      Address 3
+                  </label>
+                  <input class="govuk-input govuk-!-width-two-thirds " id="address-line-2" name="address-line-2" type="text" autocomplete="address-line" value="test" >
+                  </div>
+                  <div class="govuk-form-group">
+                      <label class="govuk-label" for="address-line-2">
+                          Town
+                      </label>
+                      <input class="govuk-input govuk-!-width-two-thirds " id="address-line-2" name="address-line-2" type="text" autocomplete="address-line" value="test" >
+                    </div>
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="subject">
+                          County
+                      </label>
+                      <select class="govuk-select govuk-!-width-two-thirds" id="subject" name="subject" aria-describedby="subject-hint">
+                        <option value="eastmidlands" selected>East Midlands</option>
+                        <option value="eastofengland">East of England</option>
+                        <option value="london">London</option>
+                        <option value="northeast">North East</option>
+                        <option value="northwest">North West</option>
+                        <option value="southeast">South East</option>
+                        <option value="southwest">South West</option>
+                        <option value="westmidlands">West Midlands</option>
+                        <option value="yorkshire">Yorkshire and the Humber</option>
+                      </select>
+                    </div>
+              
+              </div>
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="address-postcode">
+                    Postcode
+                </label>
+                <input class="govuk-input govuk-input--width-10" id="address-postcode"
+                    name="address-postcode" type="text" autocomplete="postal-code"
+                   >
+            </div>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="address-town">
+                Telephone number
+              </label>
+              <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text" autocomplete="address-level2" value="0711111111">
+            </div>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="address-postcode">
+                Proprietor email address
+              </label>
+              <input class="govuk-input govuk-!-width-two-thirds" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code" value="mainemail@email.com">
+            </div>
+          </fieldset>
+
+          <div class="govuk-!-padding-bottom-4"></div>
+          
+          <div class="govuk-button-group">
+            <a class="govuk-button" data-module="govuk-button" href="confirm-individualchanges#ch_proprietors">
+              Save and continue
+            </a>
+            <a class="govuk-link" href="proprietors-individualtab#ch_proprietors">Cancel</a>
+          </div>
+          
+    </div>
+
     <div class="govuk-tabs__panel govuk-tabs__panel--hidden ch_tabs" id="ch_iebt">
 
     </div>
@@ -667,15 +667,6 @@ href: "#"
 
     </div>
   </div>
-
-  <a class="back-to-top-link" href="#top">
-    <svg role="presentation" focusable="false" class="back-to-top-icon" xmlns="http://www.w3.org/2000/svg" width="13"
-      height="17" viewBox="0 0 13 17">
-      <path fill="currentColor" d="M6.5 0L0 6.5 1.4 8l4-4v12.7h2V4l4.3 4L13 6.4z"></path>
-    </svg>
-    Back to top
-  </a>
-
 
 </body>
 {% endblock %}

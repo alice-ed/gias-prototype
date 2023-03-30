@@ -151,6 +151,8 @@ href: "#"
 
 <body>
 
+    <form class="form" action="/proprietors/create" method="post">
+
   <h1 class="govuk-heading-l" id="children_care_details">
     <span class="govuk-caption-l">Establishment</span>
     Ashbridge Independent School
@@ -602,98 +604,44 @@ href: "#"
 
     <div class="govuk-tabs__panel govuk-tabs__panel--hidden ch_tabs" id="ch_proprietors">
 
-      <h1 class="govuk-heading-l">Add a new individual proprietor </h1>
-
-            <fieldset class="govuk-fieldset">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                <h2 class="govuk-fieldset__heading">
-                  Proprietor individual
-                </h2>
-              </legend>
-              <div class="govuk-form-group">
-                <label class="govuk-label" for="address-line-1">
-                  Proprietor individual name
-                </label>
-                <input class="govuk-input govuk-!-width-two-thirds" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1" >
-              </div>
-              <div class="govuk-form-group">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="address-line-2" valaue="test">
-                    Street
-                  </label>
-                  <input class="govuk-input govuk-!-width-two-thirds " id="address-line-2" name="address-line-2" type="text" autocomplete="address-line2"  >
-                </div>
-                <div class="govuk-form-group">
-                    <label class="govuk-label" for="address-line-2">
-                        Locality
-                    </label>
-                    <input class="govuk-input govuk-!-width-two-thirds " id="address-line-2" name="address-line-2" type="text" autocomplete="address-line" >
-                  </div>
-                  <div class="govuk-form-group">
-                    <label class="govuk-label" for="address-line-2">
-                        Address 3
-                    </label>
-                    <input class="govuk-input govuk-!-width-two-thirds " id="address-line-2" name="address-line-2" type="text" autocomplete="address-line"  >
-                    </div>
-                    <div class="govuk-form-group">
-                        <label class="govuk-label" for="address-line-2">
-                            Town
-                        </label>
-                        <input class="govuk-input govuk-!-width-two-thirds " id="address-line-2" name="address-line-2" type="text" autocomplete="address-line"  >
-                      </div>
-                      <div class="govuk-form-group">
-                        <label class="govuk-label" for="subject">
-                            County
-                        </label>
-                        <select class="govuk-select govuk-!-width-two-thirds" id="subject" name="subject" aria-describedby="subject-hint">
-                          <option value="choose" selected>Choose county</option>
-                          <option value="eastmidlands" >East Midlands</option>
-                          <option value="eastofengland">East of England</option>
-                          <option value="london">London</option>
-                          <option value="northeast">North East</option>
-                          <option value="northwest">North West</option>
-                          <option value="southeast">South East</option>
-                          <option value="southwest">South West</option>
-                          <option value="westmidlands">West Midlands</option>
-                          <option value="yorkshire">Yorkshire and the Humber</option>
-                        </select>
-                      </div>
-                
-                </div>
-              <div class="govuk-form-group">
-                  <label class="govuk-label" for="address-postcode">
-                      Postcode
-                  </label>
-                  <input class="govuk-input govuk-input--width-10" id="address-postcode"
-                      name="address-postcode" type="text" autocomplete="postal-code"
-                     >
-              </div>
-              <div class="govuk-form-group">
-                <label class="govuk-label" for="address-town">
-                  Telephone number
-                </label>
-                <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text" autocomplete="address-level2" >
-              </div>
-              <div class="govuk-form-group">
-                <label class="govuk-label" for="address-postcode">
-                  Proprietor email address
-                </label>
-                <input class="govuk-input govuk-!-width-two-thirds" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code" >
-              </div>
-            </fieldset>
-  
-
-        <div class="govuk-button-group">
-            <a class="govuk-button" data-module="govuk-button" href="confirm-individualchanges#ch_proprietors">
-              Continue
-            </a>
-            <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="add-individual#ch_proprietors">
-              Add another individual proprietor
-            </a>
-            
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+             Chose proprietor type?
+            </h1>
+          </legend>
+          <div id="sign-in-hint" class="govuk-hint">
+            An other independent school or independent special school must have a proprietor body or one of more individual proprietors. 
           </div>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="bodyyes1" name="select-yes" type="radio" value="body-yes" aria-describedby="sign-in-item-hint">
+              <label class="govuk-label govuk-radios__label" for="sign-in">
+                Body
+              </label>
+              <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                A proprietor body is a body, corporate or incorporate, that owns an independent school, for example, a limited company, a charity, a trust or a governing body.
+              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="individualyes2" name="select-yes" type="radio" value="individual-yes" aria-describedby="sign-in-2-item-hint">
+              <label class="govuk-label govuk-radios__label" for="sign-in-2">
+                Individual
+              </label>
+              <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
+                An individual proprietors is a person or group of persons who own an independent school and are not members of a proprietor body.
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      
 
-          <a class="govuk-link" href="">Cancel</a>
+      <button class="govuk-button" id="continue" data-module="govuk-button">
+        Continue
+      </button>
+      
 
   </div>
 
@@ -725,7 +673,7 @@ href: "#"
     Back to top
   </a>
 
-
+</form>
 </body>
 {% endblock %}
 

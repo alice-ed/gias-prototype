@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html>
+{% extends "layouts/main.html" %}
+{% block pageTitle %}
+Get Information about Schools
+{% endblock %}
+
+{% block header %}
+{% from "govuk/components/cookie-banner/macro.njk" import govukCookieBanner %}
+
+{% set html %}
+<p class="govuk-body">We use some essential cookies to make this service work.</p>
+<p class="govuk-body">We’d also like to use analytics cookies so we can understand how you use the service and make
+    improvements.</p>
+{% endset %}
+
+{{ govukCookieBanner({
+ariaLabel: "Cookies on Get Information about Schools",
+messages: [
+{
+headingText: "Cookies on Get Information about Schools",
+html: html,
+actions: [
+{
+text: "Accept analytics cookies",
+type: "button",
+name: "cookies",
+value: "accept"
+},
+{
+text: "Reject analytics cookies",
+type: "button",
+name: "cookies",
+value: "reject"
+},
+{
+text: "View cookies",
+href: "#"
+}
+]
+}
+]
+}) }}
+{# Set serviceName in config.js. #}
+{{ govukHeader({
+homepageUrl: "/",
+serviceName: serviceName,
+serviceUrl: "/",
+navigation: [
+{
+href: "http://localhost:3000/landing",
+text: "Home"
+},
+{
+href: "search",
+text: "Search"
+},
+{
+href: "download",
+text: "Downloads"
+},
+{
+href: "about",
+text: "About"
+},
+{
+href: "help",
+text: "Help"
+},
+{
+href: "news",
+text: "News"
+},
+{
+href: "sign-in",
+text: "Sign in"
+}
+],
+containerClasses: "govuk-width-container"
+}) }}
+{% endblock %}
+
+{% block footer %}
+{{ govukFooter({
+meta: {
+items: [
+{
+href: "#",
+text: "Contact"
+},
+{
+href: "#",
+text: "Glossary"
+},
+{
+href: "#",
+text: "Guidance"
+},
+{
+href: "#",
+text: "Terms of use"
+},
+{
+href: "#",
+text: "Privacy"
+},
+{
+href: "#",
+text: "Cookies"
+},
+{
+href: "#",
+text: "Accessibility"
+}
+],
+visuallyHiddenTitle: "Footer links"
+}
+}) }}
+
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+tag: {
+text: "beta"
+},
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{{ govukBreadcrumbs({
+items: [
+{
+text: "Home",
+href: "#"
+},
+{
+text: "Search",
+href: "#"
+},
+{
+text: "Establishments",
+href: "#"
+}
+]
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<body>
+
+    <h1 class="govuk-heading-l" id="children_care_details">
+        <span class="govuk-caption-l">Establishment</span>
+        Beeches Junior School
+    </h1>
+
+
+    <p class="govuk-body-s govuk-!-font-weight-bold" id="urn_colour">URN:<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span> 124879&nbsp;&nbsp;&nbsp;&nbsp; Type: <span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span> &nbsp;&nbsp;Community
+        school</p> </br>
+
+        <p class="govuk-body-s govuk-!-font-weight-bold" id="urn_colour2">Part of federation:<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span> &nbsp;&nbsp; <a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-regular" id="download_location">Abbey Parks Schools Federation</a></p>    
+    <a href="#" class="govuk-link govuk-link--no-visited-state" id="download_location">Download establishment data</a>
+
+    <img src="/public/images/u432.png" id="important-icon" alt="important message" />
+    <img src="/public/images/u381.png" id="important-icon2" alt="important message" />
+
+    <div class="govuk-tabs" data-module="govuk-tabs">
+        <h2 class="govuk-tabs__title">
+            Contents
+        </h2>
+        <ul class="govuk-tabs__list">
+            <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                <a class="govuk-tabs__tab" href="#ch_details">
+                    Details
+                </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#ch_iebt">
+                    Governance
+                </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#ch_links">
+                    Links
+                </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#ch_locations">
+                    Locations
+                </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#ch_changes">
+                    Changes
+                </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#ch_helpdesk">
+                    Helpdesk
+                </a>
+            </li>
+        </ul>
+
+        <div class="govuk-tabs__panel ch_tabs" id="ch_details">
+
+            <fieldset class="govuk-fieldset">
+                <div class="govuk-form-group ">
+                    <label class="govuk-label" for="school-town">
+                        Establishment name <span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span>
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds greyed_out" id="school-name" name="address-town"
+                        type="text" value="Beeches Junior School">
+                </div>
+
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        Unique Reference Number (URN) <span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span>
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds greyed_out" id="urn" name="address-town"
+                        type="text" value="103163">
+                </div>
+
+                <div class="govuk-form-group ">
+                    <label class="govuk-label" for="school-town">
+                        Establishment type <span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span>
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds greyed_out" id="school-name" name="address-town"
+                        type="text" value="Community school">
+                </div>
+
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        Part of federation <span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span>
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds greyed_out" id="urn" name="address-town"
+                        type="text" value="Abbey Parks Schools Federation ">
+                </div>
+            </fieldset>
+
+            <div class="govuk-!-padding-bottom-9"></div>
+            <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <h1 class="govuk-heading-m">
+                        Establishment headteacher details
+                    </h1>
+                </legend>
+
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="title">
+                        Title
+                    </label>
+                    <select class="govuk-select govuk-!-width-two-thirds" id="title" name="sort">
+                        <option value="published">Mrs</option>
+                        <option value="updated" selected>Mr</option>
+                        <option value="views">Miss</option>
+                        <option value="comments">Master</option>
+                    </select>
+                </div>
+
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        First name
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="urn" name="address-town" type="text"
+                        value="Mike">
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        Surname
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="urn" name="address-town" type="text"
+                        value="Smart">
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        Job title
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds greyed_out" id="urn" name="address-town"
+                        type="text" value="Headteacher">
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        Headteacher establishment email address
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="urn" name="address-town" type="text"
+                        value=" m.smart@beechesjnr.bham.sch.uk">
+                </div>
+                
+                <details class="govuk-details" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                            How this email address information is used
+                        </span>
+                    </summary>
+                    <div class="govuk-details__text govuk-!-width-two-thirds">
+                        The headteacher / principal personal establishment email address must be added here. This must
+                        be an up-to-date, valid and actively monitored email address. This information is not publicly
+                        displayed on the website's interface and is classed as personal data, therefore it cannot be
+                        shared publicly, for example, through a Freedom of Information (FOI) request. Under the
+                        conditions of Article 6(1)(e) of the UK-GDPR this information can be shared with other
+                        government departments, non-departmental public bodies, arm's length bodies and partners for
+                        official functions and tasks within the public interest to be performed.
+                        </br>
+                        </br>
+                        This information is very important as it allows the Department for Education to share important
+                        information and messages with headteachers/principals/managers, especially during the
+                        Coronavirus pandemic.
+                    </div>
+                </details>
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <h1 class="govuk-heading-s">
+                                Date of appointment
+                            </h1>
+                        </legend>
+                        <div id="passport-issued-hint" class="govuk-hint">
+                            For example, 27 3 2007
+                        </div>
+                        <div class="govuk-date-input" id="passport-issued">
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                                        Day
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                        id="passport-issued-day" name="passport-issued-day" type="text"
+                                        inputmode="numeric">
+                                </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                                        Month
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                        id="passport-issued-month" name="passport-issued-month" type="text"
+                                        inputmode="numeric">
+                                </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                                        Year
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-4"
+                                        id="passport-issued-year" name="passport-issued-year" type="text"
+                                        inputmode="numeric">
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </fieldset>
+
+            <div class="govuk-!-padding-bottom-9"></div>
+
+            <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <h1 class="govuk-heading-m">
+                        Establishment name and registered contact information
+                    </h1>
+                </legend>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        Establishment name
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="urn" name="address-town" type="text"
+                        value=" Beeches Junior School">
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="address-postcode">
+                        Postcode
+                    </label>
+                    <input class="govuk-input govuk-input--width-10 greyed_out" id="address-postcode"
+                        name="address-postcode" type="text" autocomplete="postal-code" value=" 1P19 9AB">
+                    <a class="govuk-link " href="#">Replace this address</a>
+                </div>
+                <div class="govuk-form-group">
+                    <a class="govuk-link " href="#">Edit or replace address</a>
+                </div>
+                <details class="govuk-details" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                            More information about editing or replacing the address
+                        </span>
+                    </summary>
+                    <div class="govuk-details__text govuk-!-width-two-thirds">
+                        More information about editing or replacing the address
+                    </div>
+                </details>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        Street
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="urn" name="address-town" type="text"
+                        value="Beeches Road">
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        Locality
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="urn" name="address-town" type="text"
+                        value="">
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        Address 3
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="urn" name="address-town" type="text"
+                        value="">
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        Town
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="urn" name="address-town" type="text"
+                        value="Birmingham">
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="County">
+                        County
+                    </label>
+                    <select class="govuk-select govuk-!-width-two-thirds" id="County" name="sort">
+                        <option value="published">Yorkshire</option>
+                        <option value="updated" selected>West Midlands</option>
+                        <option value="views">Tyne and Wear</option>
+                        <option value="comments">Northumberland</option>
+                    </select>
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        Main telephone number
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="urn" name="address-town" type="text"
+                        value="01212725888">
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        Main email address
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="urn" name="address-town" type="text"
+                        value="enquiry@beechesjnr.bham.sch.uk">
+                </div>
+                <details class="govuk-details" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                            More information about editing or replacing the address
+                        </span>
+                    </summary>
+                    <div class="govuk-details__text govuk-!-width-two-thirds">
+                        The main establishment email address and the alternative establishment email address (if one
+                        exists for your establishment) should be added here respectively. These must be up-to-date,
+                        valid and actively monitored email addresses. No personal email addresses or personal
+                        establishment email addresses should be added to these fields. Although these fields are not
+                        publicly displayed on the website's interface they are not classed as personal data, therefore
+                        under certain circumstances GIAS must share this information, for example, if the department is
+                        requested to do so under a Freedom of Information (FOI) request. This data can be used by the
+                        DfE and other government departments, non-departmental public bodies, arm's length bodies and
+                        partners for official functions and tasks within the public interest.
+                        </br>
+                        </br>
+                        This information is very important as it allows the Department for Education to share important
+                        information and messages with establishments, especially during the Coronavirus pandemic.
+                    </div>
+                </details>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        Alternative email address
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="urn" name="address-town" type="text"
+                        value="admissions@birmingham.gov.uk">
+                </div>
+                <details class="govuk-details" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                            More information about editing or replacing the address
+                        </span>
+                    </summary>
+                    <div class="govuk-details__text govuk-!-width-two-thirds">
+                        The main establishment email address and the alternative establishment email address (if one
+                        exists for your establishment) should be added here respectively. These must be up-to-date,
+                        valid and actively monitored email addresses. No personal email addresses or personal
+                        establishment email addresses should be added to these fields. Although these fields are not
+                        publicly displayed on the website's interface they are not classed as personal data, therefore
+                        under certain circumstances GIAS must share this information, for example, if the department is
+                        requested to do so under a Freedom of Information (FOI) request. This data can be used by the
+                        DfE and other government departments, non-departmental public bodies, arm's length bodies and
+                        partners for official functions and tasks within the public interest.
+                        </br>
+                        </br>
+                        This information is very important as it allows the Department for Education to share important
+                        information and messages with establishments, especially during the Coronavirus pandemic.
+                    </div>
+                </details>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        Website
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="urn" name="address-town" type="text"
+                        value="https://www.beechesjnr.bham.sch.uk/about-us/admissions">
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        GIAS local authority code <span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span>
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="urn" name="address-town" type="text"
+                        value="330">
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="County">
+                        Local authority name <span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span>
+                    </label>
+                    <select class="govuk-select govuk-!-width-two-thirds" id="County" name="sort">
+                        <option value="published">Kent</option>
+                        <option value="updated" selected>Birmingham</option>
+                        <option value="views">Newcastle</option>
+                        <option value="comments">Liverpool</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <div class="govuk-!-padding-bottom-9"></div>
+
+            <h1 class="govuk-heading-m">
+                Multiple site addresses
+            </h1>
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <p class="govuk-body govuk-!-font-weight-bold">
+                      Does the school have multiple sites?
+                    </p>
+                  </legend>
+                  <div id="contact-hint" class="govuk-hint">
+                    Defintion
+                  </div>
+                  <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact" selected>
+                      <label class="govuk-label govuk-radios__label" for="contact">
+                        Yes
+                      </label>
+                    </div>
+                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label" for="contact-by-email">
+                          How many different sites?
+                        </label>
+                        <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false" autocomplete="email" value="3">
+                      </div>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone">
+                      <label class="govuk-label govuk-radios__label" for="contact-2">
+                        No
+                      </label>
+                    </div>
+                </fieldset>
+              </div>
+
+              <div class="govuk-!-padding-bottom-7"></div>
+              
+              <fieldset class="govuk-fieldset">
+                </legend>
+                <div class="govuk-form-group">
+                    <label class="govuk-label govuk-!-font-weight-bold" for="urn">
+                        Site 1 name
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="urn" name="address-town" type="text"
+                        value=" Beeches Junior School">
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="address-postcode">
+                        Postcode
+                    </label>
+                    <input class="govuk-input govuk-input--width-10 greyed_out" id="address-postcode"
+                        name="address-postcode" type="text" autocomplete="postal-code" value=" 1P19 9AB">
+                    <a class="govuk-link " href="#">Replace this address</a>
+                </div>
+                <div class="govuk-form-group">
+                    <a class="govuk-link " href="#">Edit or replace address</a>
+                </div>
+                <details class="govuk-details" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                            More information about editing or replacing the address
+                        </span>
+                    </summary>
+                    <div class="govuk-details__text govuk-!-width-two-thirds">
+                        More information about editing or replacing the address
+                    </div>
+                </details>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        Street
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="urn" name="address-town" type="text"
+                        value="Beeches Road">
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        Locality
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="urn" name="address-town" type="text"
+                        value="">
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        Address 3
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="urn" name="address-town" type="text"
+                        value="">
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        Town
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="urn" name="address-town" type="text"
+                        value="Birmingham">
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="County">
+                        County
+                    </label>
+                    <select class="govuk-select govuk-!-width-two-thirds" id="County" name="sort">
+                        <option value="published">Yorkshire</option>
+                        <option value="updated" selected>West Midlands</option>
+                        <option value="views">Tyne and Wear</option>
+                        <option value="comments">Northumberland</option>
+                    </select>
+                </div>
+                </fieldset>
+
+                <div class="govuk-!-padding-bottom-7"></div>
+              
+                <fieldset class="govuk-fieldset">
+                </legend>
+                <div class="govuk-form-group">
+                    <label class="govuk-label govuk-!-font-weight-bold" for="urn">
+                        Site 2 name
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="urn" name="address-town" type="text"
+                        value=" Beeches Junior School">
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="address-postcode">
+                        Postcode
+                    </label>
+                    <input class="govuk-input govuk-input--width-10 greyed_out" id="address-postcode"
+                        name="address-postcode" type="text" autocomplete="postal-code" value=" 1P19 9AB">
+                    <a class="govuk-link " href="#">Replace this address</a>
+                </div>
+                <div class="govuk-form-group">
+                    <a class="govuk-link " href="#">Edit or replace address</a>
+                </div>
+                <details class="govuk-details" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                            More information about editing or replacing the address
+                        </span>
+                    </summary>
+                    <div class="govuk-details__text govuk-!-width-two-thirds">
+                        More information about editing or replacing the address
+                    </div>
+                </details>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        Street
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="urn" name="address-town" type="text"
+                        value="Beeches Road">
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        Locality
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="urn" name="address-town" type="text"
+                        value="">
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        Address 3
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="urn" name="address-town" type="text"
+                        value="">
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        Town
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="urn" name="address-town" type="text"
+                        value="Birmingham">
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="County">
+                        County
+                    </label>
+                    <select class="govuk-select govuk-!-width-two-thirds" id="County" name="sort">
+                        <option value="published">Yorkshire</option>
+                        <option value="updated" selected>West Midlands</option>
+                        <option value="views">Tyne and Wear</option>
+                        <option value="comments">Northumberland</option>
+                    </select>
+                </div>
+                </fieldset>
+
+                  <div class="govuk-!-padding-bottom-7"></div>
+              
+                  <fieldset class="govuk-fieldset">
+                    </legend>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-!-font-weight-bold" for="urn">
+                            Site 3 name
+                        </label>
+                        <input class="govuk-input govuk-!-width-two-thirds" id="urn" name="address-town" type="text"
+                            value=" Beeches Junior School">
+                    </div>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="address-postcode">
+                            Postcode
+                        </label>
+                        <input class="govuk-input govuk-input--width-10 greyed_out" id="address-postcode"
+                            name="address-postcode" type="text" autocomplete="postal-code" value=" 1P19 9AB">
+                        <a class="govuk-link " href="#">Replace this address</a>
+                    </div>
+                    <div class="govuk-form-group">
+                        <a class="govuk-link " href="#">Edit or replace address</a>
+                    </div>
+                    <details class="govuk-details" data-module="govuk-details">
+                        <summary class="govuk-details__summary">
+                            <span class="govuk-details__summary-text">
+                                More information about editing or replacing the address
+                            </span>
+                        </summary>
+                        <div class="govuk-details__text govuk-!-width-two-thirds">
+                            More information about editing or replacing the address
+                        </div>
+                    </details>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="urn">
+                            Street
+                        </label>
+                        <input class="govuk-input govuk-!-width-two-thirds" id="urn" name="address-town" type="text"
+                            value="Beeches Road">
+                    </div>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="urn">
+                            Locality
+                        </label>
+                        <input class="govuk-input govuk-!-width-two-thirds" id="urn" name="address-town" type="text"
+                            value="">
+                    </div>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="urn">
+                            Address 3
+                        </label>
+                        <input class="govuk-input govuk-!-width-two-thirds" id="urn" name="address-town" type="text"
+                            value="">
+                    </div>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="urn">
+                            Town
+                        </label>
+                        <input class="govuk-input govuk-!-width-two-thirds" id="urn" name="address-town" type="text"
+                            value="Birmingham">
+                    </div>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="County">
+                            County
+                        </label>
+                        <select class="govuk-select govuk-!-width-two-thirds" id="County" name="sort">
+                            <option value="published">Yorkshire</option>
+                            <option value="updated" selected>West Midlands</option>
+                            <option value="views">Tyne and Wear</option>
+                            <option value="comments">Northumberland</option>
+                        </select>
+                    </div>
+                    </fieldset>
+    
+
+            
+
+            <div class="govuk-!-padding-bottom-9"></div>
+
+            <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-heading-m">
+                    Establishment identifiers 
+                  </h1>
+                </legend>
+              
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        Unique Reference Number (URN) <span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span>
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds greyed_out" id="urn" name="address-town"
+                        type="text" value="103163">
+                </div>
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" role="group"
+                        aria-describedby="passport-issued-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <label class="govuk-label" for="urn">
+                                Unique Reference Number (URN) <span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span>
+                            </label>
+                        </legend>
+                        <div class="govuk-date-input" id="passport-issued">
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label"
+                                        for="passport-issued-day"> <div id="passport-issued-hint" class="govuk-hint">
+                                            LA code 
+                                        </div>
+                                    </label>
+                                    <input
+                                        class="govuk-input govuk-date-input__input govuk-input--width-4 greyed_out"
+                                        id="passport-issued-day" name="passport-issued-day" type="text"
+                                        inputmode="numeric" value="149" >
+                                </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label"
+                                    for="passport-issued-day"> <div id="passport-issued-hint" class="govuk-hint">
+                                        Establishment number 
+                                    </div>
+                                </label>
+                                    <input
+                                        class="govuk-input govuk-date-input__input govuk-input--width-6 "
+                                        id="passport-issued-month" name="passport-issued-month"
+                                        type="text" inputmode="numeric" value=" 6036">
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        Establishment number <span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span>
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds " id="urn" name="address-town"
+                        type="text" value="2016">
+                </div>
+
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        UK provider reference number (UKPRN) <span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span>
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds " id="urn" name="address-town"
+                        type="text" value="10071503">
+                </div>
+              
+              </fieldset>
+
+              <div class="govuk-!-padding-bottom-9"></div>
+
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-heading-m">
+                    Establishment type and status information
+                  </h1>
+                </legend>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        Establishment group type <span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span>
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds greyed_out" id="urn" name="address-town" type="text"
+                        value=" Local authority maintained school">
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="County">
+                        Establishment type <span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span>
+                    </label>
+                    <select class="govuk-select govuk-!-width-two-thirds" id="County" name="sort">
+                        <option value="updated" selected>Community school</option>
+                    </select>
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="County">
+                        Admissions policy <span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span>
+                    </label>
+                    <select class="govuk-select govuk-!-width-two-thirds" id="County" name="sort">
+                        <option value="updated" selected>Not applicable</option>
+                    </select>
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="County">
+                        Phase of education <span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span>
+                    </label>
+                    <select class="govuk-select govuk-!-width-two-thirds" id="County" name="sort">
+                        <option value="updated" selected>Primary</option>
+                    </select>
+                </div>
+
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" role="group"
+                        aria-describedby="passport-issued-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <h1 class="govuk-heading-s">
+                                Statutory age range <span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span>
+                            </h1>
+                        </legend>
+                        <div class="govuk-date-input" id="passport-issued">
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label"
+                                        for="passport-issued-day">
+                                        Lowest statutory age
+                                    </label>
+                                    <input
+                                        class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                        id="passport-issued-day" name="passport-issued-day" type="text"
+                                        inputmode="numeric" value="4">
+                                </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label"
+                                        for="passport-issued-month">
+                                        Highest statutory age 
+                                    </label>
+                                    <input
+                                        class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                        id="passport-issued-month" name="passport-issued-month"
+                                        type="text" inputmode="numeric" value="11">
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="County">
+                        Capacity <span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span>
+                    </label>
+                    <select class="govuk-select govuk-!-width-two-thirds" id="County" name="sort">
+                        <option value="updated" selected>360</option>
+                    </select>
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="County">
+                        Total number of pupils <span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span>
+                    </label>
+                    <select class="govuk-select govuk-!-width-two-thirds greyed_out" id="County" name="sort">
+                        <option value="updated" selected>300</option>
+                    </select>
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="County">
+                        Total number of girls <span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span>
+                    </label>
+                    <select class="govuk-select govuk-!-width-two-thirds greyed_out" id="County" name="sort">
+                        <option value="updated" selected>150</option>
+                    </select>
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="County">
+                        Total number of boys <span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span>
+                    </label>
+                    <select class="govuk-select govuk-!-width-two-thirds greyed_out" id="County" name="sort">
+                        <option value="updated" selected>150</option>
+                    </select>
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="County">
+                        Gender of entry
+                    </label>
+                    <select class="govuk-select govuk-!-width-two-thirds" id="County" name="sort">
+                        <option value="updated" selected>Mixed</option>
+                        <option value="views">Girls</option>
+                        <option value="comments">Boys</option>
+                    </select>
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="County">
+                        Establishment status
+                    </label>
+                    <select class="govuk-select govuk-!-width-two-thirds" id="County" name="sort">
+                        <option value="updated" selected>Open</option>
+                        <option value="views">Closed</option>
+                    </select>
+                </div>
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" role="group"
+                        aria-describedby="passport-issued-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <h1 class="govuk-heading-s">
+                                Open date
+                            </h1>
+                        </legend>
+                        <div id="passport-issued-hint" class="govuk-hint">
+                            For example, 27 3 2007
+                        </div>
+                        <div class="govuk-date-input" id="passport-issued">
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label"
+                                        for="passport-issued-day">
+                                        Day
+                                    </label>
+                                    <input
+                                        class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                        id="passport-issued-day" name="passport-issued-day" type="text"
+                                        inputmode="numeric" value="20">
+                                </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label"
+                                        for="passport-issued-month">
+                                        Month
+                                    </label>
+                                    <input
+                                        class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                        id="passport-issued-month" name="passport-issued-month"
+                                        type="text" inputmode="numeric" value="11">
+                                </div>
+                            </div>
+
+                            <div class="govuk-form-group">
+                                <label class="govuk-label" for="County">
+                                    Reason establishment opened
+                                </label>
+                                <select class="govuk-select govuk-!-width-two-thirds" id="County" name="sort">
+                                    <option value="updated" selected>New provision</option>
+                                </select>
+                            </div>
+                            <div class="govuk-form-group">
+                                <fieldset class="govuk-fieldset" role="group"
+                                    aria-describedby="passport-issued-hint">
+                                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                                        <h1 class="govuk-heading-s">
+                                            Close date
+                                        </h1>
+                                    </legend>
+                                    <div id="passport-issued-hint" class="govuk-hint">
+                                        For example, 27 3 2007
+                                    </div>
+                                    <div class="govuk-date-input" id="passport-issued">
+                                        <div class="govuk-date-input__item">
+                                            <div class="govuk-form-group">
+                                                <label class="govuk-label govuk-date-input__label"
+                                                    for="passport-issued-day">
+                                                    Day
+                                                </label>
+                                                <input
+                                                    class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                                    id="passport-issued-day" name="passport-issued-day" type="text"
+                                                    inputmode="numeric" value="20">
+                                            </div>
+                                        </div>
+                                        <div class="govuk-date-input__item">
+                                            <div class="govuk-form-group">
+                                                <label class="govuk-label govuk-date-input__label"
+                                                    for="passport-issued-month">
+                                                    Month
+                                                </label>
+                                                <input
+                                                    class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                                    id="passport-issued-month" name="passport-issued-month"
+                                                    type="text" inputmode="numeric" value="11">
+                                            </div>
+                                        </div>
+            
+                                        <div class="govuk-form-group">
+                                            <label class="govuk-label" for="County">
+                                                Reason establishment closed
+                                            </label>
+                                            <select class="govuk-select govuk-!-width-two-thirds" id="County" name="sort">
+                                                <option value="updated" selected>New applicable</option>
+                                            </select>
+                                        </div>
+              </fieldset>
+
+              <div class="govuk-!-padding-bottom-9"></div>
+
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-heading-m">
+                    Further establishment information 
+                  </h1>
+                </legend>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        Part of federation<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span>
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds greyed_out" id="urn" name="address-town" type="text"
+                        value=" Abbey Parks Schools Federation ">
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="County">
+                        Nursery provision<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span>
+                    </label>
+                    <select class="govuk-select govuk-!-width-two-thirds" id="County" name="sort">
+                        <option value="updated" selected>No nursery classes</option>
+                        <option value="views">Yes nursery classes</option>
+                    </select>
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="County">
+                        Official sixth form<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span>
+                    </label>
+                    <select class="govuk-select govuk-!-width-two-thirds" id="County" name="sort">
+                        <option value="updated" selected>Has a sixth form</option>
+                        <option value="views">Doesn't have a sixth form</option>
+                    </select>
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="County">
+                        Type of boarding
+                    </label>
+                    <select class="govuk-select govuk-!-width-two-thirds" id="County" name="sort">
+                        <option value="updated" selected>No boarders</option>
+                        <option value="views">Boarders</option>
+                    </select>
+                </div>
+             
+              </fieldset>
+
+              <div class="govuk-!-padding-bottom-9"></div>
+
+
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-heading-m">
+                    Faith information
+                  </h1>
+                </legend>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="County">
+                        Religious character<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span>
+                    </label>
+                    <select class="govuk-select govuk-!-width-two-thirds" id="County" name="sort">
+                        <option value="updated" selected>Roman Catholic</option>
+                        <option value="views">Christian</option>
+                        <option value="views">Jewish</option>
+                        <option value="views">Muslim</option>
+                    </select>
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="County">
+                        Religious diocese<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span>
+                    </label>
+                    <select class="govuk-select govuk-!-width-two-thirds" id="County" name="sort">
+                        <option value="updated" selected>Roman Catholic Archdiocese of Birmingham</option>
+                    </select>
+                </div>
+              </fieldset>
+
+              <div class="govuk-!-padding-bottom-9"></div>
+
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-heading-m">
+                    Free school meals (FSM) information
+                  </h1>
+                </legend>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        Number of pupils eligible for free school meals (FSM)<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span>
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds greyed_out" id="urn" name="address-town" type="text"
+                        value=" 30 ">
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        Percentage of pupils eligible for free school meals (FSM)<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span>
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds greyed_out" id="urn" name="address-town" type="text"
+                        value=" 10 ">
+                </div>
+              </fieldset>
+
+              <div class="govuk-!-padding-bottom-9"></div>
+
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-heading-m">
+                    Special educational need (SEN) information
+                  </h1>
+                </legend>
+                <<div class="govuk-form-group">
+                    <label class="govuk-label" for="County">
+                        Special classes<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span>
+                    </label>
+                    <select class="govuk-select govuk-!-width-two-thirds" id="County" name="sort">
+                        <option value="updated" selected>Yes</option>
+                        <option value="updated" >No</option>
+                    </select>
+                </div>
+
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                      <legend class="govuk-fieldset__legend">
+                        Type of special educational need (SEN) information
+                      </legend>
+                      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                          <label class="govuk-label govuk-checkboxes__label" for="waste">
+                            ASD - Autistic spectrum disorder
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                          <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                            HI - Hearing impairment
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                            MLD - Moderate learning difficulty
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                Not applicable
+                            </label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                OTH - Other difficulty/Disability
+                            </label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                PD - Physical disability
+                            </label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                PMLD - Profound and multiple learning difficulty
+                            </label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                SEMH - Social, emotional and mental health
+                            </label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                SSLCN - Speech, language and communication
+                            </label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                SLD - Severe learning difficulty
+                            </label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                SpLD - Specific learning difficulty
+                            </label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                VI - Visual impairment
+                            </label>
+                          </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="County">
+                        Type of resourced provision<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span>
+                    </label>
+                    <select class="govuk-select govuk-!-width-two-thirds" id="County" name="sort">
+                        <option value="updated" selected>SEN</option>
+                    </select>
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        Resourced provision capacity<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span>
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds greyed_out" id="urn" name="address-town" type="text"
+                        value=" 10 ">
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        Resourced provision number on roll<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span>
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds greyed_out" id="urn" name="address-town" type="text"
+                        value=" 5 ">
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        Special educational need (SEN) unit capacity<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span>
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds greyed_out" id="urn" name="address-town" type="text"
+                        value=" 10 ">
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        Special educational need (SEN) unit number on roll<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span>
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds greyed_out" id="urn" name="address-town" type="text"
+                        value=" 5 ">
+                </div>
+
+              </fieldset>
+
+              <div class="govuk-!-padding-bottom-9"></div>
+
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-heading-m">
+                    Inspectorate information
+                  </h1>
+                </legend>
+
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        Last full Ofsted inspection rating<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span>
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds greyed_out" id="urn" name="address-town" type="text"
+                        value=" Good ">
+                </div>
+
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                      <legend class="govuk-fieldset__legend">
+                        Last full Ofsted inspection date<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span>
+                      </legend>
+                      <div id="passport-issued-hint" class="govuk-hint">
+                        For example, 27 3 2007
+                      </div>
+                      <div class="govuk-date-input" id="passport-issued">
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-issued-day" >
+                              Day
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2 greyed_out"  value="10" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                          </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-issued-month" >
+                              Month
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2 greyed_out" value="3" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                          </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-issued-year" >
+                              Year
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-4 greyed_out" value="2018" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        Ofsted inspection information<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span>
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds greyed_out" id="urn" name="address-town" type="text"
+                        value="http://reports.ofsted.gov.uk/inspection-reports/find-inspection-report/provider/ELS/103163 ">
+                </div>
+               
+              </fieldset>
+
+              <div class="govuk-!-padding-bottom-9"></div>
+
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-heading-m">
+                    Links to other websites applicable for this establishment
+                  </h1>
+                </legend>
+
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        Find and Compare Schools in England (CSCP)<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span>
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds greyed_out" id="urn" name="address-town" type="text"
+                        value="https://cscp-dev-web.azurewebsites.net/school/103163/beeches-junior-school/primary ">
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        Schools Financial Benchmarking (SFB)<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span>
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds greyed_out" id="urn" name="address-town" type="text"
+                        value="https://as-t1dv-sfb.azurewebsites.net/school?urn=103163">
+                </div>
+                </fieldset>
+
+                <div class="govuk-!-padding-bottom-9"></div>
+
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-heading-m">
+                    Record updates
+                  </h1>
+                </legend>
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                      <legend class="govuk-fieldset__legend">
+                        Record last confirmed or updated<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span>
+                      </legend>
+                      <div class="govuk-date-input" id="passport-issued">
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-issued-day" >
+                              Day
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2 greyed_out"  value="17" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                          </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-issued-month" >
+                              Month
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2 greyed_out" value="10" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                          </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-issued-year" >
+                              Year
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-4 greyed_out" value="2022" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+              
+
+                </fieldset>
+
+              <div class="govuk-!-padding-bottom-9"></div>
+
+              <button class="govuk-button" data-module="govuk-button">
+                Continue
+              </button>
+
+        </div>
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden ch_tabs" id="ch_iebt">
+
+        </div>
+
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden ch_tabs" id="ch_links">
+
+        </div>
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden ch_tabs" id="ch_locations">
+
+        </div>
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden ch_tabs" id="ch_changes">
+
+        </div>
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden ch_tabs" id="ch_helpdesk">
+
+        </div>
+    </div>
+
+    <a class="back-to-top-link" href="#top">
+        <svg role="presentation" focusable="false" class="back-to-top-icon" xmlns="http://www.w3.org/2000/svg"
+            width="13" height="17" viewBox="0 0 13 17">
+            <path fill="currentColor" d="M6.5 0L0 6.5 1.4 8l4-4v12.7h2V4l4.3 4L13 6.4z"></path>
+        </svg>
+        Back to top
+    </a>
+
+</body>
+{% endblock %}
+
+</html>

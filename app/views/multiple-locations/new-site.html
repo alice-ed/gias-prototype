@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+{% extends "layouts/main.html" %}
+{% block pageTitle %}
+Get Information about Schools
+{% endblock %}
+
+{% block header %}
+{% from "govuk/components/cookie-banner/macro.njk" import govukCookieBanner %}
+
+{% set html %}
+<p class="govuk-body">We use some essential cookies to make this service work.</p>
+<p class="govuk-body">We’d also like to use analytics cookies so we can understand how you use the service and make
+    improvements.</p>
+{% endset %}
+
+{{ govukCookieBanner({
+ariaLabel: "Cookies on Get Information about Schools",
+messages: [
+{
+headingText: "Cookies on Get Information about Schools",
+html: html,
+actions: [
+{
+text: "Accept analytics cookies",
+type: "button",
+name: "cookies",
+value: "accept"
+},
+{
+text: "Reject analytics cookies",
+type: "button",
+name: "cookies",
+value: "reject"
+},
+{
+text: "View cookies",
+href: "#"
+}
+]
+}
+]
+}) }}
+{# Set serviceName in config.js. #}
+{{ govukHeader({
+homepageUrl: "/",
+serviceName: serviceName,
+serviceUrl: "/",
+navigation: [
+{
+href: "http://localhost:3000/landing",
+text: "Home"
+},
+{
+href: "search",
+text: "Search"
+},
+{
+href: "download",
+text: "Downloads"
+},
+{
+href: "about",
+text: "About"
+},
+{
+href: "help",
+text: "Help"
+},
+{
+href: "news",
+text: "News"
+},
+{
+href: "sign-in",
+text: "Sign in"
+}
+],
+containerClasses: "govuk-width-container"
+}) }}
+{% endblock %}
+
+{% block footer %}
+{{ govukFooter({
+meta: {
+items: [
+{
+href: "#",
+text: "Contact"
+},
+{
+href: "#",
+text: "Glossary"
+},
+{
+href: "#",
+text: "Guidance"
+},
+{
+href: "#",
+text: "Terms of use"
+},
+{
+href: "#",
+text: "Privacy"
+},
+{
+href: "#",
+text: "Cookies"
+},
+{
+href: "#",
+text: "Accessibility"
+}
+],
+visuallyHiddenTitle: "Footer links"
+}
+}) }}
+
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+tag: {
+text: "beta"
+},
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{{ govukBreadcrumbs({
+items: [
+{
+text: "Home",
+href: "#"
+},
+{
+text: "Search",
+href: "#"
+},
+{
+text: "Establishments",
+href: "#"
+}
+]
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<body>
+
+    <h1 class="govuk-heading-l" id="children_care_details">
+        <span class="govuk-caption-l">Establishment</span>
+        Beeches Junior School
+    </h1>
+
+
+    <p class="govuk-body-s govuk-!-font-weight-bold" id="urn_colour">URN:<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span> 124879&nbsp;&nbsp;&nbsp;&nbsp; Type: <span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span> &nbsp;&nbsp;Community
+        school</p> </br>
+
+        <p class="govuk-body-s govuk-!-font-weight-bold" id="urn_colour2">Part of federation:<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span> &nbsp;&nbsp; <a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-regular" id="download_location">Abbey Parks Schools Federation</a></p>    
+    <a href="#" class="govuk-link govuk-link--no-visited-state" id="download_location">Download establishment data</a>
+
+    <img src="/public/images/u432.png" id="important-icon" alt="important message" />
+    <img src="/public/images/u381.png" id="important-icon2" alt="important message" />
+
+    <div class="govuk-tabs" data-module="govuk-tabs">
+        <h2 class="govuk-tabs__title">
+            Contents
+        </h2>
+        <ul class="govuk-tabs__list">
+            <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                <a class="govuk-tabs__tab" href="#ch_details">
+                    Details
+                </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#ch_iebt">
+                    Governance
+                </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#ch_links">
+                    Links
+                </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#ch_locations">
+                    Locations
+                </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#ch_changes">
+                    Changes
+                </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#ch_helpdesk">
+                    Helpdesk
+                </a>
+            </li>
+        </ul>
+
+        <div class="govuk-tabs__panel ch_tabs" id="ch_details">
+
+            <h1 class="govuk-heading-l">Add a new site </h1>
+
+<fieldset class="govuk-fieldset">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+    
+  </legend>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-line-1">
+      Site name
+    </label>
+    <input class="govuk-input govuk-!-width-two-thirds" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1" >
+  </div>
+  <div class="govuk-form-group">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="address-line-2" valaue="test">
+        Street
+      </label>
+      <input class="govuk-input govuk-!-width-two-thirds " id="address-line-2" name="address-line-2" type="text" autocomplete="address-line2"  >
+    </div>
+    <div class="govuk-form-group">
+        <label class="govuk-label" for="address-line-2">
+            Locality
+        </label>
+        <input class="govuk-input govuk-!-width-two-thirds " id="address-line-2" name="address-line-2" type="text" autocomplete="address-line" >
+      </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-line-2">
+            Address 3
+        </label>
+        <input class="govuk-input govuk-!-width-two-thirds " id="address-line-2" name="address-line-2" type="text" autocomplete="address-line"  >
+        </div>
+        <div class="govuk-form-group">
+            <label class="govuk-label" for="address-line-2">
+                Town
+            </label>
+            <input class="govuk-input govuk-!-width-two-thirds " id="address-line-2" name="address-line-2" type="text" autocomplete="address-line"  >
+          </div>
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="subject">
+                County
+            </label>
+            <select class="govuk-select govuk-!-width-two-thirds" id="subject" name="subject" aria-describedby="subject-hint">
+              <option value="choose" selected>Choose county</option>
+              <option value="eastmidlands" >East Midlands</option>
+              <option value="eastofengland">East of England</option>
+              <option value="london">London</option>
+              <option value="northeast">North East</option>
+              <option value="northwest">North West</option>
+              <option value="southeast">South East</option>
+              <option value="southwest">South West</option>
+              <option value="westmidlands">West Midlands</option>
+              <option value="yorkshire">Yorkshire and the Humber</option>
+            </select>
+          </div>
+    
+    </div>
+  <div class="govuk-form-group">
+      <label class="govuk-label" for="address-postcode">
+          Postcode
+      </label>
+      <input class="govuk-input govuk-input--width-10" id="address-postcode"
+          name="address-postcode" type="text" autocomplete="postal-code"
+         >
+  </div>
+
+<div class="govuk-button-group">
+<a class="govuk-button" data-module="govuk-button" href="edit">
+  Continue
+</a>
+<a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="new-site">
+  Add another site
+</a>
+
+</div>
+
+<a class="govuk-link" href="">Cancel</a>
+
+</div>
+
+          
+        </div>
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden ch_tabs" id="ch_iebt">
+
+        </div>
+
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden ch_tabs" id="ch_links">
+
+        </div>
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden ch_tabs" id="ch_locations">
+
+        </div>
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden ch_tabs" id="ch_changes">
+
+        </div>
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden ch_tabs" id="ch_helpdesk">
+
+        </div>
+        <a class="back-to-top-link" href="#top">
+            <svg role="presentation" focusable="false" class="back-to-top-icon" xmlns="http://www.w3.org/2000/svg"
+                width="13" height="17" viewBox="0 0 13 17">
+                <path fill="currentColor" d="M6.5 0L0 6.5 1.4 8l4-4v12.7h2V4l4.3 4L13 6.4z"></path>
+            </svg>
+            Back to top
+        </a>
+    </div>
+
+   
+
+</body>
+{% endblock %}
+
+</html>

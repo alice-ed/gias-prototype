@@ -41,83 +41,83 @@ href: "#"
 }
 ]
 }) }}
-{# Set serviceName in config.js. #}
-{{ govukHeader({
-homepageUrl: "/",
-serviceName: serviceName,
-serviceUrl: "/",
-navigation: [
-{
-href: "http://localhost:3000/api/index_api",
-text: "Home"
-},
-{
-href: "search",
-text: "Search"
-},
-{
-href: "download_api",
-text: "Downloads",
-active: true
-},
-{
-href: "about",
-text: "About"
-},
-{
-href: "help",
-text: "Help"
-},
-{
-href: "news",
-text: "News"
-},
-{
-href: "sign-in",
-text: "Sign in"
-}
-],
-containerClasses: "govuk-width-container"
-}) }}
-{% endblock %}
 
-{% block footer %}
-{{ govukFooter({
-meta: {
-items: [
-{
-href: "#",
-text: "Contact"
-},
-{
-href: "#",
-text: "Glossary"
-},
-{
-href: "#",
-text: "Guidance"
-},
-{
-href: "#",
-text: "Terms of use"
-},
-{
-href: "#",
-text: "Privacy"
-},
-{
-href: "#",
-text: "Cookies"
-},
-{
-href: "#",
-text: "Accessibility"
-}
-],
-visuallyHiddenTitle: "Footer links"
-}
-}) }}
-
+<header class="govuk-header " role="banner" data-module="govuk-header">
+    <div class="govuk-header__container govuk-width-container">
+      <div class="govuk-header__logo">
+        <a href="#" class="govuk-header__link govuk-header__link--homepage">
+          <span class="govuk-header__logotype">
+            <!--[if gt IE 8]><!-->
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              class="govuk-header__logotype-crown"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 132 97"
+              height="30"
+              width="36">
+              <path
+                fill="currentColor" fill-rule="evenodd"
+                d="M25 30.2c3.5 1.5 7.7-.2 9.1-3.7 1.5-3.6-.2-7.8-3.9-9.2-3.6-1.4-7.6.3-9.1 3.9-1.4 3.5.3 7.5 3.9 9zM9 39.5c3.6 1.5 7.8-.2 9.2-3.7 1.5-3.6-.2-7.8-3.9-9.1-3.6-1.5-7.6.2-9.1 3.8-1.4 3.5.3 7.5 3.8 9zM4.4 57.2c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.5-1.5-7.6.3-9.1 3.8-1.4 3.5.3 7.6 3.9 9.1zm38.3-21.4c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.6-1.5-7.6.3-9.1 3.8-1.3 3.6.4 7.7 3.9 9.1zm64.4-5.6c-3.6 1.5-7.8-.2-9.1-3.7-1.5-3.6.2-7.8 3.8-9.2 3.6-1.4 7.7.3 9.2 3.9 1.3 3.5-.4 7.5-3.9 9zm15.9 9.3c-3.6 1.5-7.7-.2-9.1-3.7-1.5-3.6.2-7.8 3.7-9.1 3.6-1.5 7.7.2 9.2 3.8 1.5 3.5-.3 7.5-3.8 9zm4.7 17.7c-3.6 1.5-7.8-.2-9.2-3.8-1.5-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.3 3.5-.4 7.6-3.9 9.1zM89.3 35.8c-3.6 1.5-7.8-.2-9.2-3.8-1.4-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.4 3.6-.3 7.7-3.9 9.1zM69.7 17.7l8.9 4.7V9.3l-8.9 2.8c-.2-.3-.5-.6-.9-.9L72.4 0H59.6l3.5 11.2c-.3.3-.6.5-.9.9l-8.8-2.8v13.1l8.8-4.7c.3.3.6.7.9.9l-5 15.4v.1c-.2.8-.4 1.6-.4 2.4 0 4.1 3.1 7.5 7 8.1h.2c.3 0 .7.1 1 .1.4 0 .7 0 1-.1h.2c4-.6 7.1-4.1 7.1-8.1 0-.8-.1-1.7-.4-2.4V34l-5.1-15.4c.4-.2.7-.6 1-.9zM66 92.8c16.9 0 32.8 1.1 47.1 3.2 4-16.9 8.9-26.7 14-33.5l-9.6-3.4c1 4.9 1.1 7.2 0 10.2-1.5-1.4-3-4.3-4.2-8.7L108.6 76c2.8-2 5-3.2 7.5-3.3-4.4 9.4-10 11.9-13.6 11.2-4.3-.8-6.3-4.6-5.6-7.9 1-4.7 5.7-5.9 8-.5 4.3-8.7-3-11.4-7.6-8.8 7.1-7.2 7.9-13.5 2.1-21.1-8 6.1-8.1 12.3-4.5 20.8-4.7-5.4-12.1-2.5-9.5 6.2 3.4-5.2 7.9-2 7.2 3.1-.6 4.3-6.4 7.8-13.5 7.2-10.3-.9-10.9-8-11.2-13.8 2.5-.5 7.1 1.8 11 7.3L80.2 60c-4.1 4.4-8 5.3-12.3 5.4 1.4-4.4 8-11.6 8-11.6H55.5s6.4 7.2 7.9 11.6c-4.2-.1-8-1-12.3-5.4l1.4 16.4c3.9-5.5 8.5-7.7 10.9-7.3-.3 5.8-.9 12.8-11.1 13.8-7.2.6-12.9-2.9-13.5-7.2-.7-5 3.8-8.3 7.1-3.1 2.7-8.7-4.6-11.6-9.4-6.2 3.7-8.5 3.6-14.7-4.6-20.8-5.8 7.6-5 13.9 2.2 21.1-4.7-2.6-11.9.1-7.7 8.8 2.3-5.5 7.1-4.2 8.1.5.7 3.3-1.3 7.1-5.7 7.9-3.5.7-9-1.8-13.5-11.2 2.5.1 4.7 1.3 7.5 3.3l-4.7-15.4c-1.2 4.4-2.7 7.2-4.3 8.7-1.1-3-.9-5.3 0-10.2l-9.5 3.4c5 6.9 9.9 16.7 14 33.5 14.8-2.1 30.8-3.2 47.7-3.2z"></path>
+            </svg>
+            <!--<![endif]-->
+            <!--[if IE 8]>
+            <img src="/assets/images/govuk-logotype-crown.png" class="govuk-header__logotype-crown-fallback-image" width="36" height="32" alt="">
+            <![endif]-->
+            <span class="govuk-header__logotype-text">
+              GOV.UK
+            </span>
+          </span>
+        </a>
+      </div>
+      <div class="govuk-header__content">
+        <a href="#" class="govuk-header__link govuk-header__service-name">
+          Get Information about Schools
+        </a>
+        <nav aria-label="Menu" class="govuk-header__navigation ">
+          <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide menu" hidden>Menu</button>
+          <ul id="navigation" class="govuk-header__navigation-list">
+            <li class="govuk-header__navigation-item ">
+              <a class="govuk-header__link" href="#">
+                Home
+              </a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="#">
+                Search
+              </a>
+            </li>
+            <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+              <a class="govuk-header__link" href="#">
+                Downloads
+              </a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="#">
+                About
+              </a>
+            </li>
+            <li class="govuk-header__navigation-item">
+                <a class="govuk-header__link" href="#">
+                  Help
+                </a>
+              </li>
+              <li class="govuk-header__navigation-item" >
+                <a class="govuk-header__link" href="#">
+                  News
+                </a>
+              </li>
+              <li class="govuk-header__navigation-item" id="signin-location">
+                <a class="govuk-header__link" href="#">
+                  Sign out
+                </a>
+              </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  
 {% endblock %}
 
 {% block beforeContent %}
@@ -129,6 +129,15 @@ text: "beta"
 },
 html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
+
+<div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="#">Home</a>
+      </li>
+    </ol>
+  </div>
+
 
 {% endblock %}
 
@@ -157,8 +166,6 @@ html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a
         </div>
     </div> -->
 
-
-
         <p class="govuk-body">This data is updated daily. The data fields and the order of the data fields can change in
             these downloads. If you need data in a prescribed format you should consider signing up for WebServices by
             submitting a <a class="govuk-link" href="#">Service Request (opens in new tab).</a> </p>
@@ -186,105 +193,82 @@ html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a
                 </li>
             </ul>
             <div class="govuk-tabs__panel download_tabs" id="establishment">
-                <h2 class="govuk-heading-l">Establishment & group data</h2>
+                
                 <div class="govuk-grid-row">
-                    <div class="govuk-grid-column-one-third">
-
-                        <fieldset class="govuk-fieldset" id="download-radios">
-                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Select an option</legend>
-                            <div class="govuk-form-group govuk-!-margin-bottom-2">
-                                <div class="govuk-radios govuk-radios--small govuk-radios--conditional"
-                                    data-module="govuk-radios">
-                                    <div class="govuk-radios__item gias-radio__item--bordered-filter">
-
-                                        <input checked="checked" class="govuk-radios__input" data-aria-controls="Latest"
-                                            id="search-type-Latest" name="SearchType" type="radio" value="Latest">
-                                        <label class="govuk-label govuk-radios__label"
-                                            for="search-type-Latest">Latest</label>
-                                    </div>
-                                    <div class="govuk-radios__item gias-radio__item--bordered-filter">
-
-                                        <input class="govuk-radios__input" id="search-type-DateFilter" name="SearchType"
-                                            type="radio" value="DateFilter" aria-controls="DateFilter"
-                                            aria-expanded="false">
-                                        <label class="govuk-label govuk-radios__label"
-                                            for="search-type-DateFilter">Select a date</label>
-                                    </div>
-
-                                    <div id="DateFilter"
-                                        class="govuk-radios__conditional gias-conditional--bordered govuk-radios__conditional--hidden">
-                                        <div class="date-filters    " id="filterDate">
-                                            <p class="govuk-!-padding-right-2">
-                                                Files can be downloaded from<br>
-                                                11 September 2020 to present
-                                            </p>
-
-                                            <div class="govuk-form-group create-edit-form-group date-group     ">
-                                                <fieldset class="govuk-fieldset range-group search-to-date">
-                                                
-                                                    <p class="govuk-hint">For example, 11 9 2020</p>
-
-                                                    <div class="govuk-date-input">
-                                                        <div class="govuk-date-input__item">
-                                                            <div class="govuk-form-group">
+                    <div class="govuk-grid-column-one-third" id="one-third-no-padding">
 
 
-                                                                <label
-                                                                    class="govuk-label govuk-label govuk-date-input__label"
-                                                                    for="FilterDate_Day">Day</label>
-                                                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="FilterDate_Day"
-                                                                    maxlength="2" name="FilterDate.Day" type="text"
-                                                                    value="1">
-                                                            </div>
-                                                        </div>
-                                                        <div class="govuk-date-input__item">
-                                                            <div class="govuk-form-group">
-                                                                <label
-                                                                    class="govuk-label govuk-label govuk-date-input__label"
-                                                                    for="FilterDate_Month">Month</label>
-                                                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="FilterDate_Month"
-                                                                    maxlength="2" name="FilterDate.Month" type="text"
-                                                                    value="2">
-                                                            </div>
-                                                        </div>
-                                                        <div class="govuk-date-input__item gias-year-input__item">
-                                                            <div class="govuk-form-group">
-                                                                <label
-                                                                    class="govuk-label govuk-label govuk-date-input__label"
-                                                                    for="FilterDate_Year">Year</label>
-                                                                <input class=" govuk-input govuk-date-input__input govuk-input--width-4" id="FilterDate_Year"
-                                                                    maxlength="4" name="FilterDate.Year" type="text"
-                                                                    value="2023">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </fieldset>
-                                            </div>
-
-
-                                            <div class="js-show-block">
-                                                <button type="submit" name="apply"
-                                                    class="govuk-button downloads-filter-button"
-                                                    id="filter-apply">Apply</button>
-                                            </div>
-
-                                        </div>
-
-                                    </div>
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset">
+                              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                <h2 class="govuk-fieldset__heading ">
+                                    Select an option
+                                </h2>
+                              </legend>
+                              <div class="govuk-radios govuk-radios--small testradios" data-module="govuk-radios">
+                                <div class="govuk-radios__item" id="latest-box">
+                                  <input class="govuk-radios__input " id="input-latest-select" name="filter" type="radio" value="month">
+                                  <label class="govuk-label govuk-radios__label" for="changed-name">
+                                    Latest
+                                  </label>
                                 </div>
-                            </div>
-                           
-                        </fieldset>
-
-
-
+                                <div class="govuk-radios__item" id="date-box">
+                                    <input class="govuk-radios__input gias-conditional--bordered" id="input-date-select" name="filter" type="radio" value="email" data-aria-controls="conditional-contact">
+                                    <label class="govuk-label govuk-radios__label" for="contact">
+                                    Select a date
+                                    </label>
+                                  </div>
+                                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden gias-conditional--bordered filter-date" id="conditional-contact">
+                                    <div class="govuk-form-group" id="filter-date">
+                                      <label class="govuk-label govuk-!-padding-bottom-2" for="contact-by-email">
+                                        Files can be downloaded from </br>11 September 2020 to present
+                                      </label>
+                                      <div id="sign-in-hint govuk-!-padding-bottom-2" class="govuk-hint">
+                                        For example, 11 9 2020
+                                      </div>
+                                      <div class="govuk-date-input" id="passport-issued">
+                                        <div class="govuk-date-input__item">
+                                          <div class="govuk-form-group">
+                                            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                                              Day
+                                            </label>
+                                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                                          </div>
+                                        </div>
+                                        <div class="govuk-date-input__item">
+                                          <div class="govuk-form-group">
+                                            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                                              Month
+                                            </label>
+                                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                                          </div>
+                                        </div>
+                                        <div class="govuk-date-input__item govuk-!-padding-bottom-2">
+                                          <div class="govuk-form-group">
+                                            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                                              Year
+                                            </label>
+                                            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="govuk-button-group">
+                                        <button class="govuk-button" data-module="govuk-button">
+                                            Apply
+                                          </button>
+                                          </div>
+                                        
+                                    </div>
+                                      
+                            </fieldset>
+                          </div>
                     </div>
 
                     <div class="govuk-grid-column-two-thirds">
                         <p class="goveuk-body">Select the files you want to download then click 'Download selected
                             files'.</p>
 
-                        <details class="govuk-details" data-module="govuk-details">
+                        <details class="govuk-details govuk-!-margin-bottom-4 data-module="govuk-details">
                             <summary class="govuk-details__summary">
                                 <span class="govuk-details__summary-text"> Why can't I see the files I'm looking for?
                                 </span>
@@ -301,9 +285,11 @@ html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a
                             <p class="govuk-body">Please try again tomorrow or if the error continues, raise a <a
                                     href="#" class="govuk-link">Service Request (opens in new tab).</a></p>
                         </details>
-
+                      
                         <a class="govuk-link govuk-body" href="#">Select all </a>
-                        <a class="govuk-link govuk-body" id="clear_all" href="#">Clear all </a>
+                        <a class="govuk-link govuk-body " id="clear_all" href="#">Clear all </a>
+
+                        <div class="govuk-!-padding-bottom-4"></div>
 
                         <h2 class="govuk-heading-m">Establishment downloads</h2>
                         <p class="" govuk-body>You can download the complete record for the specified establishment
@@ -500,6 +486,131 @@ html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a
                                 </div>
                             </fieldset>
                         </div>
+
+                        <h2 class="govuk-heading-m">Miscellaneous</h2>
+                        </p>
+
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                                <h3 class="govuk-heading-s">All data</h3>
+
+                                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox"
+                                            value="carcasses">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste">
+                                            SCDBextract.zip, 0 MB
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox"
+                                            value="mines">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                            All governance data non-public.csv
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox"
+                                            value="mines">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                            A governance data completeness report.csv
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox"
+                                            value="mines">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                            All group records with links non-public.zip, 0.96 MB
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox"
+                                            value="mines">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                            Active_GIAS_User_List.csv
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox"
+                                            value="mines">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                            GIAS_Webservices_Users.csv
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox"
+                                            value="mines">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                            User_Group_Access_Rights.zip
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox"
+                                            value="mines">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                            Data_Owners.csv
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox"
+                                            value="mines">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                            Trusted_Sources.csv
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox"
+                                            value="mines">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                            toolsaccess.zip
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox"
+                                            value="mines">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                            lookupfields.zip
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox"
+                                            value="mines">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                            Data_Dictionary.pdf
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox"
+                                            value="mines">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                            Business_and_Validation_Rules.zip
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox"
+                                            value="mines">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                            All academy governance records (non public).csv
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox"
+                                            value="mines">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                            All local authority (LA) maintained governance records (non public).csv
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox"
+                                            value="mines">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                            ESFA_CRM_Governance_Download.csv
+                                        </label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+
 
                         <button class="govuk-button" data-module="govuk-button">
                             Download selected files

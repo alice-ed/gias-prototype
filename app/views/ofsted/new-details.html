@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+{% extends "layouts/main.html" %}
+{% block pageTitle %}
+Get Information about Schools
+{% endblock %}
+
+{% block header %}
+{% from "govuk/components/cookie-banner/macro.njk" import govukCookieBanner %}
+
+{% set html %}
+<p class="govuk-body">We use some essential cookies to make this service work.</p>
+<p class="govuk-body">We’d also like to use analytics cookies so we can understand how you use the service and make
+  improvements.</p>
+{% endset %}
+
+{{ govukCookieBanner({
+ariaLabel: "Cookies on Get Information about Schools",
+messages: [
+{
+headingText: "Cookies on Get Information about Schools",
+html: html,
+actions: [
+{
+text: "Accept analytics cookies",
+type: "button",
+name: "cookies",
+value: "accept"
+},
+{
+text: "Reject analytics cookies",
+type: "button",
+name: "cookies",
+value: "reject"
+},
+{
+text: "View cookies",
+href: "#"
+}
+]
+}
+]
+}) }}
+{# Set serviceName in config.js. #}
+{{ govukHeader({
+homepageUrl: "/",
+serviceName: serviceName,
+serviceUrl: "/",
+navigation: [
+{
+href: "http://localhost:3000/landing",
+text: "Home"
+},
+{
+href: "search",
+text: "Search"
+},
+{
+href: "download",
+text: "Downloads"
+},
+{
+href: "about",
+text: "About"
+},
+{
+href: "help",
+text: "Help"
+},
+{
+href: "news",
+text: "News"
+},
+{
+  href: "sign-in",
+  text: "Sign in"
+  }
+],
+containerClasses: "govuk-width-container"
+}) }}
+{% endblock %}
+
+{% block footer %}
+{{ govukFooter({
+meta: {
+items: [
+{
+href: "#",
+text: "Contact"
+},
+{
+href: "#",
+text: "Glossary"
+},
+{
+href: "#",
+text: "Guidance"
+},
+{
+href: "#",
+text: "Terms of use"
+},
+{
+href: "#",
+text: "Privacy"
+},
+{
+href: "#",
+text: "Cookies"
+},
+{
+href: "#",
+text: "Accessibility"
+}
+],
+visuallyHiddenTitle: "Footer links"
+}
+}) }}
+
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "#"
+    },
+    {
+      text: "Search",
+      href: "#"
+    },
+    {
+      text: "Establishments",
+      href: "#"
+    }
+  ]
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<body>
+
+  <h1 class="govuk-heading-l" id="children_care_details">
+    <span class="govuk-caption-l">Establishment</span>
+    Beeches Junior School
+  </h1>
+
+  
+  <p class="govuk-body-s govuk-!-font-weight-bold" id="urn_colour">URN:<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span> 124879&nbsp;&nbsp;&nbsp;&nbsp; Type: <span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span> &nbsp;&nbsp;Community
+    school</p> </br>
+
+    <p class="govuk-body-s govuk-!-font-weight-bold" id="urn_colour2">Part of federation:<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span> &nbsp;&nbsp; <a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-regular" id="download_location">Abbey Parks Schools Federation</a></p>    
+<a href="#" class="govuk-link govuk-link--no-visited-state" id="download_location">Download establishment data</a>
+
+ <img src="/public/images/u432.png" id="important-icon" alt="important message"/>
+ <img src="/public/images/u381.png" id="important-icon2" alt="important message"/>
+
+  <div class="govuk-tabs" data-module="govuk-tabs">
+    <h2 class="govuk-tabs__title">
+      Contents
+    </h2>
+  <ul class="govuk-tabs__list">
+            <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                <a class="govuk-tabs__tab" href="#ch_details">
+                    Details
+                </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#ch_iebt">
+                    Governance 
+                </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#ch_links">
+                    Links
+                </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#ch_locations">
+                    Locations
+                </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#ch_changes">
+                    Changes
+                </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#ch_helpdesk">
+                    Helpdesk
+                </a>
+            </li>
+        </ul>
+
+    <div class="govuk-tabs__panel ch_tabs" id="ch_details">
+
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+           Show map
+          </span>
+        </summary>
+        <img src="/public/images/map.png" id="important-icon" alt="map"/>
+      </details>
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Establishment headteacher details</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-one-half">Name</th>
+            <td class="govuk-table__cell govuk-!-width-one-half">Mr Mike Smart</td>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Job title</th>
+            <td class="govuk-table__cell">Headteacher</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Date of appointment</th>
+            <td class="govuk-table__cell">13 June 2001</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="govuk-!-padding-bottom-9"></div>
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Establishment name and registered contact information</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-one-half">Establishment name</th>
+            <td class="govuk-table__cell govuk-!-width-one-half">Beeches Junior School</td>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Address</th>
+            <td class="govuk-table__cell">
+              Beeches Road</br>
+              Birmingham</br>
+              West Midlands</br>
+              B42 2PY
+              </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Main telephone number</th>
+            <td class="govuk-table__cell">0121 272 5888</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Website</th>
+            <td class="govuk-table__cell">https://www.beechesjnr.bham.sch.uk/about-us/admissions</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">GIAS local authority code <span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span></th>
+            <td class="govuk-table__cell">330</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Local authority name <span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span></th>
+            <td class="govuk-table__cell">Birmingham</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="govuk-!-padding-bottom-9"></div>
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Establishment identifiers</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-one-half">Unique reference number (URN)<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span></th>
+            <td class="govuk-table__cell govuk-!-width-one-half">103163</td>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Department for Education (DfE) number<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span></th>
+            <td class="govuk-table__cell">330/2016</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Establishment number<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span></th>
+            <td class="govuk-table__cell">2016</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">UK provider reference number (UKPRN)<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span></th>
+            <td class="govuk-table__cell">10071503 </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="govuk-!-padding-bottom-9"></div>
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Establishment type and status information</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-one-half">Establishment group type <span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span></th>
+            <td class="govuk-table__cell govuk-!-width-one-half">Local authority maintained school</td>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Establishment type<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span></th>
+            <td class="govuk-table__cell">Community school</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Admissions policy<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span></th>
+            <td class="govuk-table__cell">Not applicable</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Phase of education<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span></th>
+            <td class="govuk-table__cell">Primary </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Statutory age range<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span></th>
+            <td class="govuk-table__cell">7 to 11 </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Capacity<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span></th>
+            <td class="govuk-table__cell">360 </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Total number of pupils<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span></th>
+            <td class="govuk-table__cell">300 </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Total number of girls<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span></th>
+            <td class="govuk-table__cell">170 </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Total number of boys<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span></th>
+            <td class="govuk-table__cell">190 </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Gender of entry<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span></th>
+            <td class="govuk-table__cell">Mixed </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Status</th>
+            <td class="govuk-table__cell">Open </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Open date</th>
+            <td class="govuk-table__cell">30 September 2014  </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Reason for opening</th>
+            <td class="govuk-table__cell">New provision </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Close date</th>
+            <td class="govuk-table__cell">Not applicable </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Reason for closing</th>
+            <td class="govuk-table__cell">Not applicable </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="govuk-!-padding-bottom-9"></div>
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Further establishment information</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-one-half">Part of federation<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span></th>
+            <td class="govuk-table__cell govuk-!-width-one-half"> <a href="#" class="govuk-link">Abbey Parks Schools Federation</a> </td>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Nursery<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span></th>
+            <td class="govuk-table__cell">No nursery classes</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Sixth form<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span></th>
+            <td class="govuk-table__cell">No sixth form</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Type of boarding</th>
+            <td class="govuk-table__cell">No boarders </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="govuk-!-padding-bottom-9"></div>
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Faith information</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-one-half">Religious character<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span></th>
+            <td class="govuk-table__cell govuk-!-width-one-half">Roman Catholic </td>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Religious diocese<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span></th>
+            <td class="govuk-table__cell">Roman Catholic Archdiocese of Birmingham</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="govuk-!-padding-bottom-9"></div>
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Free school meals (FSM) information</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-one-half">Number of pupils eligible for free school meals (FSM)<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span></th>
+            <td class="govuk-table__cell govuk-!-width-one-half">30</td>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Percentage of pupils eligible for free school meals (FSM)<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span></th>
+            <td class="govuk-table__cell">10</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="govuk-!-padding-bottom-9"></div>
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Special educational need (SEN) information</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-one-half">Special classes<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span></th>
+            <td class="govuk-table__cell govuk-!-width-one-half">Yes</td>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Type of special educational needs (SEN) </th>
+            <td class="govuk-table__cell">
+
+              ASD - Autistic spectrum disorder </br>
+              
+              HI - Hearing impairment </br>
+              
+              MLD - Moderate learning difficulty </br>
+              
+              OTH - Other difficulty/Disability </br>
+              </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Type of resourced provision<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span></th>
+            <td class="govuk-table__cell">SEN unit</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Resourced provision capacity<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span></th>
+            <td class="govuk-table__cell">10 </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Resourced provision number on roll<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span></th>
+            <td class="govuk-table__cell">5 </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Special educational need (SEN) unit capacity<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span></th>
+            <td class="govuk-table__cell">10 </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Special educational need (SEN) unit number on roll<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span></th>
+            <td class="govuk-table__cell">5 </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="govuk-!-padding-bottom-9"></div>
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Inspectorate information</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-one-half">Last full Ofsted inspection rating<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span></th>
+            <td class="govuk-table__cell govuk-!-width-one-half"><strong class="govuk-tag">
+                Inadequate (Special Measures)
+              </strong>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Last full Ofsted inspection date<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span></th>
+            <td class="govuk-table__cell">10 January 2018</td>
+          </tr>
+        </tbody>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Ofsted inspection information<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span></th>
+            <td class="govuk-table__cell"><a href="#" class="govuk-link">Ofsted inspection(s) (opens in new tab)</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="govuk-!-padding-bottom-9"></div>
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Links to other websites applicable for this establishment</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-one-half">Find and Compare Schools in England (CSCP)<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span></th>
+            <td class="govuk-table__cell govuk-!-width-one-half"><a href="#" class="govuk-link">
+
+              Find and Compare Schools in England (CSCP)
+              
+              (opens in new tab)
+              </a></td>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Schools Financial Benchmarking (SFB)<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span></th>
+            <td class="govuk-table__cell"><a href="#" class="govuk-link">Schools Financial Benchmarking (SFB) (opens in new tab)</a></td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <div class="govuk-!-padding-bottom-9"></div>
+
+  <table class="govuk-table">
+    <caption class="govuk-table__caption govuk-table__caption--m">Record updates</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header govuk-!-width-one-half">Record last confirmed or updated<span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span></th>
+        <td class="govuk-table__cell govuk-!-width-one-half">17 June 2020</td>
+      </tr>
+    </thead>
+  </table>
+  <p class="govuk-body govuk-!-margin-bottom-8"></p>
+
+     
+
+    </div>
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden ch_tabs" id="ch_iebt">
+
+    </div>
+
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden ch_tabs" id="ch_links">
+
+    </div>
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden ch_tabs" id="ch_locations">
+
+    </div>
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden ch_tabs" id="ch_changes">
+
+    </div>
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden ch_tabs" id="ch_helpdesk">
+
+    </div>
+  </div>
+
+  <a class="back-to-top-link" href="#top">
+    <svg role="presentation" focusable="false" class="back-to-top-icon" xmlns="http://www.w3.org/2000/svg" width="13"
+      height="17" viewBox="0 0 13 17">
+      <path fill="currentColor" d="M6.5 0L0 6.5 1.4 8l4-4v12.7h2V4l4.3 4L13 6.4z"></path>
+    </svg>
+    Back to top
+  </a>
+
+</body>
+{% endblock %}
+</html>

@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+{% extends "layouts/main.html" %}
+{% block pageTitle %}
+Get Information about Schools
+{% endblock %}
+
+{% block header %}
+{% from "govuk/components/cookie-banner/macro.njk" import govukCookieBanner %}
+
+{% set html %}
+<p class="govuk-body">We use some essential cookies to make this service work.</p>
+<p class="govuk-body">We’d also like to use analytics cookies so we can understand how you use the service and make
+  improvements.</p>
+{% endset %}
+
+{{ govukCookieBanner({
+ariaLabel: "Cookies on Get Information about Schools",
+messages: [
+{
+headingText: "Cookies on Get Information about Schools",
+html: html,
+actions: [
+{
+text: "Accept analytics cookies",
+type: "button",
+name: "cookies",
+value: "accept"
+},
+{
+text: "Reject analytics cookies",
+type: "button",
+name: "cookies",
+value: "reject"
+},
+{
+text: "View cookies",
+href: "#"
+}
+]
+}
+]
+}) }}
+{# Set serviceName in config.js. #}
+{{ govukHeader({
+homepageUrl: "/",
+serviceName: serviceName,
+serviceUrl: "/",
+navigation: [
+{
+href: "http://localhost:3000/landing",
+text: "Home"
+},
+{
+href: "search",
+text: "Search"
+},
+{
+href: "download",
+text: "Downloads"
+},
+{
+href: "about",
+text: "About"
+},
+{
+href: "help",
+text: "Help"
+},
+{
+href: "news",
+text: "News"
+},
+{
+  href: "sign-in",
+  text: "Sign in"
+  }
+],
+containerClasses: "govuk-width-container"
+}) }}
+{% endblock %}
+
+{% block footer %}
+{{ govukFooter({
+meta: {
+items: [
+{
+href: "#",
+text: "Contact"
+},
+{
+href: "#",
+text: "Glossary"
+},
+{
+href: "#",
+text: "Guidance"
+},
+{
+href: "#",
+text: "Terms of use"
+},
+{
+href: "#",
+text: "Privacy"
+},
+{
+href: "#",
+text: "Cookies"
+},
+{
+href: "#",
+text: "Accessibility"
+}
+],
+visuallyHiddenTitle: "Footer links"
+}
+}) }}
+
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "#"
+    },
+    {
+      text: "Search",
+      href: "#"
+    },
+    {
+      text: "Establishments",
+      href: "#"
+    }
+  ]
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<body>
+
+  <h1 class="govuk-heading-l" id="children_care_details">
+    <span class="govuk-caption-l">Establishment</span>
+    Bramfield House School
+  </h1>
+
+  
+<p class="govuk-body-s govuk-!-font-weight-bold" id="urn_colour">URN: 124879&nbsp;&nbsp;&nbsp;&nbsp;Other independent school</p>
+
+  <a href="#" class="govuk-link govuk-link--no-visited-state" id="download_location">Download establishment data</a>
+
+  <img src="/public/images/u309.png" id="important-icon" alt="important message"/>
+
+  <div class="govuk-tabs" data-module="govuk-tabs">
+    <h2 class="govuk-tabs__title">
+      Contents
+    </h2>
+  <ul class="govuk-tabs__list">
+            <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                <a class="govuk-tabs__tab" href="#ch_details">
+                    Details
+                </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#ch_iebt">
+                    IEBT
+                </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#ch_links">
+                    Links
+                </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#ch_locations">
+                    Locations
+                </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#ch_changes">
+                    Changes
+                </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#ch_helpdesk">
+                    Helpdesk
+                </a>
+            </li>
+        </ul>
+
+    <div class="govuk-tabs__panel ch_tabs" id="ch_details">
+    
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+           Show map
+          </span>
+        </summary>
+        <img src="/public/images/map.png" id="important-icon" alt="map"/>
+      </details>
+
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            obfuscated, Bramfield, obfuscated, Suffolk, IP19 9AB
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Local authority
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <a href="#" class="govuk-link govuk-link--no-visited-state">Suffolk</a> (935)
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Headteacher / Principal
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Mrs obfuscated obfuscated 
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Age range
+          </dt>
+          <dd class="govuk-summary-list__value">
+            7 to 16
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Phase of education
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Not applicable 
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            School type
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Other independent school
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Children's home
+          </dt>
+          <dd class="govuk-summary-list__value">
+            No
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Gender of entry
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Boys
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            ID
+          </dt>
+          <dd class="govuk-summary-list__value">
+            URN: 124879, DfE number: 935/6036, UKPRN: 10015213
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Establishment status
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Open
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Admissions policy
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Not applicable 
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Website
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Not recorded
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Telephone
+          </dt>
+          <dd class="govuk-summary-list__value">
+            111111
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Inspectorate name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Ofsted 
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Data from other services
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Not applicable 
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Proprietor's name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            obfuscated
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Religious character
+          </dt>
+          <dd class="govuk-summary-list__value">
+            None
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Religious ethos
+          </dt>
+          <dd class="govuk-summary-list__value">
+            None
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Boarders
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Boarding school
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Nursery provision
+          </dt>
+          <dd class="govuk-summary-list__value">
+            No Nursery Classes
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Official sixth form
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Not applicable
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            School capacity
+          </dt>
+          <dd class="govuk-summary-list__value">
+            74
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Number of pupils
+          </dt>
+          <dd class="govuk-summary-list__value">
+            71
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Section 41 approved
+          </dt>
+          <dd class="govuk-summary-list__value">
+           Approved
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Open date
+          </dt>
+          <dd class="govuk-summary-list__value">
+            20 November 1970
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Reason establishment opened
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Not applicable
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Closed date
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Not recorded
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Reason establishment closed
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Not applicable
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Special classes
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Not applicable
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Number of pupils eligible for free school meals
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Not recorded
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Percentage of children eligible for free school meals
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Not recorded
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Number of special pupils under a special educational needs (SEN) statement/education, health and care (EHC) plan
+          </dt>
+          <dd class="govuk-summary-list__value">
+            54
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Number of special pupils not under a special educational needs (SEN) statement/education, health and care (EHC) plan
+          </dt>
+          <dd class="govuk-summary-list__value">
+            0
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date last changed / confirmed
+          </dt>
+          <dd class="govuk-summary-list__value">
+            17 June 2020
+          </dd>
+        </div>
+        
+      </dl>
+
+    </div>
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden ch_tabs" id="ch_iebt">
+
+    </div>
+
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden ch_tabs" id="ch_links">
+
+    </div>
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden ch_tabs" id="ch_locations">
+
+    </div>
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden ch_tabs" id="ch_changes">
+
+    </div>
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden ch_tabs" id="ch_helpdesk">
+
+    </div>
+  </div>
+
+  <a class="back-to-top-link" href="#top">
+    <svg role="presentation" focusable="false" class="back-to-top-icon" xmlns="http://www.w3.org/2000/svg" width="13"
+      height="17" viewBox="0 0 13 17">
+      <path fill="currentColor" d="M6.5 0L0 6.5 1.4 8l4-4v12.7h2V4l4.3 4L13 6.4z"></path>
+    </svg>
+    Back to top
+  </a>
+
+
+</body>
+{% endblock %}
+</html>

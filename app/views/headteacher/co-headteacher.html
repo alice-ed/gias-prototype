@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+{% extends "layouts/main.html" %}
+{% block pageTitle %}
+Get Information about Schools
+{% endblock %}
+
+{% block header %}
+{% from "govuk/components/cookie-banner/macro.njk" import govukCookieBanner %}
+
+{% set html %}
+<p class="govuk-body">We use some essential cookies to make this service work.</p>
+<p class="govuk-body">We’d also like to use analytics cookies so we can understand how you use the service and make
+    improvements.</p>
+{% endset %}
+
+{{ govukCookieBanner({
+ariaLabel: "Cookies on Get Information about Schools",
+messages: [
+{
+headingText: "Cookies on Get Information about Schools",
+html: html,
+actions: [
+{
+text: "Accept analytics cookies",
+type: "button",
+name: "cookies",
+value: "accept"
+},
+{
+text: "Reject analytics cookies",
+type: "button",
+name: "cookies",
+value: "reject"
+},
+{
+text: "View cookies",
+href: "#"
+}
+]
+}
+]
+}) }}
+{# Set serviceName in config.js. #}
+{{ govukHeader({
+homepageUrl: "/",
+serviceName: serviceName,
+serviceUrl: "/",
+navigation: [
+{
+href: "http://localhost:3000/landing",
+text: "Home"
+},
+{
+href: "search",
+text: "Search"
+},
+{
+href: "download",
+text: "Downloads"
+},
+{
+href: "about",
+text: "About"
+},
+{
+href: "help",
+text: "Help"
+},
+{
+href: "news",
+text: "News"
+},
+{
+href: "sign-in",
+text: "Sign in"
+}
+],
+containerClasses: "govuk-width-container"
+}) }}
+{% endblock %}
+
+{% block footer %}
+{{ govukFooter({
+meta: {
+items: [
+{
+href: "#",
+text: "Contact"
+},
+{
+href: "#",
+text: "Glossary"
+},
+{
+href: "#",
+text: "Guidance"
+},
+{
+href: "#",
+text: "Terms of use"
+},
+{
+href: "#",
+text: "Privacy"
+},
+{
+href: "#",
+text: "Cookies"
+},
+{
+href: "#",
+text: "Accessibility"
+}
+],
+visuallyHiddenTitle: "Footer links"
+}
+}) }}
+
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+tag: {
+text: "beta"
+},
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{{ govukBreadcrumbs({
+items: [
+{
+text: "Home",
+href: "#"
+},
+{
+text: "Search",
+href: "#"
+},
+{
+text: "Establishments",
+href: "#"
+}
+]
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<body>
+
+    <h1 class="govuk-heading-l" id="children_care_details">
+        <span class="govuk-caption-l">Establishment</span>
+        Beeches Junior School
+    </h1>
+
+
+    <p class="govuk-body-s govuk-!-font-weight-bold" id="urn_colour">URN:<span
+            class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span> 124879&nbsp;&nbsp;&nbsp;&nbsp;
+        Type: <span class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span> &nbsp;&nbsp;Academy
+        converter</p> </br>
+
+    <p class="govuk-body-s govuk-!-font-weight-bold" id="urn_colour2">Academy sponsor:<span
+            class="govuk-warning-text__icon question_mark" aria-hidden="true">?</span> &nbsp;&nbsp; <a href="#"
+            class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-regular" id="download_location">Ashmole Academy</a></p>
+    <a href="#" class="govuk-link govuk-link--no-visited-state" id="download_location">Download establishment data</a>
+
+    <img src="/public/images/u432.png" id="important-icon" alt="important message" />
+    <img src="/public/images/u381.png" id="important-icon2" alt="important message" />
+
+    <div class="govuk-tabs" data-module="govuk-tabs">
+        <h2 class="govuk-tabs__title">
+            Contents
+        </h2>
+        <ul class="govuk-tabs__list">
+            <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                <a class="govuk-tabs__tab" href="#ch_details">
+                    Details
+                </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#ch_iebt">
+                    Governance
+                </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#ch_links">
+                    Links
+                </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#ch_locations">
+                    Locations
+                </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#ch_changes">
+                    Changes
+                </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#ch_helpdesk">
+                    Helpdesk
+                </a>
+            </li>
+        </ul>
+
+        <div class="govuk-tabs__panel ch_tabs" id="ch_details">
+
+
+            <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <h1 class="govuk-heading-m">
+                        Establishment co-headteacher details
+                    </h1>
+                    <div class="govuk-hint ">
+                        A legal status where two headteachers are sharing the leadership of a school.
+                    </div>
+                </legend>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="title">
+                        Title
+                    </label>
+                    <select class="govuk-select govuk-!-width-two-thirds" id="title" name="sort">
+                        <option value="published">Mrs</option>
+                        <option value="updated" selected>Mr</option>
+                        <option value="views">Miss</option>
+                        <option value="comments">Master</option>
+                    </select>
+                </div>
+
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        First name
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="urn" name="address-town" type="text"
+                        value="Mike">
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        Surname
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="urn" name="address-town" type="text"
+                        value="Smart">
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        Job title
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds greyed_out" id="urn" name="address-town"
+                        type="text" value="Headteacher">
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="urn">
+                        Headteacher establishment email address
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="urn" name="address-town" type="text"
+                        value=" m.smart@beechesjnr.bham.sch.uk">
+                </div>
+
+                <details class="govuk-details" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                            How this email address information is used
+                        </span>
+                    </summary>
+                    <div class="govuk-details__text govuk-!-width-two-thirds">
+                        The headteacher / principal personal establishment email address must be added here. This must
+                        be an up-to-date, valid and actively monitored email address. This information is not publicly
+                        displayed on the website's interface and is classed as personal data, therefore it cannot be
+                        shared publicly, for example, through a Freedom of Information (FOI) request. Under the
+                        conditions of Article 6(1)(e) of the UK-GDPR this information can be shared with other
+                        government departments, non-departmental public bodies, arm's length bodies and partners for
+                        official functions and tasks within the public interest to be performed.
+                        </br>
+                        </br>
+                        This information is very important as it allows the Department for Education to share important
+                        information and messages with headteachers/principals/managers, especially during the
+                        Coronavirus pandemic.
+                    </div>
+                </details>
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <h1 class="govuk-heading-s">
+                                Date of appointment
+                            </h1>
+                        </legend>
+                        <div id="passport-issued-hint" class="govuk-hint">
+                            For example, 27 3 2007
+                        </div>
+                        <div class="govuk-date-input" id="passport-issued">
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                                        Day
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                        id="passport-issued-day" name="passport-issued-day" type="text"
+                                        inputmode="numeric">
+                                </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                                        Month
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                        id="passport-issued-month" name="passport-issued-month" type="text"
+                                        inputmode="numeric">
+                                </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                                        Year
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-4"
+                                        id="passport-issued-year" name="passport-issued-year" type="text"
+                                        inputmode="numeric">
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="govuk-!-padding-bottom-9"></div>
+
+                    <div class="govuk-button-group">
+                        <a class="govuk-button" data-module="govuk-button" href="edit">
+                            Add co-headteacher
+                        </a>
+                        <a class="govuk-link" href="create">Cancel</a>
+                    </div>
+
+                </div>
+                <div class="govuk-tabs__panel govuk-tabs__panel--hidden ch_tabs" id="ch_iebt">
+
+                </div>
+
+                <div class="govuk-tabs__panel govuk-tabs__panel--hidden ch_tabs" id="ch_links">
+
+                </div>
+                <div class="govuk-tabs__panel govuk-tabs__panel--hidden ch_tabs" id="ch_locations">
+
+                </div>
+                <div class="govuk-tabs__panel govuk-tabs__panel--hidden ch_tabs" id="ch_changes">
+
+                </div>
+                <div class="govuk-tabs__panel govuk-tabs__panel--hidden ch_tabs" id="ch_helpdesk">
+
+                </div>
+        </div>
+
+        <a class="back-to-top-link" href="#top">
+            <svg role="presentation" focusable="false" class="back-to-top-icon" xmlns="http://www.w3.org/2000/svg"
+                width="13" height="17" viewBox="0 0 13 17">
+                <path fill="currentColor" d="M6.5 0L0 6.5 1.4 8l4-4v12.7h2V4l4.3 4L13 6.4z"></path>
+            </svg>
+            Back to top
+        </a>
+
+</body>
+{% endblock %}
+
+</html>
